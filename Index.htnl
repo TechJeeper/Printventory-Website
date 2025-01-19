@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Printventory</title>
+<style>
+body {
+	    background-color: black;
+}
+img {
+	    display: block;
+	        margin: auto;
+}
+a {
+	    color: white;
+	        text-decoration: none;
+}
+</style>
+	</head>
+	<body>
+		<img src="logo.png" alt="Logo">
+		<br>
+		<a href="https://bsky.app/profile/printventory.bsky.social"><img src="BlueSky.png" alt="BlueSky logo"></a>
+		<a href="https://x.com/Printventory"><img src="X.png" alt="X logo"></a>
+		<br>
+		<br>
+		Follow us on <a href="https://bsky.app/profile/printventory.bsky.social">BlueSky</a> and <a href="https://x.com/Printventory">X</a>
+	</body>
+</html>
