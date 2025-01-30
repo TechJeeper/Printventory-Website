@@ -137,4 +137,46 @@ footer a:hover {
 .version-number {
     color: #00bfff;
     font-weight: 500;
+}
+
+.social-links {
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.affiliate-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 25px auto;
+    max-width: 800px;
+}
+
+.affiliate-link img {
+    height: 40px;
+    max-width: 160px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(20%) brightness(0.9);
+}
+
+.affiliate-link:hover img {
+    transform: translateY(-2px);
+    filter: grayscale(0%) brightness(1);
+}
+
+.support-text {
+    margin: 30px 0 15px;
+    color: #b0b0b0;
+    font-size: 0.9em;
+}
+
+.social-links p {
+    color: #b0b0b0;
+    margin-bottom: 20px;
 } 
