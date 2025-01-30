@@ -271,9 +271,9 @@ footer a:hover {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(0.35) blur(1.5px);
-    transform: scale(1.1);
+    object-fit: contain;
+    filter: brightness(0.45) blur(1px);
+    background-color: rgba(26, 26, 26, 0.9);
 }
 
 .header-content {
