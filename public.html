@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printventory Beta Release</title>
+    <title>Printventory Public Release</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,23 +13,19 @@
         <header>
             <img src="logo.png" alt="Printventory Logo" class="logo">
         </header>
-        <h1>Download Printventory Beta</h1>
+        <h1>Download Printventory</h1>
         <div class="download-section">
-            <div class="warning-box">
-                <p>⚠️ These are pre-release builds. Use at your own risk.</p>
-                <p>Join our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a> for beta testing feedback and support!</p>
-            </div>
             <div class="version-info" id="version-info">
                 <p>Version <span id="version-number" class="version-number">Loading...</span></p>
             </div>
             <div class="download-buttons">
-                <a href="https://printventory.techjeeper.com/WINBETA.exe" class="download-button">
+                <a href="https://printventory.techjeeper.com/WINPUB.exe" class="download-button">
                     <img src="win.png" alt="Windows logo">
-                    Download Beta for Windows
+                    Download Windows
                 </a>
-                <a href="https://printventory.techjeeper.com/MACBETA.dmg" class="download-button">
+                <a href="https://printventory.techjeeper.com/MACPUB.dmg" class="download-button">
                     <img src="mac.png" alt="macOS logo">
-                    Download Beta for MacOS
+                    Download MacOS
                 </a>
             </div>
         </div>
@@ -41,7 +37,7 @@
         </footer>
     </div>
     <script>
-        fetch('beta.version')
+        fetch('public.version')
             .then(response => response.text())
             .then(version => {
                 document.getElementById('version-number').textContent = version.trim();
