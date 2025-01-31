@@ -40,13 +40,16 @@
     </header>
 
     <div class="hero-section">
+      
       <h1>Organize Your 3D Models</h1>
       <p>The ultimate tool for managing your 3D printing collection with ease. Sort, tag, and track your models in one
         place.</p>
     </div>
 
     <div class="features">
+      
       <div class="feature-section">
+        
         <center>
           <h3>File<br>Management</h3>
         </center>
@@ -92,6 +95,31 @@
           <li>Easily remove duplicate files</li>
         </ul>
       </div>
+
+      <div class="feature-section full-width">
+        <center>
+          <h3>See It In Action</h3>
+        </center>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox(1)">
+            <img src="2.png" alt="Screenshot 2" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(2)">
+            <img src="3.png" alt="Screenshot 3" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(0)">
+            <img src="1.png" alt="Screenshot 1" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close-lightbox">&times;</span>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Enlarged screenshot">
+      </div>
     </div>
 
     <div class="download-section">
@@ -117,9 +145,10 @@
     </div>
 
     <div class="social-links">
+      <h2>Support the Project!</h2>
       <p>Support Printventory by using our affiliate links or donating directly!</p>
       <div class="affiliate-links">
-          <a href="http://www.prusa3d.com/#a_aid=Printventory" target="_blank" class="affiliate-link">
+          <a href="https://prusa.com/" target="_blank" class="affiliate-link">
               <img src="prusa.png" alt="Support via Prusa">
           </a>
           <a href="https://us.polymaker.com?aff=1033" target="_blank" class="affiliate-link">
@@ -140,16 +169,18 @@
     </div>
 
     <footer>
-      <p>Join the discussion</p>
+      <h2>Join the discussion</h2>
+    
       <div class="social-media">
-        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank">
-          <img src="discord.svg" alt="Join our Discord" style="height: 30px;">
-        </a>
+   
         <a href="https://bsky.app/profile/printventory.com" target="_blank">
-          <img src="BlueSky.png" alt="Follow us on Bluesky" style="height: 30px;">
+          <img src="BlueSky.png" alt="Follow us on Bluesky" style="height: 60px;">
+        </a>
+        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank">
+          <img src="discord.svg" alt="Join our Discord" style="height: 60px;">
         </a>
         <a href="https://x.com/printventory" target="_blank">
-          <img src="X.png" alt="Follow us on X" style="height: 30px;">
+          <img src="X.png" alt="Follow us on X" style="height: 60px;">
         </a>
       </div>
     </footer>
@@ -178,6 +209,30 @@
 
     // Initialize carousel
     carousel();
+
+    // Lightbox functionality
+    function openLightbox(index) {
+      const images = ['1.png', '2.png', '3.png'];
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = images[index];
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
   </script>
 </body>
 
