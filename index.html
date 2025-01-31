@@ -93,12 +93,12 @@
       </div>
       <div class="download-buttons">
         <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button"
-          onclick="ga('send', 'event', 'Download', 'Windows', 'Printventory');">
+          onclick="gtag('send', 'event', 'Download', 'Windows', 'Printventory'); return false;">
           <img src="win.png" alt="Windows logo">
           Download Windows
         </a>
         <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button"
-          onclick="ga('send', 'event', 'Download', 'MacOS', 'Printventory');">
+          onclick="gtag('send', 'event', 'Download', 'MacOS', 'Printventory'); return false;">
           <img src="mac.png" alt="macOS logo">
           Download MacOS
         </a>
@@ -150,7 +150,7 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer ||;
 
     function gtag() {
       dataLayer.push(arguments);
