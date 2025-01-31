@@ -101,13 +101,11 @@
         <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
       </div>
       <div class="download-buttons">
-        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button"
-           onclick="gtag('event', 'Download', {'event_category': 'Windows', 'event_label': 'Printventory'});">
+        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button" id="windows-download">
           <img src="win.png" alt="Windows logo">
           Download Windows
         </a>
-        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button"
-           onclick="gtag('event', 'Download', {'event_category': 'MacOS', 'event_label': 'Printventory'});">
+        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button" id="macos-download">
           <img src="mac.png" alt="macOS logo">
           Download MacOS
         </a>
@@ -157,8 +155,6 @@
     </footer>
   </div>
 
-  
-
   <script>
     function carousel() {
         const slides = document.querySelectorAll('.carousel-slide');
@@ -174,12 +170,22 @@
             showSlide(currentSlide);
         }
 
-        // Change slide every 5 seconds
         setInterval(nextSlide, 5000);
     }
 
-    // Initialize carousel
     carousel();
+
+    const windowsDownload = document.getElementById('windows-download');
+    const macosDownload = document.getElementById('macos-download');
+
+    windowsDownload.addEventListener('click', function() {
+      gtag('event', 'Download', {'event_category': 'Windows', 'event_label': 'Printventory'});
+    });
+
+    macosDownload.addEventListener('click', function() {
+      gtag('event', 'Download', {'event_category': 'MacOS', 'event_label': 'Printventory'});
+    });
+
   </script>
 </body>
 
