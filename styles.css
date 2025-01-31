@@ -72,6 +72,21 @@ h1 {
 
 .warning-box {
     background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    text-align: center;
+}
+
+.warning-box a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.warning-box a:hover {
+    text-decoration: underline;
     border: 1px solid rgba(255, 215, 0, 0.2);
     color: #ffd700;
     padding: 20px;
