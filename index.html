@@ -94,12 +94,6 @@
       </div>
     </div>
 
-    <div class="image-gallery">
-      <img src="1.png" alt="Screenshot 1" class="gallery-image">
-      <img src="2.png" alt="Screenshot 2" class="gallery-image">
-      <img src="3.png" alt="Screenshot 3" class="gallery-image">
-    </div>
-
     <div class="download-section">
       <h2>Get Started Today</h2>
       <div class="warning-box">
@@ -107,11 +101,13 @@
         <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
       </div>
       <div class="download-buttons">
-        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button" id="windows-download">
+        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button"
+          onclick="gtag('send', 'event', 'Download', 'Windows', 'Printventory'); return false;">
           <img src="win.png" alt="Windows logo">
           Download Windows
         </a>
-        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button" id="macos-download">
+        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button"
+          onclick="gtag('send', 'event', 'Download', 'MacOS', 'Printventory'); return false;">
           <img src="mac.png" alt="macOS logo">
           Download MacOS
         </a>
@@ -161,6 +157,8 @@
     </footer>
   </div>
 
+  
+
   <script>
     function carousel() {
         const slides = document.querySelectorAll('.carousel-slide');
@@ -176,22 +174,12 @@
             showSlide(currentSlide);
         }
 
+        // Change slide every 5 seconds
         setInterval(nextSlide, 5000);
     }
 
+    // Initialize carousel
     carousel();
-
-    const windowsDownload = document.getElementById('windows-download');
-    const macosDownload = document.getElementById('macos-download');
-
-    windowsDownload.addEventListener('click', function() {
-      gtag('event', 'Download', {'event_category': 'Windows', 'event_label': 'Printventory'});
-    });
-
-    macosDownload.addEventListener('click', function() {
-      gtag('event', 'Download', {'event_category': 'MacOS', 'event_label': 'Printventory'});
-    });
-
   </script>
 </body>
 
