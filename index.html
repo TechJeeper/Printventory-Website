@@ -129,33 +129,15 @@
         <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
       </div>
       <div class="download-buttons">
-        <a href="https://printventory.techjeeper.com/" id="win-download" class="download-button">
+        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button">
           <img src="win.png" alt="Windows logo">
           Download Windows
         </a>
-        <a href="https://printventory.techjeeper.com/" id="mac-download" class="download-button">
+        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button">
           <img src="mac.png" alt="macOS logo">
           Download MacOS
         </a>
       </div>
-      <script>
-        async function fetchDownloadLinks() {
-          try {
-            const winResponse = await fetch('win.pub');
-            const macResponse = await fetch('mac.pub');
-            if (!winResponse.ok || !macResponse.ok) throw new Error('Failed to fetch download links');
-            
-            const winFilename = await winResponse.text();
-            const macFilename = await macResponse.text();
-            
-            document.getElementById('win-download').href = `https://printventory.techjeeper.com/${winFilename.trim()}`;
-            document.getElementById('mac-download').href = `https://printventory.techjeeper.com/${macFilename.trim()}`;
-          } catch (error) {
-            console.error('Error fetching download links:', error);
-          }
-        }
-        fetchDownloadLinks();
-      </script>
       <div class="warning">
         <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security & Privacy
         panel of System Preferences.
@@ -182,9 +164,6 @@
       <p class="support-text">Or support us directly:</p>
       <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank">
         <img src="donate.png" alt="Support Printventory">
-      </a>
-      <a href="https://www.buymeacoffee.com/printventory" target="_blank" style="display: block; margin-top: 10px;">
-        <img src="coffee.png" alt="Buy me a Coffee">
       </a>
 
     </div>
