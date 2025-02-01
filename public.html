@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KJ2X0SQYQV');
-</script>
-  
-
 <body>
     <div class="container">
-
+        <header>
+            <img src="logo.png" alt="Printventory Logo" class="logo">
+        </header>
         <h1>Download Printventory</h1>
         <div class="download-section">
             <div class="version-info" id="version-info">
@@ -32,52 +23,44 @@
                 <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
             </div>
             <div class="download-buttons">
-                <a href="https://printventory.techjeeper.com/" id="win-download" class="download-button">
+                <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button">
                     <img src="win.png" alt="Windows logo">
                     Download Windows
                 </a>
-                <a href="https://printventory.techjeeper.com/" id="mac-download" class="download-button">
+                <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button">
                     <img src="mac.png" alt="macOS logo">
                     Download MacOS
                 </a>
             </div>
-            <script>
-                async function fetchDownloadLinks() {
-                    try {
-                        const winResponse = await fetch('win.pub');
-                        const macResponse = await fetch('mac.pub');
-                        if (!winResponse.ok || !macResponse.ok) throw new Error('Failed to fetch download links');
-                        
-                        const winFilename = await winResponse.text();
-                        const macFilename = await macResponse.text();
-                        
-                        document.getElementById('win-download').href = `https://printventory.techjeeper.com/${winFilename.trim()}`;
-                        document.getElementById('mac-download').href = `https://printventory.techjeeper.com/${macFilename.trim()}`;
-                    } catch (error) {
-                        console.error('Error fetching download links:', error);
-                    }
-                }
-                fetchDownloadLinks();
-            </script>
         </div>
         <footer>
+            <p>Join the discussion</p>
+            <a href="https://discord.com/invite/JXcZHT77ua" target="_blank">
+                <img src="discord.svg" alt="Join our Discord" style="height: 30px;">
+            </a>
         </footer>
     </div>
     <script>
-        async function fetchVersion() {
-            try {
-                const response = await fetch('public.version');
-                if (!response.ok) throw new Error('Failed to fetch version');
-                const version = await response.text();
-                document.getElementById('version-number').textContent = version.trim() || 'Version information unavailable';
-            } catch (error) {
-                console.error('Error fetching version:', error);
+        fetch('public.version')
+            .then(response => response.text())
+            .then(version => {
+                document.getElementById('version-number').textContent = version.trim();
+            })
+            .catch(error => {
                 document.getElementById('version-number').textContent = 'Version information unavailable';
-            }
-        }
-        fetchVersion();
+                console.error('Error fetching version:', error);
+            });
     </script>
 
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-KJ2X0SQYQV');
+    </script>
 </body>
 </html>
