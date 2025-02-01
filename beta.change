@@ -1,21 +1,19 @@
-Changelog
+## [Version 6.1] - 2024
 
-[Version 6.1] 2024
+### Added
+- Project support functionality
+- File type filtering capability
+- Parent Directory view in grid with filtering options
+- Multi-selection support for file operations
 
-Added
-Project support functionality
-File type filtering capability
-Parent Directory view in grid with filtering options
-Multi-selection support for file operations
+### Enhanced
+- Improved search functionality with debounce implementation
+- System directories handling with skip functionality
 
-Enhanced
-Improved search functionality with debounce implementation
-System directories handling with skip functionality
+### New Features
+- Right-click move operation for models
+- Multi-edit capabilities for move and delete operations
 
-New Features
-Right-click move operation for models
-Multi-edit capabilities for move and delete operations
-
-Technical Improvements
-Implemented system directory exclusion
-Enhanced grid view with parent directory navigation
+### Technical Improvements
+- Implemented system directory exclusion
+- Enhanced grid view with parent directory navigation
