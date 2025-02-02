@@ -1,10 +1,9 @@
-## [Version 6.1] - 2024
-
 ### Added
 - Project support functionality
 - File type filtering capability
 - Parent Directory view in grid with filtering options
 - Multi-selection support for file operations
+- Right click open directory operation
 
 ### Enhanced
 - Improved search functionality with debounce implementation
