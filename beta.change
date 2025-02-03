@@ -1,18 +1,7 @@
-### Added
-- Project support functionality
-- File type filtering capability
-- Parent Directory view in grid with filtering options
-- Multi-selection support for file operations
-- Right click open directory operation
+Ignore system directories during scan
 
-### Enhanced
-- Improved search functionality with debounce implementation
-- System directories handling with skip functionality
+Added directory to thumbnail
 
-### New Features
-- Right-click move operation for models
-- Multi-edit capabilities for move and delete operations
+Added click to filter directory
 
-### Technical Improvements
-- Implemented system directory exclusion
-- Enhanced grid view with parent directory navigation
+Fixed search inconsistencies
