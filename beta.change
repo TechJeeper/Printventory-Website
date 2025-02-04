@@ -1,11 +1,13 @@
-Ignore system directories during scan
+Added loading screen while the library loads
 
-Added directory to thumbnail
+Additional skip directories and continue on EPERM errors
 
-Added click to filter directory
+Added right click open directory
 
-Fixed search inconsistencies
+Ability to filter "none"
 
-Add move to right click menu
+Moved Delete and Cancel buttons on De-Dup to top
 
-Multi select move and delete
+Added buttons for De-Dup, Print Roulette and Tag Manager
+
+Fixed CurrentVersion update
