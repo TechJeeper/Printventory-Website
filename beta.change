@@ -1,13 +1,5 @@
-Added loading screen while the library loads
+Fixed website link in about
 
-Additional skip directories and continue on EPERM errors
+Fixed search uppercase issue
 
-Added right click open directory
-
-Ability to filter "none"
-
-Moved Delete and Cancel buttons on De-Dup to top
-
-Added buttons for De-Dup, Print Roulette and Tag Manager
-
-Fixed CurrentVersion update
+Fixed search to include all fields
