@@ -1,7 +1,5 @@
-Added loading screen sequence
+Ignore __MACOSX directories
 
-Fixed website link in about
+Added continue button to loading screen
 
-Fixed search uppercase issue
-
-Fixed search to include all fields
+Fixed multi-edit delete and move
