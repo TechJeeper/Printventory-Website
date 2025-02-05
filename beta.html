@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KJ2X0SQYQV');
+</script>
 <body>
     <div class="container">
         <header>
@@ -23,11 +31,11 @@
                 <p>Version <span id="version-number" class="version-number">Loading...</span></p>
             </div>
             <div class="download-buttons">
-                <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.3.exe" class="download-button">
+                <a href="#" id="download-win" class="download-button">
                     <img src="win.png" alt="Windows logo">
                     Download Beta for Windows
                 </a>
-                <a href="https://printventory.techjeeper.com/printventory-0.6.3.dmg" class="download-button">
+                <a href="#" id="download-mac" class="download-button">
                     <img src="mac.png" alt="macOS logo">
                     Download Beta for MacOS
                 </a>
@@ -70,16 +78,27 @@
                 console.error('Error fetching changelog:', error);
             });
     </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-KJ2X0SQYQV');
+        // Dynamically update download links for beta release.
+        fetch('win.beta')
+            .then(response => response.text())
+            .then(url => {
+                document.getElementById('download-win').href = url.trim();
+            })
+            .catch(error => {
+                console.error('Error fetching Windows beta download URL:', error);
+            });
+
+        fetch('mac.beta')
+            .then(response => response.text())
+            .then(url => {
+                document.getElementById('download-mac').href = url.trim();
+            })
+            .catch(error => {
+                console.error('Error fetching Mac beta download URL:', error);
+            });
     </script>
+
+
 </body>
 </html>

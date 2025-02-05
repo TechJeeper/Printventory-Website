@@ -115,6 +115,9 @@
             <img src="1.png" alt="Screenshot 1" loading="lazy">
           </div>
         </div>
+        <div class="youtube-video" style="margin-top: 20px; text-align: center;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pV3kNr3YDMI?si=g6U3OnF6cgbFRyd4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
@@ -133,13 +136,13 @@
         <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
       </div>
       <div class="download-buttons">
-        <a href="https://printventory.techjeeper.com/Printventory-Setup-0.6.0.exe" class="download-button">
+        <a href="#" id="download-win" class="download-button">
           <img src="win.png" alt="Windows logo">
-          Download Windows
+          Download for Windows
         </a>
-        <a href="https://printventory.techjeeper.com/printventory-0.6.0.dmg" class="download-button">
+        <a href="#" id="download-mac" class="download-button">
           <img src="mac.png" alt="macOS logo">
-          Download MacOS
+          Download for MacOS
         </a>
       </div>
       <div class="warning">
@@ -242,6 +245,29 @@
       }
     });
   </script>
+  <script>
+    // Dynamically update download links for public release on index.html.
+    fetch('win.pub')
+        .then(response => response.text())
+        .then(url => {
+            document.getElementById('download-win').href = url.trim();
+        })
+        .catch(error => {
+            console.error('Error fetching Windows public download URL:', error);
+        });
+
+    fetch('mac.pub')
+        .then(response => response.text())
+        .then(url => {
+            document.getElementById('download-mac').href = url.trim();
+        })
+        .catch(error => {
+            console.error('Error fetching Mac public download URL:', error);
+        });
+  </script>
+    <div class="footer-copywrite" style="text-align: center; font-size: 0.8em; margin: 20px 0;">
+      &copy; TechJeeper Designs
+    </div>
 </body>
 
 </html>
