@@ -559,3 +559,28 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Donation buttons styling */
+.donate-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.donate-button {
+    width: 200px;
+    height: 50px;
+    background: #ffd700; /* Gold color */
+    color: #000; /* Black text */
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.donate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
