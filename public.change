@@ -1,0 +1,25 @@
+Optimized Search function
+
+Right-Click Open Directory added
+
+Right-Click Move feature
+
+Multi-Model Search & Delete added
+
+Added buttons for De-Dup, Tag Manager and Print Roulette
+
+Grid loading optimization
+
+Added a loading screen
+
+Added “STL Home” option to automatically scan for changes on start
+
+Added “Performance” option to set max file size
+
+Skip system directories on scan
+
+Added ability to filter all models in a directory
+
+Redesigned De-Dup UI
+  
+Ability to filter by “None”
