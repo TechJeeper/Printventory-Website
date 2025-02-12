@@ -1,11 +1,9 @@
-Standard search dialog
+Tuned search
 
-Search and Filter now combine
+Fixed parent directory filter
 
-Added Settings - Slicer Path (Settings > Slicer Path)
+Fixed persistence console errors
 
-Added Open in Slicer to Right Click
+Added predfined configs for AI Config
 
-Quick Start Guide
-
-Added AI Tagging (Setting > AI Config)
+Fixed copy/paste/cut
