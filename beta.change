@@ -1,9 +1,7 @@
-Tuned search
+Furtther tuned search
 
-Fixed parent directory filter
+Fixed filtering
 
-Fixed persistence console errors
+Force garbage collection during render
 
-Added predfined configs for AI Config
-
-Fixed copy/paste/cut
+Optimized thumbnail creation
