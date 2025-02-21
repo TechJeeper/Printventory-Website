@@ -1,7 +1,5 @@
-More search tuning
+Memory optimization
 
-Fixed filtering
+Fixed designer filter
 
-Force garbage collection during render
-
-Optimized thumbnail creation
+Fixed AI Config test
