@@ -1,1 +1,3 @@
-Fixed Thumbnail Generation on Load
+Fixed filter clearing on multi edit
+
+Added clear selected
