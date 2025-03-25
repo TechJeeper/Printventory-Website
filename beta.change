@@ -3,3 +3,5 @@ Fixed 100 Select All In Multi-Edit
 Fixed Grid Refresh On Remove/Delete/Move
 
 Fixed AIConfig Panel Field Persistence
+
+MacOS Universal Package (Intel/Apple Silicon Support)
