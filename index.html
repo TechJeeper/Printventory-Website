@@ -299,7 +299,7 @@
             return;
           }
           
-          // Create two copies of the content for seamless looping
+          // Create the content spans
           const content = supporters.map(supporter => {
             const span = document.createElement('span');
             span.textContent = supporter;
@@ -307,8 +307,11 @@
             return span;
           });
           
-          // Add both copies to the list
+          // Add the content twice to create seamless scrolling
           content.forEach(span => supportersList.appendChild(span));
+          content.forEach(span => supportersList.appendChild(span.cloneNode(true)));
+          
+          // Add a third copy to ensure smooth transition
           content.forEach(span => supportersList.appendChild(span.cloneNode(true)));
         })
         .catch(error => {
