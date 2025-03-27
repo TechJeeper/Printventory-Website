@@ -276,7 +276,7 @@
 
     <div class="supporters-bar">
       <div class="supporters-container">
-        <span class="supporters-title">Thank You Patreon Supporters:</span>
+        <span class="supporters-title">Thank you Patreon Supporters:</span>
         <div class="supporters-list" id="supporters-list"></div>
       </div>
     </div>
@@ -299,12 +299,17 @@
             return;
           }
           
-          supporters.forEach(supporter => {
+          // Create two copies of the content for seamless looping
+          const content = supporters.map(supporter => {
             const span = document.createElement('span');
             span.textContent = supporter;
             span.style.padding = '0 10px';
-            supportersList.appendChild(span);
+            return span;
           });
+          
+          // Add both copies to the list
+          content.forEach(span => supportersList.appendChild(span));
+          content.forEach(span => supportersList.appendChild(span.cloneNode(true)));
         })
         .catch(error => {
           console.error('Error loading supporters:', error);
