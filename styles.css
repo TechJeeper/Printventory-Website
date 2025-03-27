@@ -587,3 +587,42 @@ footer a:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+.supporters-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.supporters-container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll 60s linear infinite;
+}
+
+.supporters-title {
+    font-weight: bold;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+.supporters-list {
+    display: inline-flex;
+    gap: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

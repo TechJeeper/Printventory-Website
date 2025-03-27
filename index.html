@@ -273,6 +273,48 @@
     <div class="footer-copywrite" style="text-align: center; font-size: 0.8em; margin: 20px 0;">
       &copy; TechJeeper Designs
     </div>
+
+    <div class="supporters-bar">
+      <div class="supporters-container">
+        <span class="supporters-title">Thank you Patreon Supporters:</span>
+        <div class="supporters-list" id="supporters-list"></div>
+      </div>
+    </div>
+
+    <script>
+      // Load and display supporters
+      fetch('supporters.list')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(text => {
+          const supporters = text.split('\n').filter(name => name.trim());
+          const supportersList = document.getElementById('supporters-list');
+          
+          if (supporters.length === 0) {
+            console.error('No supporters found in the file');
+            return;
+          }
+          
+          // Duplicate supporters to create seamless scrolling
+          const duplicatedSupporters = [...supporters, ...supporters];
+          
+          duplicatedSupporters.forEach(supporter => {
+            const span = document.createElement('span');
+            span.textContent = supporter;
+            span.style.padding = '0 10px';
+            supportersList.appendChild(span);
+          });
+        })
+        .catch(error => {
+          console.error('Error loading supporters:', error);
+          const supportersList = document.getElementById('supporters-list');
+          supportersList.innerHTML = '<span style="color: #ff0000;">Error loading supporters</span>';
+        });
+    </script>
 </body>
 
 </html>
