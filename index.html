@@ -299,10 +299,7 @@
             return;
           }
           
-          // Duplicate supporters to create seamless scrolling
-          const duplicatedSupporters = [...supporters, ...supporters];
-          
-          duplicatedSupporters.forEach(supporter => {
+          supporters.forEach(supporter => {
             const span = document.createElement('span');
             span.textContent = supporter;
             span.style.padding = '0 10px';
