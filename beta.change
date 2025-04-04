@@ -1,7 +1,3 @@
-Fixed 100 Select All In Multi-Edit
-
-Fixed Grid Refresh On Remove/Delete/Move
-
-Fixed AIConfig Panel Field Persistence
-
-MacOS Universal Package (Intel/Apple Silicon Support)
+Fixed Directory Multi-Edit Select All
+Tuned Search/Filter
+Fixed De-Dup (Scan was not generating file hash) 
