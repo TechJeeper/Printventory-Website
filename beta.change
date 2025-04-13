@@ -1,2 +1,1 @@
-Fixed Multi-Select Not Clearing Selected
-Fixed AI Tagging Test
+Fixed De-Dup by adding File Hash check
