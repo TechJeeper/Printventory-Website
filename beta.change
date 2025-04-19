@@ -1,4 +1,1 @@
-Fixed failed thumbnail generation when path includes special characters
-Added "Generate Missing Thumbnails" to Tools menu
-Refresh Tag List on AI Generate
-Furthher Tuned Filtering to Prevet Duplicate "Fake" Models
+Fixed critical issue with Windows 0.9.8 build
