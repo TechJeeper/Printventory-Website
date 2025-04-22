@@ -1,5 +1,3 @@
-Dropdown Values in Multi-Edit
+Fixed issues adding tags after exiting multi-edit mode
 
-"Geneating Tags" dialog stuck
-
-Multi-Edit Tags Issue
+Fixed the "Clear Selected" button
