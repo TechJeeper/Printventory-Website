@@ -1,25 +1,16 @@
-Optimized Search function
+AI Tagging
 
-Right-Click Open Directory added
+Multiple Slicer Support
 
-Right-Click Move feature
+Ability to Remove From Library
 
-Multi-Model Search & Delete added
+Redesigned DeDup UI
 
-Added buttons for De-Dup, Tag Manager and Print Roulette
+MacOS Universal Package
 
-Grid loading optimization
+Basic Usage Tracking (Disable in About)
 
-Added a loading screen
+Search and Filter Optimization
 
-Added “STL Home” option to automatically scan for changes on start
+Bug Fixes and Performance Improvements
 
-Added “Performance” option to set max file size
-
-Skip system directories on scan
-
-Added ability to filter all models in a directory
-
-Redesigned De-Dup UI
-  
-Ability to filter by “None”
