@@ -1,2 +1,3 @@
-Added Zip Support - Enable through Settings > File Types
-Fixed a bunch of stuff that broke durring the rafactor
+Improved Scan Performance
+Fixed Stop Scan function
+Fixed File Types Settings UI
