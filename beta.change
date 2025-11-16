@@ -1,3 +1,2 @@
-Improved Scan Performance
-Fixed Stop Scan function
-Fixed File Types Settings UI
+Added Zip Support (Enable under File Types menu)
+Updated Package Versions (Electron, Three, sqllite)
