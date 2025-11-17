@@ -1,2 +1,8 @@
+1.7.0
+Fixed Zip Pathing
+Fixed DB Backup Versioning
+Fixed File Type Filter
+
+1.6.0
 Added Zip Support (Enable under File Types menu)
 Updated Package Versions (Electron, Three, sqllite)
