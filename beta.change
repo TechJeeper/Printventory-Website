@@ -1,4 +1,4 @@
-1.21.4
+1.22.0
 - Three new views - Detailed, Preview, List
 - Ctrl/Cmd+Click to Multi Select
 - Ctrl/Cmd+A to Select All
@@ -7,3 +7,5 @@
 - Right Click > Add Image
 - Metadata Editor in Tools
 - New Model Detection on Scan
+- Added new AI Tagging UI
+- Added Puter.com Support for AI
