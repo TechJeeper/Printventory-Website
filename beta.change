@@ -1,11 +1,12 @@
-1.22.5
-- Three new views - Detailed, Preview, List
-- Ctrl/Cmd+Click to Multi Select
-- Ctrl/Cmd+A to Select All
-- Zip Support (Enable in Settings > File Types)
-- Multi-Image Support
-- Right Click > Add Image
-- Metadata Editor in Tools
-- New Model Detection on Scan
-- Added new AI Tagging UI
-- Added Puter.com Support for AI
+1.25.1 
+Fixed DeDup Has Loop
+Fixed Linux Build
+Added right click Metadata for 3mf
+
+1.25.0
+Docker/Server Mode Right Click Download
+Auto detect metadata from 3mf files on scan
+Theme UI tweaks
+
+1.24.0
+-New customizable theme
