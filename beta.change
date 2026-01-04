@@ -1,3 +1,7 @@
+1.27.0
+Bug Fixes
+Added List button next to dropdowns to enable search
+
 1.26.2
 Fixed Thumbnail Generation Loop
 Fixed UI for Slicer Config
