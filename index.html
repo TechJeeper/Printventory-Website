@@ -147,6 +147,10 @@
           <img src="mac.png" alt="macOS logo">
           Download for MacOS
         </a>
+        <a href="#" id="download-linux" class="download-button">
+          <img src="linux.svg" alt="Linux logo" width="30" height="30">
+          Download for Linux
+        </a>
       </div>
       <div class="warning">
         <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security & Privacy
@@ -259,23 +263,28 @@
   </script>
   <script>
     // Dynamically update download links for public release on index.html.
-    fetch('win.pub')
-        .then(response => response.text())
-        .then(url => {
-            document.getElementById('download-win').href = url.trim();
-        })
-        .catch(error => {
-            console.error('Error fetching Windows public download URL:', error);
-        });
+    async function updateLinks() {
+        try {
+            const versionResponse = await fetch('public.version');
+            const version = (await versionResponse.text()).trim();
 
-    fetch('mac.pub')
-        .then(response => response.text())
-        .then(url => {
-            document.getElementById('download-mac').href = url.trim();
-        })
-        .catch(error => {
-            console.error('Error fetching Mac public download URL:', error);
-        });
+            const platforms = ['win', 'mac', 'linux'];
+            await Promise.all(platforms.map(async (platform) => {
+                try {
+                    const urlResponse = await fetch(`${platform}.pub`);
+                    let url = (await urlResponse.text()).trim();
+                    url = url.replace('{public.version}', version);
+                    const element = document.getElementById(`download-${platform}`);
+                    if (element) element.href = url;
+                } catch (e) {
+                    console.error(`Error updating ${platform} link:`, e);
+                }
+            }));
+        } catch (e) {
+            console.error('Error fetching version:', e);
+        }
+    }
+    updateLinks();
   </script>
     <div class="footer-copywrite" style="text-align: center; font-size: 0.8em; margin: 20px 0;">
       &copy; TechJeeper Designs

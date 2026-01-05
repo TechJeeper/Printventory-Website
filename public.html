@@ -33,6 +33,10 @@
                     <img src="mac.png" alt="macOS logo">
                     Download for MacOS
                 </a>
+                <a href="#" id="download-linux" class="download-button">
+                    <img src="linux.svg" alt="Linux logo" width="30" height="30">
+                    Download for Linux
+                </a>
             </div>
             <div class="changelog-section">
                 <h2>Latest Changes</h2>
@@ -55,47 +59,44 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        fetch('public.version')
-            .then(response => response.text())
-            .then(version => {
-                document.getElementById('version-number').textContent = version.trim();
-            })
-            .catch(error => {
+        async function loadContent() {
+            try {
+                // Fetch version
+                const versionResponse = await fetch('public.version');
+                const version = (await versionResponse.text()).trim();
+                document.getElementById('version-number').textContent = version;
+
+                // Update download links
+                const platforms = ['win', 'mac', 'linux'];
+                await Promise.all(platforms.map(async (platform) => {
+                    try {
+                        const urlResponse = await fetch(`${platform}.pub`);
+                        let url = (await urlResponse.text()).trim();
+                        url = url.replace('{public.version}', version);
+                        const element = document.getElementById(`download-${platform}`);
+                        if (element) element.href = url;
+                    } catch (e) {
+                        console.error(`Error updating ${platform} link:`, e);
+                    }
+                }));
+            } catch (error) {
                 document.getElementById('version-number').textContent = 'Version information unavailable';
                 console.error('Error fetching version:', error);
-            });
-    </script>
-    <script>
-        fetch('public.change')
-            .then(response => response.text())
-            .then(changelog => {
+            }
+
+            // Fetch changelog
+            try {
+                const changelogResponse = await fetch('public.change');
+                const changelog = await changelogResponse.text();
                 const changelogContent = document.getElementById('changelog-content');
                 changelogContent.innerHTML = marked.parse(changelog);
-            })
-            .catch(error => {
+            } catch (error) {
                 document.getElementById('changelog-content').innerHTML = 'Changelog unavailable';
                 console.error('Error fetching changelog:', error);
-            });
-    </script>
-    <script>
-        // Dynamically update download links for public release.
-        fetch('win.pub')
-            .then(response => response.text())
-            .then(url => {
-                document.getElementById('download-win').href = url.trim();
-            })
-            .catch(error => {
-                console.error('Error fetching Windows public download URL:', error);
-            });
+            }
+        }
 
-        fetch('mac.pub')
-            .then(response => response.text())
-            .then(url => {
-                document.getElementById('download-mac').href = url.trim();
-            })
-            .catch(error => {
-                console.error('Error fetching Mac public download URL:', error);
-            });
+        loadContent();
     </script>
 
 </body>
