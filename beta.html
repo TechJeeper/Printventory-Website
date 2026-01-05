@@ -37,6 +37,10 @@
                     <img src="mac.png" alt="macOS logo">
                     Download Beta for MacOS
                 </a>
+                <a href="#" id="download-linux" class="download-button">
+                    <img src="linux.png" alt="Linux logo" width="30" height="30">
+                    Download Beta for Linux
+                </a>
             </div>
             <div class="changelog-section">
                 <h2>Latest Changes</h2>
@@ -47,6 +51,7 @@
         </div>
         <div class="donate-buttons">
             <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" class="donate-button">PayPal</a>
+            <a href="https://patreon.com/Printventory" target="_blank" class="donate-button">Patreon</a>
             <a href="https://www.buymeacoffee.com/printventory" target="_blank" class="donate-button">Buy Me a Coffee</a>
             <a href="https://printventory-shop.fourthwall.com/" target="_blank" class="donate-button">Merch</a>
         </div>
@@ -59,47 +64,44 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        fetch('beta.version')
-            .then(response => response.text())
-            .then(version => {
-                document.getElementById('version-number').textContent = version.trim();
-            })
-            .catch(error => {
+        async function loadContent() {
+            try {
+                // Fetch version
+                const versionResponse = await fetch('beta.version');
+                const version = (await versionResponse.text()).trim();
+                document.getElementById('version-number').textContent = version;
+
+                // Update download links
+                const platforms = ['win', 'mac', 'linux'];
+                await Promise.all(platforms.map(async (platform) => {
+                    try {
+                        const urlResponse = await fetch(`${platform}.beta`);
+                        let url = (await urlResponse.text()).trim();
+                        url = url.replace('{beta.version}', version);
+                        const element = document.getElementById(`download-${platform}`);
+                        if (element) element.href = url;
+                    } catch (e) {
+                        console.error(`Error updating ${platform} link:`, e);
+                    }
+                }));
+            } catch (error) {
                 document.getElementById('version-number').textContent = 'Version information unavailable';
                 console.error('Error fetching version:', error);
-            });
-    </script>
-    <script>
-        fetch('beta.change')
-            .then(response => response.text())
-            .then(changelog => {
+            }
+
+            // Fetch changelog
+            try {
+                const changelogResponse = await fetch('beta.change');
+                const changelog = await changelogResponse.text();
                 const changelogContent = document.getElementById('changelog-content');
                 changelogContent.innerHTML = marked.parse(changelog);
-            })
-            .catch(error => {
+            } catch (error) {
                 document.getElementById('changelog-content').innerHTML = 'Changelog unavailable';
                 console.error('Error fetching changelog:', error);
-            });
-    </script>
-    <script>
-        // Dynamically update download links for beta release.
-        fetch('win.beta')
-            .then(response => response.text())
-            .then(url => {
-                document.getElementById('download-win').href = url.trim();
-            })
-            .catch(error => {
-                console.error('Error fetching Windows beta download URL:', error);
-            });
+            }
+        }
 
-        fetch('mac.beta')
-            .then(response => response.text())
-            .then(url => {
-                document.getElementById('download-mac').href = url.trim();
-            })
-            .catch(error => {
-                console.error('Error fetching Mac beta download URL:', error);
-            });
+        loadContent();
     </script>
 
 
