@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create the banner structure
     const banner = document.createElement('div');
     banner.className = 'supporters-bar';
-    banner.innerHTML = '<div id="supporter-message" style="opacity: 0; transition: opacity 0.5s ease-in-out;">Loading supporters...</div>';
+    banner.innerHTML = '<div id="supporter-message">Thank you to our Supporters: <span id="supporter-name" style="opacity: 0; transition: opacity 0.5s ease-in-out; color: #00bfff; font-weight: bold;">Loading...</span></div>';
     document.body.appendChild(banner);
 
     // Adjust body padding to prevent overlap
@@ -19,26 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(text => {
             const supporters = text.split('\n').filter(name => name.trim());
             const messageDiv = banner.querySelector('#supporter-message');
+            const nameSpan = banner.querySelector('#supporter-name');
 
             if (supporters.length === 0) {
                 console.error('No supporters found in the file');
-                messageDiv.textContent = '';
+                messageDiv.innerHTML = 'Thank you to our Supporters';
                 return;
             }
 
             let currentIndex = 0;
 
             const updateSupporter = () => {
-                // Fade out
-                messageDiv.style.opacity = '0';
+                // Fade out name
+                nameSpan.style.opacity = '0';
 
                 setTimeout(() => {
                     // Update text
                     const name = supporters[currentIndex];
-                    messageDiv.innerHTML = `Thank you to our Supporters: <span style="color: #00bfff; font-weight: bold;">${name}</span>`;
+                    nameSpan.textContent = name;
 
-                    // Fade in
-                    messageDiv.style.opacity = '1';
+                    // Fade in name
+                    nameSpan.style.opacity = '1';
 
                     // Move to next supporter
                     currentIndex = (currentIndex + 1) % supporters.length;
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error loading supporters:', error);
             const messageDiv = banner.querySelector('#supporter-message');
-            messageDiv.style.opacity = '1';
-            messageDiv.innerHTML = '<span style="color: #ff0000;">Error loading supporters</span>';
+            messageDiv.innerHTML = 'Thank you to our Supporters: <span style="color: #ff0000;">Error loading</span>';
         });
 });
