@@ -296,52 +296,7 @@
     updateLinks();
   </script>
 
-    <div class="supporters-bar">
-      <div class="supporters-container">
-        <span class="supporters-title">Thank You Patreon Supporters:</span>
-        <div class="supporters-list" id="supporters-list"></div>
-      </div>
-    </div>
-
-    <script>
-      // Load and display supporters
-      fetch('supporters.list')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.text();
-        })
-        .then(text => {
-          const supporters = text.split('\n').filter(name => name.trim());
-          const supportersList = document.getElementById('supporters-list');
-          
-          if (supporters.length === 0) {
-            console.error('No supporters found in the file');
-            return;
-          }
-          
-          // Create the content spans
-          const content = supporters.map(supporter => {
-            const span = document.createElement('span');
-            span.textContent = supporter;
-            span.style.padding = '0 10px';
-            return span;
-          });
-          
-          // Add the content twice to create seamless scrolling
-          content.forEach(span => supportersList.appendChild(span));
-          content.forEach(span => supportersList.appendChild(span.cloneNode(true)));
-          
-          // Add a third copy to ensure smooth transition
-          content.forEach(span => supportersList.appendChild(span.cloneNode(true)));
-        })
-        .catch(error => {
-          console.error('Error loading supporters:', error);
-          const supportersList = document.getElementById('supporters-list');
-          supportersList.innerHTML = '<span style="color: #ff0000;">Error loading supporters</span>';
-        });
-    </script>
+    <script src="supporters.js"></script>
 </body>
 
 </html>
