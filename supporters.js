@@ -2,12 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create the banner structure
     const banner = document.createElement('div');
     banner.className = 'supporters-bar';
-    banner.innerHTML = `
-      <div class="supporters-container">
-        <span class="supporters-title">Thank You Patreon Supporters:</span>
-        <div class="supporters-list" id="supporters-list"></div>
-      </div>
-    `;
+    banner.innerHTML = '<div id="supporter-message" style="opacity: 0; transition: opacity 0.5s ease-in-out;">Loading supporters...</div>';
     document.body.appendChild(banner);
 
     // Adjust body padding to prevent overlap
@@ -23,33 +18,43 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(text => {
             const supporters = text.split('\n').filter(name => name.trim());
-            const supportersList = banner.querySelector('#supporters-list');
+            const messageDiv = banner.querySelector('#supporter-message');
 
             if (supporters.length === 0) {
                 console.error('No supporters found in the file');
+                messageDiv.textContent = '';
                 return;
             }
 
-            // Create the content spans
-            const createSpans = () => {
-                return supporters.map(supporter => {
-                    const span = document.createElement('span');
-                    span.textContent = supporter;
-                    span.className = 'supporter-name';
-                    return span;
-                });
+            let currentIndex = 0;
+
+            const updateSupporter = () => {
+                // Fade out
+                messageDiv.style.opacity = '0';
+
+                setTimeout(() => {
+                    // Update text
+                    const name = supporters[currentIndex];
+                    messageDiv.innerHTML = `Thank you to our Supporters: <span style="color: #00bfff; font-weight: bold;">${name}</span>`;
+
+                    // Fade in
+                    messageDiv.style.opacity = '1';
+
+                    // Move to next supporter
+                    currentIndex = (currentIndex + 1) % supporters.length;
+                }, 500); // Wait for fade out (matches transition time)
             };
 
-            // Add the content multiple times to ensure seamless scrolling
-            // Calculate how many copies we need based on screen width vs content width
-            // For simplicity, we'll just add it enough times (e.g., 4 times)
-            for (let i = 0; i < 20; i++) {
-                createSpans().forEach(span => supportersList.appendChild(span));
-            }
+            // Start the cycle
+            updateSupporter();
+
+            // Cycle every 4 seconds (0.5s fade out + 3s visible + 0.5s fade in approximation)
+            setInterval(updateSupporter, 4000);
         })
         .catch(error => {
             console.error('Error loading supporters:', error);
-            const supportersList = banner.querySelector('#supporters-list');
-            supportersList.innerHTML = '<span style="color: #ff0000;">Error loading supporters</span>';
+            const messageDiv = banner.querySelector('#supporter-message');
+            messageDiv.style.opacity = '1';
+            messageDiv.innerHTML = '<span style="color: #ff0000;">Error loading supporters</span>';
         });
 });
