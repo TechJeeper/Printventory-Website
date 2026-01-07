@@ -1,9 +1,9 @@
 1.28.0
-- Fixed printed checkbox
-- Ensure models are cleared when leaving Multi-Edit
-- Fixed version check
-- Redesigned Guide and About Dialog
-- Added auto-scan frequency for Server Mode
+Fixed printed checkbox
+Ensure models are cleared when leaving Multi-Edit
+Fixed version check
+Redesigned Guide and About Dialog
+Added auto-scan frequency for Server Mode
 
 1.27.3
 Remove Tag feature under Multi-Edit
