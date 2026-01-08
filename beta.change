@@ -1,3 +1,6 @@
+1.28.1
+Fixed Crash on Fresh Start
+
 1.28.0
 Fixed printed checkbox
 Ensure models are cleared when leaving Multi-Edit
