@@ -46,7 +46,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -726,6 +726,6 @@ footer a:hover {
     }
 
     .navbar-brand img {
-        height: 30px;
+        height: 40px;
     }
 }
