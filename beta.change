@@ -1,3 +1,13 @@
+1.29.1
+Added JSON Library Import/Export in Backup/Restore
+Added Merge Metadata in Metadata Manager
+
+1.29.0
+Sorted Menus
+Fixed Right Click on Docker Build
+Minor UI tweaks
+Added Stats Menu Item
+
 1.28.2
 Added Clear/Select All to AI Tagging Review
 Tuned AI Tagging Prompt
