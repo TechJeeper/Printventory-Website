@@ -1,16 +1,19 @@
-AI Tagging
+Near-Instant Scanning We have eliminated load times so you can access even the largest libraries immediately.
 
-Multiple Slicer Support
+Native Zip Archive Support You can now inventory, filter, and open models directly inside Zip files without needing to extract them first.
 
-Ability to Remove From Library
+New Views and Themes Customize your interface with Detailed, Preview, and List views, plus a collection of new UI themes.
 
-Redesigned DeDup UI
+3MF Metadata Parsing The system now automatically extracts and populates metadata directly from 3MF files.
 
-MacOS Universal Package
+Metadata Manager A new dedicated tool allows you to centrally manage designers, parent models, and license types.
 
-Basic Usage Tracking (Disable in About)
+Flexible AI Tag Review We have updated the AI tagging workflow to give you more control when reviewing and applying tags.
 
-Search and Filter Optimization
+Custom Images You now have the ability to upload and set your own specific images for any model.
 
-Bug Fixes and Performance Improvements
+Expanded Notes Editor The notes interface has been enlarged to provide a better workspace for documenting model details.
 
+Linux Support (Experimental) We have released an official AppImage for Linux users.
+
+Server and Docker Mode (Experimental) You can now manage models located on network storage using the new Server or Docker configurations.
