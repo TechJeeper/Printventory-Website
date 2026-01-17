@@ -1,3 +1,7 @@
+2.0.1
+Bug Fixes
+
+2.0.0
 Near-Instant Scanning We have eliminated load times so you can access even the largest libraries immediately.
 
 Native Zip Archive Support You can now inventory, filter, and open models directly inside Zip files without needing to extract them first.
