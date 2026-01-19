@@ -1,3 +1,8 @@
+2.0.2
+Fixed Dialog Inputs for Docker
+Added Click Menu (fix for Docker/Server mode)
+Minor UI Fixes
+
 2.0.1
 Fixed Notes field
 Fixed Input fields on Docker/Server Mode
