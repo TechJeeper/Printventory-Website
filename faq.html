@@ -76,7 +76,7 @@
             <h3>What file formats does Printventory support?</h3>
             <ul>
                 <li><strong>STL files</strong> - Full support with thumbnail generation</li>
-                <li><strong>3MF files</strong> - Supported, but some Bambu Studio 3MF files may not render thumbnails due to non-standard formatting</li>
+                <li><strong>3MF files</strong> - fully supported with ability to pull metadata from within 3mf file along with model images</li>
                 <li><strong>ZIP files</strong> - Beta support for searching inside zip archives</li>
                 <li><strong>STEP files</strong> - Planned for future releases</li>
                 <li><strong>G-code files</strong> - Planned for future releases</li>
@@ -409,14 +409,6 @@
 
         <div id="troubleshooting" style="margin-bottom: 40px;">
             <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Troubleshooting</h2>
-
-            <h3>3MF files aren't showing thumbnails</h3>
-            <p><strong>Known issue</strong>: Bambu Studio exports 3MF files that don't follow the standard format.</p>
-            <ul>
-                <li><strong>Workaround</strong>: Right-click > "Change picture" to add your own image</li>
-                <li><strong>Status</strong>: Library developers are aware; no ETA for fix</li>
-                <li><strong>Alternative</strong>: Use STL files when possible</li>
-            </ul>
 
             <h3>Filters/Sort not working (V1.0)</h3>
             <p><strong>Known bug in V1.0</strong>: Changing sort order disables active filters.</p>
