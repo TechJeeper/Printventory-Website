@@ -1,30 +1,136 @@
-Privacy Policy for Printventory Watcher
-Last Updated: January 31, 2026
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Printventory Watcher</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --container-bg: #ffffff;
+            --accent-color: #3498db;
+        }
 
-1. Introduction
-This Privacy Policy explains how TechJeeper ("we," "us," or "our") handles information in relation to the Printventory Watcher Chrome Extension. This extension is designed to help 3D printing enthusiasts monitor their profiles and models across various platforms.
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
 
-2. Data Collection and Use
-No Server-Side Storage: Printventory Watcher does not collect, store, or transmit your personal data to any external servers.
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-Website Data: The extension reads specific data (such as download counts, likes, or notifications) from 3D printing platforms (e.g., MakerWorld, Printables, Thangs) strictly for the purpose of displaying this information to you via the extension interface.
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
 
-Local Storage: All user preferences, login states, and monitored stats are stored locally on your device using the chrome.storage API.
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-size: 1.25rem;
+        }
 
-3. Permissions
-To function as intended, Printventory Watcher requires the following permissions:
+        p {
+            margin-bottom: 15px;
+        }
 
-Storage: To save your configuration and dashboard preferences locally.
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
 
-Host Permissions (e.g., *://*.makerworld.com/*, *://*.printables.com/*): To fetch publicly available or user-specific stats directly from the platforms you choose to monitor.
+        li {
+            margin-bottom: 10px;
+        }
 
-Alarms: To periodically refresh your stats in the background so your dashboard stays up to date.
+        strong {
+            color: var(--primary-color);
+        }
 
-4. Data Sharing
-We do not sell, trade, or share your data with third parties. Because the extension operates locally, we do not have access to your browsing history or account credentials.
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-5. Google Chrome "Limited Use" Compliance
-Printventory Watcher complies with the Google Chrome Web Store User Data Policy, including the Limited Use requirements. We only use permissions and data that are necessary to provide the user-facing features of the extension.
+        a:hover {
+            text-decoration: underline;
+        }
 
-6. Contact
-For support or questions regarding this policy, please visit https://www.printventory.com or contact us via GitHub at TechJeeper.
+        .meta {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Privacy Policy for Printventory Watcher</h1>
+        <span class="meta">Last Updated: January 31, 2026</span>
+
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy explains how TechJeeper ("we," "us," or "our") handles information in relation to the Printventory Watcher Chrome Extension. This extension is designed to help 3D printing enthusiasts monitor their profiles and models across various platforms.</p>
+
+        <h2>2. Data Collection and Use</h2>
+        <ul>
+            <li><strong>No Server-Side Storage:</strong> Printventory Watcher does not collect, store, or transmit your personal data to any external servers.</li>
+            <li><strong>Website Data:</strong> The extension reads specific data (such as download counts, likes, or notifications) from 3D printing platforms (e.g., MakerWorld, Printables, Thangs) strictly for the purpose of displaying this information to you via the extension interface.</li>
+            <li><strong>Local Storage:</strong> All user preferences, login states, and monitored stats are stored locally on your device using the <code>chrome.storage</code> API.</li>
+        </ul>
+
+        <h2>3. Permissions</h2>
+        <p>To function as intended, Printventory Watcher requires the following permissions:</p>
+        <ul>
+            <li><strong>Storage:</strong> To save your configuration and dashboard preferences locally.</li>
+            <li><strong>Host Permissions (e.g., *://*.makerworld.com/*, *://*.printables.com/*):</strong> To fetch publicly available or user-specific stats directly from the platforms you choose to monitor.</li>
+            <li><strong>Alarms:</strong> To periodically refresh your stats in the background so your dashboard stays up to date.</li>
+        </ul>
+
+        <h2>4. Data Sharing</h2>
+        <p>We do not sell, trade, or share your data with third parties. Because the extension operates locally, we do not have access to your browsing history or account credentials.</p>
+
+        <h2>5. Google Chrome "Limited Use" Compliance</h2>
+        <p>Printventory Watcher complies with the Google Chrome Web Store User Data Policy, including the Limited Use requirements. We only use permissions and data that are necessary to provide the user-facing features of the extension.</p>
+
+        <h2>6. Contact</h2>
+        <p>For support or questions regarding this policy, please visit <a href="https://www.printventory.com">https://www.printventory.com</a> or contact us via GitHub at TechJeeper.</p>
+
+        <footer>
+            &copy; 2026 TechJeeper. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
