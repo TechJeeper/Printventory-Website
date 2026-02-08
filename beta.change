@@ -1,3 +1,7 @@
+2.0.11
+Fixed Parent Directory Filter
+Fixed STL Home Directory Parsing 
+
 2.0.10
 Performance and Bug Fixes
 
@@ -14,88 +18,3 @@ Docker/Server Mode Fixes
 
 2.0.6
 Docker/Server Mode Fixes
-
-2.0.5
-Docker/Server Mode Fixes
-Modified how Zipped Models are Handled in DeDup
-
-2.0.4
-Fixed 3mf Preview
-
-2.0.3
-Model Preview
-Minior UI Fixes
-
-2.0.2
-Fixed Dialog Inputs for Docker
-Added Click Menu (fix for Docker/Server mode)
-Model Color and Lighting in Theme
-Minor UI Fixes
-
-2.0.1
-Fixed Notes field
-Fixed Input fields on Docker/Server Mode
-Fixed Right Click context on Docker/Server mode
-
-2.0.0
-Public Release Testing
-
-1.29.1
-Added JSON Library Import/Export in Backup/Restore
-Added Merge Metadata in Metadata Manager
-
-1.29.0
-Sorted Menus
-Fixed Right Click on Docker Build
-Minor UI tweaks
-Added Stats Menu Item
-
-1.28.2
-Added Clear/Select All to AI Tagging Review
-Tuned AI Tagging Prompt
-
-1.28.1
-Fixed Crash on Fresh Start
-
-1.28.0
-Fixed printed checkbox
-Ensure models are cleared when leaving Multi-Edit
-Fixed version check
-Redesigned Guide and About Dialog
-Added auto-scan frequency for Server Mode
-
-1.27.3
-Remove Tag feature under Multi-Edit
-Multi-select clear tag list when select changed
-UI Tweaks
-
-1.27.2
-Bug fixes
-Fixed UI Styling for Sidebar
-
-1.27.0
-Bug Fixes
-Added List button next to dropdowns to enable search
-
-1.26.2
-Fixed Thumbnail Generation Loop
-Fixed UI for Slicer Config
-Fixed metadata editor search and UI
-
-1.26.0
-Fixed Notes field and added Notes dialog box
-Added pattern to background 
-Fixed List thumbnail placement 
-
-1.25.1 
-Fixed DeDup Has Loop
-Fixed Linux Build
-Added right click Metadata for 3mf
-
-1.25.0
-Docker/Server Mode Right Click Download
-Auto detect metadata from 3mf files on scan
-Theme UI tweaks
-
-1.24.0
--New customizable theme
