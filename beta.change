@@ -1,3 +1,6 @@
+2.0.17
+Fixed hang on render
+
 2.0.16
 Fixed issue with thumbnail memory cache
 
