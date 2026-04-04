@@ -1,3 +1,8 @@
+2.0.21
+Fixes flickering on load
+Fixed tagging
+Added Auxilery directory for 3mf thumbnails
+
 2.0.19
 Fixed lazy loading of grid to improve performance
 
