@@ -1,3 +1,8 @@
+2.0.23
+Improved initial scanning performance (Gather Files)
+Fixed Performance Menu Item
+Fixed issue with refresh after deleting a file
+
 2.0.21
 Fixes flickering on load
 Fixed tagging
