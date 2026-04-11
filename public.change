@@ -1,23 +1,40 @@
-2.0.1
-Bug Fixes
+Printventory 2.1 Changelog
+✨ New Features & UI Additions
 
-2.0.0
-Near-Instant Scanning We have eliminated load times so you can access even the largest libraries immediately.
+Model Previews: Added fully featured model previews, including dedicated support for 3MF files.
 
-Native Zip Archive Support You can now inventory, filter, and open models directly inside Zip files without needing to extract them first.
+Theme Customization: You can now customize Model Color and Lighting directly within your Theme settings.
 
-New Views and Themes Customize your interface with Detailed, Preview, and List views, plus a collection of new UI themes.
+Expanded Modals: Added a Full Screen toggle for the DeDup and Tagging modals to give you more workspace.
 
-3MF Metadata Parsing The system now automatically extracts and populates metadata directly from 3MF files.
+List View Sorting: Added a sortable header to the List View for easier file management.
 
-Metadata Manager A new dedicated tool allows you to centrally manage designers, parent models, and license types.
+Click Menu: Introduced a new click menu system (greatly improving usability, especially in Docker/Server modes).
 
-Flexible AI Tag Review We have updated the AI tagging workflow to give you more control when reviewing and applying tags.
+🚀 Performance Improvements
 
-Custom Images You now have the ability to upload and set your own specific images for any model.
+Faster Scanning: Greatly improved initial scanning performance during the "Gather Files" phase.
 
-Expanded Notes Editor The notes interface has been enlarged to provide a better workspace for documenting model details.
+Optimized Grid Rendering: Implemented lazy loading for the grid view, significantly smoothing out scrolling and overall performance.
 
-Linux Support (Experimental) We have released an official AppImage for Linux users.
+Memory Management: Resolved an issue with the thumbnail memory cache to keep the application running efficiently.
 
-Server and Docker Mode (Experimental) You can now manage models located on network storage using the new Server or Docker configurations.
+🐳 Docker & Server Mode Enhancements
+
+UI/Input Fixes: Resolved numerous issues with dialog inputs, notes fields, and right-click context menus specific to Docker/Server environments.
+
+Background Tasks: Fixed Docker hash background generation to ensure smooth operation.
+
+🛠️ General Improvements & Bug Fixes
+
+DeDup Handling: Improved how zipped models are handled and processed within the DeDup tool.
+
+File Management: Unselecting a file type will now successfully purge those models from the view.
+
+Filtering & Parsing: Fixed issues with the Parent Directory filter, STL Home Directory parsing, and filtering selected files.
+
+Stability: Fixed a critical bug that caused the application to hang during rendering.
+
+UI Sync: Fixed an issue where the UI would not properly refresh after deleting a file.
+
+General Polish: Various minor UI tweaks, Performance Menu fixes, and under-the-hood bug fixes for a more stable release.
