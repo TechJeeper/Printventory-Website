@@ -1,58 +1,7 @@
-2.0.24
-Fixed selected file when filtering
-Prep for 2.1 Public
-
-2.0.23
-Improved initial scanning performance (Gather Files)
-Fixed Performance Menu Item
-Fixed issue with refresh after deleting a file
-
-2.0.21
-Fixes flickering on load
-Fixed tagging
-Added Auxiliary directory for 3mf thumbnails
-
-2.0.19
-Fixed lazy loading of grid to improve performance
-
-2.0.17
-Fixed hang on render
-
-2.0.16
-Fixed issue with thumbnail memory cache
-
-2.0.15
-Prep for Public Release
-Bug Fixes
-
-2.0.14
-Bug Fixes
-
-2.0.13
-Bug Fixes
-
-2.0.12
-Fixed Docker Hash Background Generation
-Unselecting File Type Purges Models
-UI Tweaks
-
-2.0.11
-Fixed Parent Directory Filter
-Fixed STL Home Directory Parsing 
-
-2.0.10
-Performance and Bug Fixes
-
-2.0.9
-Docker/Server Mode Fixes
-Added Full Screen to DeDup and Tagging Modals
-
-2.0.8
-Sort Headers in List View
-Added System Report to Server/Docker Mode
-
-2.0.7
-Docker/Server Mode Fixes
-
-2.0.6
-Docker/Server Mode Fixes
+2.1.1
+Added Query Builder
+Parent Models are now grouped
+New models now tagged with "New" until edited
+New Preview View
+Customizable Columns on List
+Added lys and lty file types
