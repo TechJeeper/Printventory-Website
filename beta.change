@@ -1,3 +1,8 @@
+2.1.2
+Fixed UI on MacOS
+Fixed filtering on Docker
+Tweaked Preview Styling
+
 2.1.1
 Added Query Builder
 Parent Models are now grouped
