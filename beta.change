@@ -1,5 +1,7 @@
 2.1.5 
 Fixed Zip MacOS Folder Detection 
+Fixed Screen Reader Bug with Linux
+Fixed New Model indicator
 
 2.1.4
 Fixed max file size setting
