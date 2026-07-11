@@ -1,3 +1,9 @@
+2.1.6
+Fixed MacOS Preview Memory Leak
+Fixed Oversized Thumbnails Crashing App
+Fixed Missing thumbnail-compress in Builds
+Safer Thumbnail Loading and Purging
+
 2.1.5 
 Fixed Zip MacOS Folder Detection 
 Fixed Screen Reader Bug with Linux
