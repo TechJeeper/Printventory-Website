@@ -1,3 +1,7 @@
+2.1.9
+ZIP model extracts always land under OS temp (printventory-extracts/), never beside library files
+Extracts cleaned up after preview/read, slicer launch, open, download, app quit, and on startup
+
 2.1.8
 Folder and ZIP bundle grouping in List/Preview/Detailed views
 Bundle 3D preview with multi-part grid layout
