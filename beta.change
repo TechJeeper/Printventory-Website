@@ -1,3 +1,10 @@
+2.1.8
+Folder and ZIP bundle grouping in List/Preview/Detailed views
+Bundle 3D preview with multi-part grid layout
+Bundle details panel with file list
+Send to Slicer from preview (including full bundles)
+New slicer instance on macOS send
+
 2.1.6
 Fixed MacOS Preview Memory Leak
 Fixed Oversized Thumbnails Crashing App
