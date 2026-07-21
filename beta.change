@@ -1,3 +1,11 @@
+2.1.10
+Folder/ZIP group thumbnail carousels capped (no more 1/539 runaway)
+Bundle group card meta overflow clipped cleanly
+Bundle details sidebar spacing fixed
+Folder/ZIP group icons no longer stuck on blank/generic placeholder
+Large flat STLs no longer save blank grid thumbnails
+Docker image includes bundle-keys.js for server-mode grouping
+
 2.1.9
 ZIP model extracts always land under OS temp (printventory-extracts/), never beside library files
 Extracts cleaned up after preview/read, slicer launch, open, download, app quit, and on startup
