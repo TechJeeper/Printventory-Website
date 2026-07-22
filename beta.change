@@ -1,3 +1,6 @@
+2.1.11
+Fixed issue where directories were being grouped
+
 2.1.10
 Folder/ZIP group thumbnail carousels capped (no more 1/539 runaway)
 Bundle group card meta overflow clipped cleanly
