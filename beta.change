@@ -1,3 +1,6 @@
+2.1.12
+Fixed thumbnail generation for models inside ZIP archives
+
 2.1.11
 Fixed issue where directories were being grouped
 
