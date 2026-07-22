@@ -1,3 +1,6 @@
+2.1.13
+Faster cold start: bundle column migration no longer rewrites every non-ZIP model on each launch (one-shot zip-only backfill), and extract-temp cleanup no longer blocks window creation or readdir of the full OS TEMP folder at startup.
+
 2.1.12
 Fixed thumbnail generation for models inside ZIP archives
 
