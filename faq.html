@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Printventory FAQ - Frequently Asked Questions</title>
+  <title>Printventory FAQ — Install, AI Tagging, Docker &amp; Troubleshooting</title>
+  <meta name="description" content="Printventory FAQ: installation for Windows, macOS, Linux and Docker, AI tagging, backups, large libraries, and troubleshooting.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://printventory.com/faq.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://printventory.com/faq.html">
+  <meta property="og:title" content="Printventory FAQ">
+  <meta property="og:description" content="Installation, AI tagging, Docker, backups, and troubleshooting for Printventory.">
+  <meta property="og:image" content="https://printventory.com/2.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Printventory FAQ">
+  <meta name="twitter:description" content="Installation, AI tagging, Docker, backups, and troubleshooting for Printventory.">
+  <meta name="twitter:image" content="https://printventory.com/2.webp">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -11,25 +23,26 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJ2X0SQYQV');
+  </script>
 </head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KJ2X0SQYQV');
-</script>
-
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <nav class="navbar">
       <div class="navbar-brand">
           <a href="index.html">
-              <img src="logo.png" alt="Printventory Logo">
+              <img src="logo.png" alt="Printventory">
           </a>
       </div>
-      <div class="navbar-menu">
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-menu" id="primary-nav">
           <a href="index.html">Home</a>
           <a href="public.html">Download</a>
           <a href="beta.html">Beta</a>
@@ -38,7 +51,7 @@
           <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </nav>
-  <div class="container">
+  <div class="container" id="main">
     <div class="hero-background"></div>
 
     <div class="hero-section fade-in">
@@ -102,7 +115,7 @@
 
             <h3>How do I install on Windows?</h3>
             <ol>
-                <li>Download the latest installer from the #latest-builds channel in the Discord</li>
+                <li>Download the latest installer from the <a href="public.html" style="color: #00bfff;">Download page</a> (or try <a href="beta.html" style="color: #00bfff;">Beta</a> for pre-release builds)</li>
                 <li>Run the installer</li>
                 <li>The app will install to your system</li>
                 <li>Updates can be installed over existing versions without losing data</li>
@@ -110,7 +123,7 @@
 
             <h3>How do I install on macOS?</h3>
             <ol>
-                <li>Download the .DMG file from #latest-builds</li>
+                <li>Download the .DMG file from the <a href="public.html" style="color: #00bfff;">Download page</a> (or <a href="beta.html" style="color: #00bfff;">Beta</a>)</li>
                 <li>Open the DMG and drag Printventory to Applications</li>
                 <li><strong>Important</strong>: Since the app is unsigned, you'll need to:
                     <ul>
@@ -593,11 +606,12 @@
           <img src="X.png" alt="Follow us on X" style="height: 30px;">
         </a>
       </div>
-      <div style="margin-top: 20px; font-size: 0.9em; color: var(--text-gray);">
-        &copy; TechJeeper Designs
+      <div class="footer-meta">
+        &copy; TechJeeper Designs · <a href="extension-privacy.html">Extension Privacy</a>
       </div>
     </footer>
   </div>
+    <script src="site-nav.js"></script>
     <script src="supporters.js"></script>
 </body>
 </html>

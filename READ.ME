@@ -1,82 +1,48 @@
-# Printventory - 3D Model Manager
+# Printventory Website
 
-Printventory is a desktop application for managing your 3D printing model collection.
+Marketing and download hub for [Printventory](https://github.com/TechJeeper/Printventory) — a free, open-source desktop (and Docker) app for managing local STL/3MF libraries.
 
-## Features
+**Live site:** [printventory.com](https://printventory.com/)
 
-### File Management
-- Scan directories for STL and 3MF files (up to 50MB)
-- View thumbnails of your 3D models
-- Sort models by name, size, or date
-- Quick access to file location
-- Delete files with database cleanup
-- Backup and restore database
+## What Printventory does
 
-### Model Organization
-- Tag models for easy categorization
-- Assign designers to models
-- Track print status
-- Add source URLs and notes
-- Link related models (parent/child relationships)
-- Assign licenses to models
+- Indexes STL and 3MF files where they already live (nothing uploaded or moved)
+- Thumbnails, tags, designers, print status, notes, and source URLs
+- Instant search and filters across large libraries
+- AI-assisted tagging (metadata only; model files stay local)
+- Duplicate detection by content hash
+- Batch editing and organization tools
+- Windows, macOS, Linux, plus Docker/NAS server mode
 
-### Multi-Edit Features
-- Select multiple models for batch editing
-- Bulk update designer, source, print status, and parent model
-- Select all visible models with one click
-- Filter models by various attributes
+## Website pages
 
-### Duplicate Management
-- Find duplicate files based on content hash
-- Compare duplicates with thumbnails
-- Easily remove duplicate files
+| Page | Path |
+|------|------|
+| Home | `index.html` |
+| Stable download | `public.html` |
+| Beta download | `beta.html` |
+| FAQ | `faq.html` |
+| Support / donate | `support.html` |
+| Extension privacy | `extension-privacy.html` |
 
-### Interface Features
-- Customizable model background color
-- Context menu for quick actions
-- Responsive grid layout
-- Real-time search and filtering
-- Tag management system
-- Auto-save changes
+## Updating releases
 
-### Data Management
-- Database backup and restore
-- Purge all model data option
-- Automatic thumbnail generation
-- Preserve metadata during rescans
+Version and download URLs are driven by plain text files (no HTML edits required for most releases):
 
-### File Support
-- STL files
-- 3MF files (Limited BambuLabs 3MF support)
+1. Set the version in `public.version` or `beta.version`
+2. Keep URL templates in `win.pub` / `mac.pub` / `linux.pub` (and `*.beta`) using `{public.version}` or `{beta.version}`
+3. Optionally update `public.change` / `beta.change` markdown for the changelog modal
 
+Download buttons include fallback hrefs with the current version so links still work if JavaScript fails. After bumping a version file, update those fallbacks in `index.html`, `public.html`, and `beta.html` (or rely on JS hydration after deploy).
 
-### Search & Filter
-- Search by filename
-- Filter by:
-  - Designer
-  - Print status
-  - Tags
-  - Parent model
-  - License
+## Local preview
 
-### Metadata Features
-- Track file size
-- Track modification dates
-- Store model thumbnails
-- Track print status
-- Add custom notes
-- Link to source URLs
+This is a static site. Open any HTML file in a browser, or serve the folder:
 
-## Getting Started
+```bash
+npx serve .
+```
 
-1. Launch Printventory
-2. Click "Select Directory" to choose your models folder
-3. Wait for the initial scan to complete
-4. Start organizing your models!
+## Deploy
 
-## Tips
-- Use tags for easy categorization
-- Enable multi-edit mode for batch operations
-- Regular backups recommended
-- Use the context menu for quick actions
-- Check for duplicates periodically 
+Pushes to `main` deploy via GitHub Pages (`.github/workflows/static.yml`). Custom domain is configured in `CNAME`.

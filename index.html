@@ -3,7 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Printventory - 3D Model Manager</title>
+  <title>Printventory — Free Local 3D Model Manager</title>
+  <meta name="description" content="Free and open-source 3D model manager for STL and 3MF libraries. Local-only indexing, AI tagging, duplicate cleanup, and Docker/NAS support for Windows, macOS, and Linux.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://printventory.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://printventory.com/">
+  <meta property="og:title" content="Printventory — Free Local 3D Model Manager">
+  <meta property="og:description" content="Organize your STL and 3MF library locally. Free, open source, AI tagging, and Docker/NAS support.">
+  <meta property="og:image" content="https://printventory.com/2.webp">
+  <meta property="og:site_name" content="Printventory">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Printventory — Free Local 3D Model Manager">
+  <meta name="twitter:description" content="Organize your STL and 3MF library locally. Free, open source, AI tagging, and Docker/NAS support.">
+  <meta name="twitter:image" content="https://printventory.com/2.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Printventory",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows, macOS, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Free and open-source local 3D model manager for STL and 3MF libraries with AI tagging and Docker support.",
+    "url": "https://printventory.com/",
+    "image": "https://printventory.com/2.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "TechJeeper Designs"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -11,64 +49,75 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJ2X0SQYQV');
+  </script>
 </head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KJ2X0SQYQV');
-</script>
-  
 <body>
-    <nav class="navbar">
-      <div class="navbar-brand">
-          <a href="index.html">
-              <img src="logo.png" alt="Printventory Logo">
-          </a>
-      </div>
-      <div class="navbar-menu">
-          <a href="index.html">Home</a>
-          <a href="public.html">Download</a>
-          <a href="beta.html">Beta</a>
-          <a href="faq.html">FAQ</a>
-          <a href="support.html">Support</a>
-          <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </nav>
-  <div class="container">
-    <div class="hero-background">
-        <div class="carousel" id="screenshot-carousel">
-            <div class="carousel-slide active">
-                <img src="1.png" alt="Screenshot 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="2.png" alt="Screenshot 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="3.png" alt="Screenshot 3">
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="index.html">
+        <img src="logo.png" alt="Printventory">
+      </a>
+    </div>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navbar-menu" id="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="public.html">Download</a>
+      <a href="beta.html">Beta</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </nav>
+
+  <div class="container" id="main">
+    <div class="hero-background" aria-hidden="true">
+      <div class="carousel" id="screenshot-carousel">
+        <div class="carousel-slide active">
+          <picture>
+            <source srcset="1.webp" type="image/webp">
+            <img src="1.png" alt="" width="1600" height="948" fetchpriority="high">
+          </picture>
         </div>
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="2.webp" type="image/webp">
+            <img src="2.png" alt="" width="1600" height="943" loading="lazy">
+          </picture>
+        </div>
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="3.webp" type="image/webp">
+            <img src="3.png" alt="" width="1600" height="902" loading="lazy">
+          </picture>
+        </div>
+      </div>
     </div>
 
     <div class="hero-section fade-in">
       <div style="margin-bottom: 2rem;">
-        <img src="logo.png" alt="Printventory Logo" class="logo" style="max-width: 400px; width: 100%;">
+        <img src="logo.png" alt="Printventory" class="logo" style="max-width: 400px; width: 100%;">
       </div>
-      <h1>Organize Your 3D Models</h1>
-      <p>The ultimate tool for managing your 3D printing collection with ease. Sort, tag, and track your models in one
-        place.</p>
+      <h1>Your local 3D model library, finally organized</h1>
+      <p>Free and open source. Index STL and 3MF files where they already live — with search, tags, duplicates, and AI-assisted organization.</p>
+      <p class="hero-subline">Files never leave your machine · Windows, macOS, Linux &amp; Docker</p>
+      <div class="hero-cta">
+        <a href="public.html" class="download-button">Download Free</a>
+        <a href="faq.html" class="download-button download-button--secondary">Read the FAQ</a>
+      </div>
     </div>
 
     <div class="features">
-      
       <div class="feature-section">
-        
-        <center>
-          <h3>File<br>Management</h3>
-        </center>
+        <h3>File<br>Management</h3>
         <ul>
           <li>Scan directories for STL and 3MF files</li>
           <li>View thumbnails of your 3D models</li>
@@ -78,9 +127,7 @@
       </div>
 
       <div class="feature-section">
-        <center>
-          <h3>Model<br>Organization</h3>
-        </center>
+        <h3>Model<br>Organization</h3>
         <ul>
           <li>Tag models for easy categorization</li>
           <li>Assign designers to models</li>
@@ -90,9 +137,17 @@
       </div>
 
       <div class="feature-section">
-        <center>
-          <h3>Multi-Edit<br>Features</h3>
-        </center>
+        <h3>AI<br>Tagging</h3>
+        <ul>
+          <li>Suggest tags from model metadata</li>
+          <li>Works with popular AI providers</li>
+          <li>Your model files stay local</li>
+          <li>Speed up organizing large libraries</li>
+        </ul>
+      </div>
+
+      <div class="feature-section">
+        <h3>Multi-Edit<br>Features</h3>
         <ul>
           <li>Select multiple models for batch editing</li>
           <li>Bulk update designer, source, and status</li>
@@ -102,9 +157,7 @@
       </div>
 
       <div class="feature-section">
-        <center>
-          <h3>Duplicate<br>Management</h3>
-        </center>
+        <h3>Duplicate<br>Management</h3>
         <ul>
           <li>Find duplicate files based on content hash</li>
           <li>Compare duplicates with thumbnails</li>
@@ -112,33 +165,58 @@
         </ul>
       </div>
 
+      <div class="feature-section">
+        <h3>Docker &amp;<br>NAS</h3>
+        <ul>
+          <li>Run server mode on Synology, Unraid, and more</li>
+          <li>Index network storage without a desktop GUI</li>
+          <li>Official Docker Hub image available</li>
+          <li>Built for large home libraries</li>
+        </ul>
+      </div>
+
       <div class="feature-section full-width">
-        <center>
-          <h3>See It In Action</h3>
-        </center>
-        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 200px); gap: 10px; justify-content: center;">
-          <div class="gallery-item" onclick="openLightbox(1)">
-            <img src="2.png" alt="Screenshot 2" loading="lazy">
-          </div>
-          <div class="gallery-item" onclick="openLightbox(2)">
-            <img src="3.png" alt="Screenshot 3" loading="lazy">
-          </div>
-          <div class="gallery-item" onclick="openLightbox(0)">
-            <img src="1.png" alt="Screenshot 1" loading="lazy">
-          </div>
-          <div class="gallery-item" onclick="openLightbox(3)">
-            <img src="4.png" alt="Screenshot 1" loading="lazy">
-          </div>
+        <h3>See It In Action</h3>
+        <div class="gallery-grid">
+          <button type="button" class="gallery-item" onclick="openLightbox(0)" aria-label="Open library grid screenshot">
+            <picture>
+              <source srcset="1.webp" type="image/webp">
+              <img src="1.png" alt="Library grid view of 3D models" loading="lazy" width="1600" height="948">
+            </picture>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(1)" aria-label="Open model detail screenshot">
+            <picture>
+              <source srcset="2.webp" type="image/webp">
+              <img src="2.png" alt="Model detail and metadata panel" loading="lazy" width="1600" height="943">
+            </picture>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(2)" aria-label="Open search and tags screenshot">
+            <picture>
+              <source srcset="3.webp" type="image/webp">
+              <img src="3.png" alt="Search and tag filtering" loading="lazy" width="1600" height="902">
+            </picture>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(3)" aria-label="Open organization tools screenshot">
+            <picture>
+              <source srcset="4.webp" type="image/webp">
+              <img src="4.png" alt="Organization and batch editing tools" loading="lazy" width="1562" height="952">
+            </picture>
+          </button>
         </div>
-        <div class="youtube-video" style="margin-top: 20px; text-align: center;">
-          <iframe width="420" height="236" src="https://www.youtube.com/embed/pV3kNr3YDMI?si=g6U3OnF6cgbFRyd4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="youtube-video">
+          <iframe
+            src="https://www.youtube.com/embed/pV3kNr3YDMI?si=g6U3OnF6cgbFRyd4"
+            title="Printventory demo video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
     </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-      <span class="close-lightbox">&times;</span>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
+      <button type="button" class="close-lightbox" aria-label="Close screenshot preview" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
       <div class="lightbox-content">
         <img id="lightbox-img" src="" alt="Enlarged screenshot">
       </div>
@@ -150,23 +228,23 @@
         <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
       </div>
       <div class="download-buttons">
-        <a href="#" id="download-win" class="download-button" style="width: 260px; justify-content: center;">
-          <img src="win.png" alt="Windows logo">
+        <a href="https://printventory.techjeeper.com/Printventory-Setup-2.1.0.exe" id="download-win" class="download-button">
+          <img src="win.png" alt="">
           Download for Windows
         </a>
-        <a href="#" id="download-mac" class="download-button" style="width: 260px; justify-content: center;">
-          <img src="mac.png" alt="macOS logo">
+        <a href="https://printventory.techjeeper.com/printventory-2.1.0-universal.dmg" id="download-mac" class="download-button">
+          <img src="mac.png" alt="">
           Download for MacOS
         </a>
-        <a href="#" id="download-linux" class="download-button" style="width: 260px; justify-content: center;">
-          <img src="linux.png" alt="Linux logo" width="30" height="30">
+        <a href="https://printventory.techjeeper.com/printventory-2.1.0.AppImage" id="download-linux" class="download-button">
+          <img src="linux.png" alt="" width="30" height="30">
           <div style="display: flex; flex-direction: column; align-items: center;">
             <span>Download for Linux</span>
             <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
           </div>
         </a>
-        <a href="https://hub.docker.com/r/printventory/printventory" target="_blank" class="download-button" style="width: 260px; justify-content: center;">
-          <img src="docker.png" alt="Docker logo" width="30" height="30" style="filter: brightness(0) invert(1);">
+        <a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer" class="download-button">
+          <img src="docker.png" alt="" width="30" height="30" style="filter: brightness(0) invert(1);">
           <div style="display: flex; flex-direction: column; align-items: center;">
             <span>Docker</span>
             <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
@@ -174,7 +252,7 @@
         </a>
       </div>
       <div class="warning">
-        <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security & Privacy
+        <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security &amp; Privacy
         panel of System Preferences.
         <br><br>
         <strong>Windows Users:</strong> The installer may be flagged as an "Untrusted Package". Click "More Info" then "Run Anyway" to proceed.
@@ -185,131 +263,115 @@
       <h2>Support the Project!</h2>
       <p>Support Printventory by using our affiliate links or donating directly!</p>
       <div class="affiliate-links">
-          <a href="https://www.prusa3d.com/#a_aid=Printventory" target="_blank" class="affiliate-link">
-              <img src="prusa.png" alt="Support via Prusa">
+        <a href="https://www.prusa3d.com/#a_aid=Printventory" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+          <img src="prusa.png" alt="Support via Prusa">
+        </a>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <a href="https://us.snapmaker.com/?irclickid=wXExgZQBixycRumXP0wMgW6eUkpV%3A30x12o1TM0&irgwc=1&afsrc=1" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+            <img src="snapmaker.svg" alt="Support via Snapmaker">
           </a>
-          <div style="display: flex; flex-direction: column; align-items: center;">
-              <a href="https://us.snapmaker.com/?irclickid=wXExgZQBixycRumXP0wMgW6eUkpV%3A30x12o1TM0&irgwc=1&afsrc=1" target="_blank" class="affiliate-link">
-                  <img src="snapmaker.svg" alt="Support via Snapmaker">
-              </a>
-              <small style="margin-top: 5px; text-align: center; color: #b0b0b0;">Use code <strong>PRINTVENTORY5</strong> for 5% off!</small>
-          </div>
-          <a href="https://shop.polymaker.com/TECHJEEPER" target="_blank" class="affiliate-link">
-              <img src="polymaker.png" alt="Support via Polymaker">
-          </a>
-          <a href="https://creality.com/" target="_blank" class="affiliate-link">
-              <img src="creality.svg" alt="Support via Creality">
-          </a>
-          <a href="https://sovol3d.com?sca_ref=8022212.uB3pwbgo9B" target="_blank" class="affiliate-link">
-              <img src="sovol.png" alt="Support via Sovol">
-          </a>
-<a href="https://visionminer.com/printventory" target="_blank" class="affiliate-link">
-              <img src="vm.png" alt="Support via Vision Miner">
-</a>
-        
+          <small style="margin-top: 5px; text-align: center; color: #b0b0b0;">Use code <strong>PRINTVENTORY5</strong> for 5% off!</small>
+        </div>
+        <a href="https://shop.polymaker.com/TECHJEEPER" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+          <img src="polymaker.png" alt="Support via Polymaker">
+        </a>
+        <a href="https://creality.com/" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+          <img src="creality.svg" alt="Support via Creality">
+        </a>
+        <a href="https://sovol3d.com?sca_ref=8022212.uB3pwbgo9B" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+          <img src="sovol.png" alt="Support via Sovol">
+        </a>
+        <a href="https://visionminer.com/printventory" target="_blank" rel="noopener noreferrer" class="affiliate-link">
+          <img src="vm.png" alt="Support via Vision Miner">
+        </a>
       </div>
       <p class="support-text">Or support us directly:</p>
       <div class="donate-buttons">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" class="donate-button">PayPal</a>
-        <a href="https://patreon.com/Printventory" target="_blank" class="donate-button">Patreon</a>
-        <a href="https://www.buymeacoffee.com/printventory" target="_blank" class="donate-button">Buy Me a Coffee</a>
-        <a href="https://printventory-shop.fourthwall.com/" target="_blank" class="donate-button">Merch</a>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" rel="noopener noreferrer" class="donate-button">PayPal</a>
+        <a href="https://patreon.com/Printventory" target="_blank" rel="noopener noreferrer" class="donate-button">Patreon</a>
+        <a href="https://www.buymeacoffee.com/printventory" target="_blank" rel="noopener noreferrer" class="donate-button">Buy Me a Coffee</a>
+        <a href="https://printventory-shop.fourthwall.com/" target="_blank" rel="noopener noreferrer" class="donate-button">Merch</a>
       </div>
-
     </div>
 
     <footer>
       <p>Join the discussion</p>
       <div class="social-media">
-        <a href="https://bsky.app/profile/printventory.com" target="_blank">
+        <a href="https://bsky.app/profile/printventory.com" target="_blank" rel="noopener noreferrer">
           <img src="BlueSky.png" alt="Follow us on Bluesky" style="height: 30px;">
         </a>
-        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank">
+        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">
           <img src="discord.svg" alt="Join our Discord" style="height: 30px;">
         </a>
-        <a href="https://x.com/printventory" target="_blank">
+        <a href="https://x.com/printventory" target="_blank" rel="noopener noreferrer">
           <img src="X.png" alt="Follow us on X" style="height: 30px;">
         </a>
       </div>
-      <div style="margin-top: 20px; font-size: 0.9em; color: var(--text-gray);">
-        &copy; TechJeeper Designs
+      <div class="footer-meta">
+        &copy; TechJeeper Designs · <a href="extension-privacy.html">Extension Privacy</a>
       </div>
     </footer>
   </div>
 
+  <script src="site-nav.js"></script>
+  <script src="download-links.js"></script>
   <script>
     function carousel() {
-        const slides = document.querySelectorAll('.carousel-slide');
-        let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      if (!slides.length) return;
+      let currentSlide = 0;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) return;
 
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-        }
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
 
-        // Change slide every 5 seconds
-        setInterval(nextSlide, 5000);
+      setInterval(nextSlide, 5000);
     }
 
-    // Initialize carousel
     carousel();
 
-    // Lightbox functionality
+    const lightboxImages = ['1.webp', '2.webp', '3.webp', '4.webp'];
+    let lastLightboxTrigger = null;
+
     function openLightbox(index) {
-      const images = ['1.png', '2.png', '3.png'];
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-      
-      lightboxImg.src = images[index];
+      lastLightboxTrigger = document.activeElement;
+      lightboxImg.src = lightboxImages[index];
       lightbox.style.display = 'flex';
+      lightbox.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
+      lightbox.querySelector('.close-lightbox').focus();
     }
 
     function closeLightbox() {
       const lightbox = document.getElementById('lightbox');
       lightbox.style.display = 'none';
-      document.body.style.overflow = 'auto';
+      lightbox.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
+        lastLightboxTrigger.focus();
+      }
     }
 
-    // Close lightbox with Escape key
     document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeLightbox();
-      }
+      if (event.key === 'Escape') closeLightbox();
+    });
+
+    hydrateDownloadLinks({
+      versionFile: 'public.version',
+      urlExt: 'pub',
+      placeholder: 'public.version'
     });
   </script>
-  <script>
-    // Dynamically update download links for public release on index.html.
-    async function updateLinks() {
-        try {
-            const versionResponse = await fetch('public.version');
-            const version = (await versionResponse.text()).trim();
-
-            const platforms = ['win', 'mac', 'linux'];
-            await Promise.all(platforms.map(async (platform) => {
-                try {
-                    const urlResponse = await fetch(`${platform}.pub`);
-                    let url = (await urlResponse.text()).trim();
-                    url = url.replace('{public.version}', version);
-                    const element = document.getElementById(`download-${platform}`);
-                    if (element) element.href = url;
-                } catch (e) {
-                    console.error(`Error updating ${platform} link:`, e);
-                }
-            }));
-        } catch (e) {
-            console.error('Error fetching version:', e);
-        }
-    }
-    updateLinks();
-  </script>
-
-    <script src="supporters.js"></script>
+  <script src="supporters.js"></script>
 </body>
-
 </html>
