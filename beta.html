@@ -6,6 +6,7 @@
     <title>Printventory Beta Release</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="changelog-modal.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ2X0SQYQV"></script>
@@ -68,12 +69,9 @@
                     </div>
                 </a>
             </div>
-            <div class="changelog-section">
-                <h2>Latest Changes</h2>
-                <div class="changelog-content" id="changelog-content">
-                    Loading changelog...
-                </div>
-            </div>
+            <button type="button" class="changelog-trigger" id="changelog-trigger">
+                View Changelog
+            </button>
         </div>
         <div class="donate-buttons">
             <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" class="donate-button">PayPal</a>
@@ -99,16 +97,27 @@
           </div>
         </footer>
     </div>
+    <div class="changelog-modal" id="changelog-modal" aria-hidden="true" role="dialog" aria-labelledby="changelog-modal-title">
+        <div class="changelog-modal-backdrop"></div>
+        <div class="changelog-modal-dialog">
+            <div class="changelog-modal-header">
+                <h2 id="changelog-modal-title">Beta Changelog</h2>
+                <button type="button" class="changelog-modal-close" aria-label="Close changelog">&times;</button>
+            </div>
+            <div class="changelog-modal-body" id="changelog-content">
+                Loading changelog...
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="changelog-modal.js"></script>
     <script>
         async function loadContent() {
             try {
-                // Fetch version
                 const versionResponse = await fetch('beta.version');
                 const version = (await versionResponse.text()).trim();
                 document.getElementById('version-number').textContent = version;
 
-                // Update download links
                 const platforms = ['win', 'mac', 'linux'];
                 await Promise.all(platforms.map(async (platform) => {
                     try {
@@ -126,16 +135,7 @@
                 console.error('Error fetching version:', error);
             }
 
-            // Fetch changelog
-            try {
-                const changelogResponse = await fetch('beta.change');
-                const changelog = await changelogResponse.text();
-                const changelogContent = document.getElementById('changelog-content');
-                changelogContent.innerHTML = marked.parse(changelog);
-            } catch (error) {
-                document.getElementById('changelog-content').innerHTML = 'Changelog unavailable';
-                console.error('Error fetching changelog:', error);
-            }
+            initChangelogModal('beta.change');
         }
 
         loadContent();
