@@ -67,8 +67,24 @@
                 </a>
                 <a href="https://printventory.techjeeper.com/printventory-2.1.0.AppImage" id="download-linux" class="download-button">
                     <img src="linux.png" alt="" width="30" height="30">
-                    Download for Linux
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span>Download for Linux</span>
+                        <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
+                    </div>
                 </a>
+                <a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer" class="download-button">
+                    <img src="docker.png" alt="" width="30" height="30" style="filter: brightness(0) invert(1);">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <span>Docker</span>
+                        <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
+                    </div>
+                </a>
+            </div>
+            <div class="warning">
+                <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security &amp; Privacy
+                panel of System Preferences.
+                <br><br>
+                <strong>Windows Users:</strong> The installer may be flagged as an "Untrusted Package". Click "More Info" then "Run Anyway" to proceed.
             </div>
             <button type="button" class="changelog-trigger" id="changelog-trigger">
                 View Changelog
