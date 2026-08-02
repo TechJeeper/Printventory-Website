@@ -1,3 +1,9 @@
+2.1.17
+Fix server-mode blank 3MF preview (typed arrays mangled over WebSocket) (#72)
+Fix Docker grid scroll crashes/floods when hydrating thumb-less 3MF models
+Suppress Chromium dbus connection error spam in Docker logs
+Preparing for 2.2 Public
+
 2.1.15
 Docker Fixes
 Prepare for 2.2 Public Release
