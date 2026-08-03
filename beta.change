@@ -1,3 +1,7 @@
+2.1.18
+Desktop Scan Directory no longer hangs at 0/N after 2.1.17 scroll-queue prune (retainDetached for scan/batch thumbs)
+Docker NVIDIA: stop forceContextLoss on thumbnail recycle (Skia OOM / CreateSharedImage log storms); soft-dispose + disable GPU compositing; cap NVIDIA WebGL concurrency to 1
+
 2.1.17
 Fix server-mode blank 3MF preview (typed arrays mangled over WebSocket) (#72)
 Fix Docker grid scroll crashes/floods when hydrating thumb-less 3MF models
