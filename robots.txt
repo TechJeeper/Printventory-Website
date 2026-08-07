@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /analytics.html
 
 Sitemap: https://printventory.com/sitemap.xml
