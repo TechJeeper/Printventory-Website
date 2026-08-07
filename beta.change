@@ -1,3 +1,7 @@
+2.1.21
+Replaced Google Analytics (GA4) with GoatCounter for usage reporting. Still gated by Enable Usage Reporting in About.
+First launch after install could leave Electron processes running with no visible window (kill in Task Manager, then relaunch worked). Main window now force-shows after a short timeout, second-instance focuses call show(), Chart.js/Fuse.js are vendored locally instead of blocking on a CDN, and UI load has a timeout with file:// fallback.
+
 2.1.20
 Stats panel shows total library disk usage and per-type byte sizes (3MF / STL / Other) alongside counts.
 Grid multi-thumbnail carousel upgrades from list metadata (hasMultipleThumbnails) without loading full thumbnail blobs up front; default-thumbnail changes broadcast live so carousels stay in sync.
