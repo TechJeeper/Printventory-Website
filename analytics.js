@@ -466,15 +466,14 @@
       let locTotal = summary.opens;
 
       if (summary.pathIds.length) {
-        const locParams = {
+        const shared = {
           start: range.start,
           end: range.end,
-          limit: 50,
           include_paths: summary.pathIds,
         };
         const [locData, totalData] = await Promise.all([
-          apiGet('/stats/locations', locParams),
-          apiGet('/stats/total', locParams),
+          apiGet('/stats/locations', { ...shared, limit: 50 }),
+          apiGet('/stats/total', shared),
         ]);
         locations = (locData.stats || []).filter((row) => row.count > 0);
         locTotal = totalData.total || summary.opens;
