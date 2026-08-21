@@ -1,3 +1,6 @@
+2.2.1
+Fixed error in Slicer parameter
+
 2.2.0
 Folder and ZIP bundle grouping - models that share a parent folder or ZIP archive appear as a single card with a details panel
 Bundle 3D preview - open every STL/3MF part in a folder or ZIP in one grid layout with per-part colors
