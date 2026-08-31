@@ -1,3 +1,6 @@
+2.2.2
+MeshyAI and other Bambu Studio / Orca 3MF files now render thumbnails and 3D previews when the mesh is stored in a separate Production Extension part
+
 2.2.1
 Fixed error in Slicer parameter
 
