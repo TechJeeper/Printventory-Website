@@ -1,3 +1,12 @@
+2.2.3
+Print lifecycle and history: Unprinted / Want / Queued / Printing / Printed / Failed plus a dated print log (quantity, notes, filaments). Click a card badge to log a print; Shift-click changes status only. Filter Ever/Never printed; sort by last printed or print count.
+Folder-tree library explorer: Folders filter with a popover tree of scanned directories, plus an optional Folders rail next to the grid. Click a folder to set the Directory chip.
+Sidebar layout: search and sort stay pinned; the long filter stack auto-collapses when model details open. Sidebar and Folders panels are drag-resizable.
+De-Dup can run on the current library view (designer, tags, query builder, and other filters) instead of always scanning the entire collection (#61).
+Filament catalog with optional pull-only Spoolman sync; assign filaments to models and filter the library by them.
+MCP Server (experimental): Tools → MCP Server enables a localhost /mcp endpoint for AI agents (always on in Docker/server). Tools include search_models, get_model, update_model, get_folder_tree, set_thumbnail, and more. Any client that can reach the endpoint can read/change library data — trusted networks only.
+Nested .3mf models inside ZIP archives no longer fail hash generation. Docker/server Dedup hash timeout and Windows path-mount fixes remain.
+
 2.2.0
 Folder and ZIP bundle grouping — models that share a parent folder or ZIP archive appear as a single card with a details panel
 Bundle 3D preview — open every STL/3MF part in a folder or ZIP in one grid layout with per-part colors
