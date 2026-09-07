@@ -3,6 +3,7 @@ HTTPS / SSL settings in Settings for server, Docker, and the desktop Browser Ext
 Server/Docker HTTPS listen port (default 5000). Map the same port on the host.
 PWA / mobile UI for server and Docker.
 Browser Extension inbox: queue model pages/downloads without the app running, then import from the inbox folder.
+AI Tagging now includes Claude as a provider (default model claude-haiku-4-5).
 
 2.2.3
 Print lifecycle and history: Unprinted / Want / Queued / Printing / Printed / Failed plus a dated print log (quantity, notes, filaments). Click a card badge to log a print; Shift-click changes status only. Filter Ever/Never printed; sort by last printed or print count.
