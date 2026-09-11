@@ -1,3 +1,10 @@
+2.2.5
+List view columns: show/hide, resize, and drag-to-reorder. Layout is saved.
+Zip/group list rows use the same columns with aggregated metadata.
+Printed column renamed to Print Status; sort headers show an arrow only.
+MCP: tags, filaments, print events, metadata, thumbnails, and duplicates tools.
+AI Tagging includes Claude (default claude-haiku-4-5).
+
 2.2.4
 HTTPS / SSL settings in Settings for server, Docker, and the desktop Browser Extension / MCP listener. Custom PEM, Let's Encrypt (HTTP-01), or self-signed.
 Server/Docker HTTPS listen port (default 5000). Map the same port on the host.
