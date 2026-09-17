@@ -1,3 +1,11 @@
+2.2.7
+3D Preview Studio: lighting, materials, backdrops, reflections, shadows, and save image
+Sit on face: click a surface to sit that plane flat on the studio floor, with reset pose
+Multi-part 3MF part picker and click-to-focus in preview
+Preview tiles keep 3D on hover and no longer show a Details button
+3MF previews skip negative/modifier parts, use Z-up seating, and sit on the floor
+Studio backdrop chips, wireframe, and the preview close control match the header
+
 2.2.6
 Tag Manager: click a tag to rename it across the library, or clear the name to delete it (#82)
 Multi-Edit Edit Tags opens Tag Manager
