@@ -1,3 +1,6 @@
+2.2.10
+ChiTuBox (.chitubox) and VOXL (.voxl) thumbnails/previews from embedded images when present
+
 2.2.9
 F3D thumbnails and 3D preview from Fusion embedded Previews/small.png
 File Type settings save no longer fails in Docker/server when unchecking a type
