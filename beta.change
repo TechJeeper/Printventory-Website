@@ -1,6 +1,8 @@
 2.2.10
 ChiTuBox (.chitubox) and VOXL (.voxl) thumbnails/previews from embedded images when present
-
+Preview wall: open button labeled Preview and centered; menu no longer under selection check
+Studio disabled for image-only formats (F3D, ChiTuBox, VOXL)
+Fix infinite thumbnail retry hang when image-only files have no embedded preview
 2.2.9
 F3D thumbnails and 3D preview from Fusion embedded Previews/small.png
 File Type settings save no longer fails in Docker/server when unchecking a type
