@@ -1,3 +1,10 @@
+2.2.11
+Printer Management: save printers, maintenance logs, and scheduled reminders
+Parts Stock inventory, deducted when a print is logged
+Markdown model notes
+Detect installed slicers from Settings
+Filament manager shows how many models use each spool, with a collapsible add form
+
 2.2.10
 ChiTuBox (.chitubox) and VOXL (.voxl) thumbnails/previews from embedded images when present
 Preview wall: open button labeled Preview and centered; menu no longer under selection check
