@@ -588,6 +588,7 @@ footer a:hover {
 
 .support-section {
     padding: 40px;
+    margin-top: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -617,6 +618,17 @@ footer a:hover {
 .spread-word {
     text-align: center;
     margin-top: 40px;
+}
+
+.makerworld-support {
+    padding: 28px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+}
+
+.makerworld-support .donate-button {
+    margin: 20px auto 0;
 }
 
 .screenshot-gallery {
