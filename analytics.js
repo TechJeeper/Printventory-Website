@@ -18,6 +18,13 @@
     mac: 'macOS',
     linux: 'Linux',
   };
+  const MODEL_SIZE_BUCKETS = [
+    { label: '0–99', max: 99 },
+    { label: '100–499', max: 499 },
+    { label: '500–999', max: 999 },
+    { label: '1,000–4,999', max: 4999 },
+    { label: '5,000+', max: Infinity },
+  ];
 
   const els = {
     periods: document.getElementById('analytics-periods'),
@@ -32,6 +39,7 @@
     countriesHint: document.getElementById('kpi-countries-hint'),
     modelsHint: document.getElementById('kpi-models-hint'),
     chart: document.getElementById('opens-chart'),
+    modelSizesList: document.getElementById('model-sizes-list'),
     versionsList: document.getElementById('versions-list'),
     platformsList: document.getElementById('platforms-list'),
     map: document.getElementById('world-map'),
@@ -116,7 +124,7 @@
 
     const fromPath = PATH_VERSION_RE.exec(path || '');
     if (fromPath) {
-      return { version: fromPath[1], platform: 'Unknown', models: 0 };
+      return { version: fromPath[1], platform: 'Unknown', models: null };
     }
 
     return null;
@@ -176,6 +184,7 @@
     const versions = new Map();
     const platforms = new Map();
     const modelSamples = [];
+    const modelSizeDistribution = MODEL_SIZE_BUCKETS.map(({ label }) => ({ name: label, count: 0 }));
     const seriesParts = [];
     let opens = 0;
     const pathIds = [];
@@ -189,12 +198,16 @@
       const meta = parseTitle(hit.title, hit.path) || {
         version: 'Unknown',
         platform: 'Unknown',
-        models: 0,
+        models: null,
       };
 
       versions.set(meta.version, (versions.get(meta.version) || 0) + count);
       platforms.set(meta.platform, (platforms.get(meta.platform) || 0) + count);
-      if (meta.models > 0) modelSamples.push(meta.models);
+      if (Number.isInteger(meta.models) && meta.models >= 0 && count > 0) {
+        modelSamples.push({ models: meta.models, count });
+        const bucket = MODEL_SIZE_BUCKETS.findIndex(({ max }) => meta.models <= max);
+        if (bucket !== -1) modelSizeDistribution[bucket].count += count;
+      }
     });
 
     const toSorted = (map) =>
@@ -202,10 +215,13 @@
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
-    const avgModels =
-      modelSamples.length > 0
-        ? Math.round(modelSamples.reduce((a, b) => a + b, 0) / modelSamples.length)
-        : 0;
+    const modelSampleOpens = modelSamples.reduce((total, sample) => total + sample.count, 0);
+    const avgModels = modelSampleOpens
+      ? Math.round(
+          modelSamples.reduce((total, sample) => total + sample.models * sample.count, 0) /
+            modelSampleOpens
+        )
+      : 0;
 
     return {
       opens,
@@ -215,6 +231,8 @@
       platforms: toSorted(platforms),
       avgModels,
       modelSamples,
+      modelSampleOpens,
+      modelSizeDistribution,
     };
   }
 
@@ -229,7 +247,7 @@
     els.opens.textContent = formatNumber(summary.opens);
     els.versions.textContent = formatNumber(summary.versions.length);
     els.countries.textContent = formatNumber(locations.length);
-    els.models.textContent = summary.avgModels ? formatNumber(summary.avgModels) : '—';
+    els.models.textContent = summary.modelSampleOpens ? formatNumber(summary.avgModels) : '—';
 
     els.opensHint.textContent = 'App opens via /app/open';
     els.versionsHint.textContent =
@@ -237,8 +255,8 @@
         ? summary.versions[0].name
         : 'Distinct versions reported';
     els.countriesHint.textContent = locations.length === 1 ? locations[0].name : 'With activity';
-    els.modelsHint.textContent = summary.avgModels
-      ? 'Avg library size from titles'
+    els.modelsHint.textContent = summary.modelSampleOpens
+      ? 'Avg models per app open'
       : 'No model counts yet';
   }
 
@@ -481,6 +499,11 @@
 
       renderKpis(summary, locations);
       renderChart(summary.series);
+      renderBars(
+        els.modelSizesList,
+        summary.modelSizeDistribution.filter((row) => row.count > 0),
+        'No library-size titles in this period yet.'
+      );
       renderBars(els.versionsList, summary.versions, 'No version data in titles yet.');
       renderBars(els.platformsList, summary.platforms, 'No platform data in titles yet.');
       renderMap(locations, locTotal);
