@@ -1,3 +1,7 @@
+2.2.16
+Organize Library copies models from a scanned folder into a folder structure you choose, checks free space, and removes each original only after the copy is verified. Zip archives can move packed when zip support is on
+De-duplication can keep the copy that lives under a preferred directory, including files in subfolders
+
 2.2.15
 Startup repairs tag links that still point at a removed models table, and retries a tag save that failed for that reason
 Tag names are inserted as text, so a tag cannot inject markup into the page
