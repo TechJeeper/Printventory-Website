@@ -3,8 +3,8 @@
  * Title format expected: "Printventory 2.1.21 (win32, 680 models)"
  */
 (function () {
-  const API_BASE = 'https://printventory.goatcounter.com/api/v0';
-  const API_TOKEN = '169ssqdeyc5lg10bsue1i5bqoj1n2m1e60rspaeucztbpi4nmk6';
+  const API_BASE = 'https://printventoryweb.goatcounter.com/api/v0';
+  const API_TOKEN = '169ssqdeyc5lg10bsue1i5bqoj1n2m1e60rspaeucztbpi4nmk6'; // TODO: Update API_TOKEN for printventoryweb domain
   const TRACK_PATH = '/app/open';
   const TITLE_RE = /Printventory\s+([\d.]+)\s*\(([^,)]+),\s*([\d,]+)\s*models?\)/i;
   const PATH_VERSION_RE = /^\/app\/open\/([\d.]+)/i;
