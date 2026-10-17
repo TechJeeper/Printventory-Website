@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Printventory — Free Local 3D Model Manager</title>
-  <meta name="description" content="Free and open-source 3D model manager for STL and 3MF libraries. Local-only indexing, AI tagging, duplicate cleanup, and Docker/NAS support for Windows, macOS, and Linux.">
+  <meta name="description" content="Free and open-source 3D model manager for local STL/3MF libraries. Print history, filament catalog, printer &amp; parts tracking, AI tagging, and Docker/NAS support.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://printventory.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://printventory.com/">
   <meta property="og:title" content="Printventory — Free Local 3D Model Manager">
-  <meta property="og:description" content="Organize your STL and 3MF library locally. Free, open source, AI tagging, and Docker/NAS support.">
-  <meta property="og:image" content="https://printventory.com/2.webp">
+  <meta property="og:description" content="Organize your local 3D library with print history, filament, printers, parts stock, AI tagging, and Docker/NAS support.">
+  <meta property="og:image" content="https://printventory.com/1.webp">
   <meta property="og:site_name" content="Printventory">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Printventory — Free Local 3D Model Manager">
-  <meta name="twitter:description" content="Organize your STL and 3MF library locally. Free, open source, AI tagging, and Docker/NAS support.">
-  <meta name="twitter:image" content="https://printventory.com/2.webp">
+  <meta name="twitter:description" content="Organize your local 3D library with print history, filament, printers, parts stock, AI tagging, and Docker/NAS support.">
+  <meta name="twitter:image" content="https://printventory.com/1.webp">
 
   <script type="application/ld+json">
   {
@@ -32,9 +32,9 @@
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Free and open-source local 3D model manager for STL and 3MF libraries with AI tagging and Docker support.",
+    "description": "Free and open-source local 3D model manager with print history, filament catalog, printer and parts tracking, AI tagging, and Docker support.",
     "url": "https://printventory.com/",
-    "image": "https://printventory.com/2.webp",
+    "image": "https://printventory.com/1.webp",
     "author": {
       "@type": "Organization",
       "name": "TechJeeper Designs"
@@ -78,19 +78,25 @@
         <div class="carousel-slide active">
           <picture>
             <source srcset="1.webp" type="image/webp">
-            <img src="1.png" alt="" width="1600" height="948" fetchpriority="high">
+            <img src="1.png" alt="" width="1600" height="925" fetchpriority="high">
           </picture>
         </div>
         <div class="carousel-slide">
           <picture>
             <source srcset="2.webp" type="image/webp">
-            <img src="2.png" alt="" width="1600" height="943" loading="lazy">
+            <img src="2.png" alt="" width="1600" height="925" loading="lazy">
           </picture>
         </div>
         <div class="carousel-slide">
           <picture>
             <source srcset="3.webp" type="image/webp">
-            <img src="3.png" alt="" width="1600" height="902" loading="lazy">
+            <img src="3.png" alt="" width="1600" height="925" loading="lazy">
+          </picture>
+        </div>
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="4.webp" type="image/webp">
+            <img src="4.png" alt="" width="1600" height="925" loading="lazy">
           </picture>
         </div>
       </div>
@@ -101,7 +107,7 @@
         <img src="logo.png" alt="Printventory" class="logo" style="max-width: 400px; width: 100%;">
       </div>
       <h1>Your local 3D model library, finally organized</h1>
-      <p>Free and open source. Index STL and 3MF files where they already live — with search, tags, duplicates, and AI-assisted organization.</p>
+      <p>Free and open source. Index models where they already live — then track prints, filament, printers, and parts without uploading a thing.</p>
       <p class="hero-subline">Files never leave your machine · Windows, macOS, Linux &amp; Docker</p>
       <div class="hero-cta">
         <a href="public.html" class="download-button">Download Free</a>
@@ -111,22 +117,42 @@
 
     <div class="features">
       <div class="feature-section">
-        <h3>File<br>Management</h3>
+        <h3>Local<br>Library</h3>
         <ul>
-          <li>Scan directories for STL and 3MF files</li>
-          <li>View thumbnails of your 3D models</li>
-          <li>Sort models by name, size, or date</li>
-          <li>Instant global search of your library</li>
+          <li>Scan directories for STL, 3MF, STEP, OBJ, and more</li>
+          <li>Thumbnails, folders, tags, designers, and notes</li>
+          <li>Instant search and filters across large libraries</li>
+          <li>Find duplicates by content hash</li>
         </ul>
       </div>
 
       <div class="feature-section">
-        <h3>Model<br>Organization</h3>
+        <h3>Print<br>Lifecycle</h3>
         <ul>
-          <li>Tag models for easy categorization</li>
-          <li>Assign designers to models</li>
-          <li>Track print status</li>
-          <li>Add source URLs and notes</li>
+          <li>Statuses from Want and Queued through Printed or Failed</li>
+          <li>Log prints with date, quantity, notes, and filament</li>
+          <li>Filter and sort by last printed or print count</li>
+          <li>Track reprints with Printed ×N badges</li>
+        </ul>
+      </div>
+
+      <div class="feature-section">
+        <h3>Filament<br>&amp; Spoolman</h3>
+        <ul>
+          <li>Build a filament catalog and assign spools to models</li>
+          <li>Filter the library by material and color</li>
+          <li>Optional pull-only sync from Spoolman</li>
+          <li>Prefill filaments when you log a print</li>
+        </ul>
+      </div>
+
+      <div class="feature-section">
+        <h3>Printers<br>&amp; Parts</h3>
+        <ul>
+          <li>Save printers with maintenance logs and reminders</li>
+          <li>Network scan for Klipper, PrusaLink, and Bambu</li>
+          <li>Track screws, bearings, and hardware stock</li>
+          <li>Deduct parts when you log a print</li>
         </ul>
       </div>
 
@@ -141,31 +167,12 @@
       </div>
 
       <div class="feature-section">
-        <h3>Multi-Edit<br>Features</h3>
-        <ul>
-          <li>Select multiple models for batch editing</li>
-          <li>Bulk update designer, source, and status</li>
-          <li>Select all visible models with one click</li>
-          <li>Filter models by various attributes</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Duplicate<br>Management</h3>
-        <ul>
-          <li>Find duplicate files based on content hash</li>
-          <li>Compare duplicates with thumbnails</li>
-          <li>Easily remove duplicate files</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Docker &amp;<br>NAS</h3>
+        <h3>Docker, NAS<br>&amp; Extension</h3>
         <ul>
           <li>Run server mode on Synology, Unraid, and more</li>
-          <li>Index network storage without a desktop GUI</li>
+          <li>HTTPS/SSL and installable PWA for phones</li>
+          <li>Browser extension inbox for model pages</li>
           <li>Official Docker Hub image available</li>
-          <li>Built for large home libraries</li>
         </ul>
       </div>
 
@@ -175,25 +182,25 @@
           <button type="button" class="gallery-item" onclick="openLightbox(0)" aria-label="Open library grid screenshot">
             <picture>
               <source srcset="1.webp" type="image/webp">
-              <img src="1.png" alt="Library grid view of 3D models" loading="lazy" width="1600" height="948">
+              <img src="1.png" alt="Library grid view of 3D models" loading="lazy" width="1600" height="925">
             </picture>
           </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(1)" aria-label="Open model detail screenshot">
+          <button type="button" class="gallery-item" onclick="openLightbox(1)" aria-label="Open filament manager screenshot">
             <picture>
               <source srcset="2.webp" type="image/webp">
-              <img src="2.png" alt="Model detail and metadata panel" loading="lazy" width="1600" height="943">
+              <img src="2.png" alt="Filament Manager with Spoolman sync" loading="lazy" width="1600" height="925">
             </picture>
           </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(2)" aria-label="Open search and tags screenshot">
+          <button type="button" class="gallery-item" onclick="openLightbox(2)" aria-label="Open printer manager screenshot">
             <picture>
               <source srcset="3.webp" type="image/webp">
-              <img src="3.png" alt="Search and tag filtering" loading="lazy" width="1600" height="902">
+              <img src="3.png" alt="Printer Manager with network detect" loading="lazy" width="1600" height="925">
             </picture>
           </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(3)" aria-label="Open organization tools screenshot">
+          <button type="button" class="gallery-item" onclick="openLightbox(3)" aria-label="Open parts manager screenshot">
             <picture>
               <source srcset="4.webp" type="image/webp">
-              <img src="4.png" alt="Organization and batch editing tools" loading="lazy" width="1562" height="952">
+              <img src="4.png" alt="Parts Manager tracking hardware stock" loading="lazy" width="1600" height="925">
             </picture>
           </button>
         </div>
