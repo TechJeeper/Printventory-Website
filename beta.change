@@ -1,5 +1,14 @@
 3.0.0
-Prepare for Public Release.
+Print lifecycle & history — Unprinted / Want / Queued / Printing / Printed / Failed, plus a real print log (date, quantity, notes, filaments). Filter and sort by last printed, print count, or status.
+Filament catalog & Spoolman — Assign filaments to models, filter the library by filament, and optionally sync your catalog from Spoolman. Filament chips prefill when you log a print.
+MCP server for AI agents — Connect Cursor, Claude Desktop, and similar tools to your library over MCP while Printventory is running (trusted networks only).
+Folder-tree explorer — Browse scanned dirs with a folder tree and optional rail next to the grid.
+HTTPS / SSL & mobile (PWA) — Server and Docker with proper certs; install as a PWA with a compact phone layout.
+Browser Extension inbox — Printventory Watcher can queue model pages/downloads even when the app isn’t open.
+3D Preview Studio — Lighting, materials, backdrops, reflections, shadows, save image — plus multi-part 3MF part picking and click-to-focus.
+More file formats — STEP/STP, OBJ, PLY, IGES, F3D, ChiTuBox, and VOXL get thumbnail/preview support where the format allows.
+Printer Management & Parts Stock — Save printers, maintenance logs, and reminders; scan for Klipper, PrusaLink, and Bambu. Track parts stock and deduct when you log a print.
+Organize Library — Copy models from a scanned folder into a structure you choose, with free-space checks and verified moves.
 
 2.2.27
 Saved thumbnails stay on screen. The Too large label is no longer drawn over a thumbnail that already exists, including before the max file size setting has loaded
