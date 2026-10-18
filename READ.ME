@@ -21,21 +21,30 @@ Marketing and download hub for [Printventory](https://github.com/TechJeeper/Prin
 | Page | Path |
 |------|------|
 | Home | `index.html` |
-| Stable download | `public.html` |
-| Beta download | `beta.html` |
-| FAQ | `faq.html` |
+| Stable download + changelog | `public.html` |
+| Beta download + changelog | `beta.html` |
+| FAQ (searchable) | `faq.html` |
 | Support / donate | `support.html` |
 | Extension privacy | `extension-privacy.html` |
+| Usage analytics (unlisted) | `analytics.html` |
+
+Shared pieces: `styles.css` (design system), `site.js` (nav, version tags, supporters), `download-links.js`, `changelog.js`, `home.js`, `faq.js`. The header and footer markup is repeated in every page, so nav changes need to be made in each HTML file.
 
 ## Updating releases
 
-Version and download URLs are driven by plain text files (no HTML edits required for most releases):
+Versions, download URLs and changelogs are driven by plain text files. No HTML edits are required for a release:
 
 1. Set the version in `public.version` or `beta.version`
 2. Keep URL templates in `win.pub` / `mac.pub` / `linux.pub` (and `*.beta`) using `{public.version}` or `{beta.version}`
-3. Optionally update `public.change` / `beta.change` markdown for the changelog modal
+3. Update `public.change` / `beta.change`: a bare version line (e.g. `3.0.1`) starts a release, and each following line is one change. `Title — description` (or `Title: description`) renders the title in bold.
 
-Download buttons include fallback hrefs with the current version so links still work if JavaScript fails. After bumping a version file, update those fallbacks in `index.html`, `public.html`, and `beta.html` (or rely on JS hydration after deploy).
+What reads them:
+
+- Every element with `data-version-of="public|beta"` (nav button, footer, hero pill, download pages) shows the current version.
+- Download buttons (`data-download="win|mac|linux"`) get their URLs from the templates, and the file name under each button updates too. The homepage hero button picks the visitor's OS automatically.
+- `public.html` / `beta.html` render the full changelog as a release timeline. The homepage "What's new" section shows the first release in `public.change`.
+
+Download buttons and version tags include fallback values so links still work if JavaScript fails. After a bump, those fallbacks in `index.html`, `public.html` and `beta.html` will be one version behind until updated. That's harmless, because JS replaces them on load.
 
 ## Local preview
 

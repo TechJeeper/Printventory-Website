@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Printventory Usage Analytics</title>
-  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Internal Printventory app usage analytics.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0c11">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="analytics.css">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <script data-goatcounter="https://printventoryweb.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body class="analytics-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a href="index.html">
-        <img src="logo.png" alt="Printventory">
-      </a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="public.html">Download</a>
+        <a href="beta.html">Beta</a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html">Support</a>
+        <a class="nav-github" href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        <a class="btn btn--sm header-cta" href="public.html">Download <span class="btn-sub" data-version-of="public" data-prefix="v">v3.0.0</span></a>
+      </nav>
     </div>
-    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar-menu" id="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="public.html">Download</a>
-      <a href="beta.html">Beta</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">Support</a>
-      <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </nav>
-
+  </header>
+  <main>
   <div class="container" id="main">
     <header class="analytics-hero">
       <p class="analytics-eyebrow">Live usage</p>
@@ -122,8 +122,55 @@
     <p class="analytics-status analytics-loading" id="analytics-status">Loading metrics…</p>
     <p class="analytics-footer-note">Unlisted page · not in sitemap · metrics from printventoryweb.goatcounter.com</p>
   </div>
-
-  <script src="site-nav.js"></script>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+          <p>A free, open-source manager for the 3D model library already on your drives. Made with care by TechJeeper Designs.</p>
+          <div class="socials">
+            <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer" aria-label="Join the Printventory Discord"><img src="discord.svg" alt=""></a>
+            <a href="https://bsky.app/profile/printventory.com" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on Bluesky"><img src="BlueSky.png" alt=""></a>
+            <a href="https://x.com/printventory" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on X"><img src="X.png" alt=""></a>
+            <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer" aria-label="Printventory on GitHub"><img src="github.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="public.html">Download<span class="ver" data-version-of="public" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="beta.html">Beta builds<span class="ver" data-version-of="beta" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="public.html#changelog">Changelog</a></li>
+            <li><a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer">Docker Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Help</h2>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#docker-server-mode">Docker setup</a></li>
+            <li><a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">Discord support</a></li>
+            <li><a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Project</h2>
+          <ul>
+            <li><a href="support.html">Support Printventory</a></li>
+            <li><a href="https://printventory-shop.fourthwall.com/" target="_blank" rel="noopener noreferrer">Merch</a></li>
+            <li><a href="extension-privacy.html">Extension privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> TechJeeper Designs. Free &amp; open source.</span>
+        <span class="supporters" id="supporters" hidden></span>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js"></script>
   <script src="analytics-world-map.js"></script>
   <script src="analytics.js"></script>
 </body>

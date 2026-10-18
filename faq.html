@@ -1,611 +1,793 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Printventory FAQ — Install, AI Tagging, Docker &amp; Troubleshooting</title>
   <meta name="description" content="Printventory FAQ: installation for Windows, macOS, Linux and Docker, AI tagging, backups, large libraries, and troubleshooting.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0c11">
   <link rel="canonical" href="https://printventory.com/faq.html">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Printventory">
   <meta property="og:url" content="https://printventory.com/faq.html">
   <meta property="og:title" content="Printventory FAQ">
-  <meta property="og:description" content="Installation, AI tagging, Docker, backups, and troubleshooting for Printventory.">
+  <meta property="og:description" content="Printventory FAQ: installation for Windows, macOS, Linux and Docker, AI tagging, backups, large libraries, and troubleshooting.">
   <meta property="og:image" content="https://printventory.com/2.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Printventory FAQ">
-  <meta name="twitter:description" content="Installation, AI tagging, Docker, backups, and troubleshooting for Printventory.">
+  <meta name="twitter:description" content="Printventory FAQ: installation for Windows, macOS, Linux and Docker, AI tagging, backups, large libraries, and troubleshooting.">
   <meta name="twitter:image" content="https://printventory.com/2.webp">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <script data-goatcounter="https://printventoryweb.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <nav class="navbar">
-      <div class="navbar-brand">
-          <a href="index.html">
-              <img src="logo.png" alt="Printventory">
-          </a>
-      </div>
-      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="navbar-menu" id="primary-nav">
-          <a href="index.html">Home</a>
-          <a href="public.html">Download</a>
-          <a href="beta.html">Beta</a>
-          <a href="faq.html">FAQ</a>
-          <a href="support.html">Support</a>
-          <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </nav>
-  <div class="container" id="main">
-    <div class="hero-background"></div>
-
-    <div class="hero-section fade-in">
-      <h1>Frequently Asked Questions</h1>
-      <p>Find answers to common questions about Printventory.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="public.html">Download</a>
+        <a href="beta.html">Beta</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="support.html">Support</a>
+        <a class="nav-github" href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        <a class="btn btn--sm header-cta" href="public.html">Download <span class="btn-sub" data-version-of="public" data-prefix="v">v3.0.0</span></a>
+      </nav>
     </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow">Help center</p>
+        <h1>Frequently asked questions</h1>
+        <p class="lede">Installing, setting up, AI tagging, Docker, backups and troubleshooting. Can't find what you need? Ask in the <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">Discord</a>.</p>
+      </div>
+    </section>
 
-    <div class="faq-content" style="background: rgba(255, 255, 255, 0.05); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 40px; margin-bottom: 60px;">
-
-        <div class="toc" style="background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 10px; margin-bottom: 40px;">
-            <h2 style="margin-top: 0;">Table of Contents</h2>
-            <ul>
-                <li><a href="#general-information" style="color: #00bfff; text-decoration: none;">General Information</a></li>
-                <li><a href="#installation-platform-support" style="color: #00bfff; text-decoration: none;">Installation & Platform Support</a></li>
-                <li><a href="#getting-started" style="color: #00bfff; text-decoration: none;">Getting Started</a></li>
-                <li><a href="#ai-tagging" style="color: #00bfff; text-decoration: none;">AI Tagging</a></li>
-                <li><a href="#file-management-organization" style="color: #00bfff; text-decoration: none;">File Management & Organization</a></li>
-                <li><a href="#docker-server-mode" style="color: #00bfff; text-decoration: none;">Docker & Server Mode</a></li>
-                <li><a href="#backup-database" style="color: #00bfff; text-decoration: none;">Backup & Database</a></li>
-                <li><a href="#performance-large-collections" style="color: #00bfff; text-decoration: none;">Performance & Large Collections</a></li>
-                <li><a href="#troubleshooting" style="color: #00bfff; text-decoration: none;">Troubleshooting</a></li>
-                <li><a href="#feature-requests-support" style="color: #00bfff; text-decoration: none;">Feature Requests & Support</a></li>
-                <li><a href="#tips-best-practices" style="color: #00bfff; text-decoration: none;">Tips & Best Practices</a></li>
-                <li><a href="#frequently-asked-questions" style="color: #00bfff; text-decoration: none;">Frequently Asked Questions</a></li>
-                <li><a href="#credits" style="color: #00bfff; text-decoration: none;">Credits</a></li>
-            </ul>
+    <section class="section--tight">
+      <div class="wrap faq-layout">
+        <aside class="faq-toc" aria-label="FAQ sections">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#general-information">General Information</a></li>
+            <li><a href="#installation-platform-support">Installation & Platform Support</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#ai-tagging">AI Tagging</a></li>
+            <li><a href="#file-management-organization">File Management & Organization</a></li>
+            <li><a href="#docker-server-mode">Docker & Server Mode</a></li>
+            <li><a href="#backup-database">Backup & Database</a></li>
+            <li><a href="#performance-large-collections">Performance & Large Collections</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#feature-requests-support">Feature Requests & Support</a></li>
+            <li><a href="#tips-best-practices">Tips & Best Practices</a></li>
+            <li><a href="#frequently-asked-questions">Quick Answers</a></li>
+          </ol>
+        </aside>
+        <div class="faq-main">
+          <div class="faq-search" role="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label class="visually-hidden" for="faq-filter">Search the FAQ</label>
+            <input type="search" id="faq-filter" placeholder="Search questions (e.g. Docker, backup, Gemini)" autocomplete="off">
+          </div>
+          <p class="faq-empty" id="faq-empty" hidden>No questions match that search. Try another word, or ask in the Discord.</p>
+        <section class="faq-group" id="general-information" aria-labelledby="general-information-title">
+          <h2 id="general-information-title">General Information</h2>
+          <details class="faq-item" id="q-what-is-printventory">
+            <summary>What is Printventory?</summary>
+            <div class="faq-answer">
+              <p>Printventory is a free, open-source app for Windows, macOS, Linux and Docker that turns the 3D model files already on your drives into a searchable library, with thumbnails, previews, tags, designers and notes. It also tracks print history, filament, printers and parts stock. It doesn't move or upload your files.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-file-formats-does-printventory-support">
+            <summary>What file formats does Printventory support?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>STL and 3MF</strong>: full support, including thumbnails, 3D previews, and metadata and images embedded in 3MF files</li>
+              <li><strong>STEP/STP, OBJ, PLY, IGES, F3D, ChiTuBox and VOXL</strong>: thumbnails and previews where the format allows</li>
+              <li><strong>LYS/LTY</strong>: indexed alongside your models</li>
+              <li><strong>ZIP archives</strong>: models inside a ZIP are indexed and grouped as a bundle</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-does-printventory-upload-or-move-my-files">
+            <summary>Does Printventory upload or move my files?</summary>
+            <div class="faq-answer">
+              <p>No! Printventory only scans and indexes your existing files. Your models stay exactly where they are on your computer or network storage. The app creates thumbnails and stores metadata in a local database.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-much-does-printventory-cost">
+            <summary>How much does Printventory cost?</summary>
+            <div class="faq-answer">
+              <p>Printventory is free and always will be, it's Open Source. If you want to support the project, visit <a href="http://printventory.com/support.html">http://printventory.com/support.html</a></p>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="installation-platform-support" aria-labelledby="installation-platform-support-title">
+          <h2 id="installation-platform-support-title">Installation & Platform Support</h2>
+          <details class="faq-item" id="q-what-platforms-are-supported">
+            <summary>What platforms are supported?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Windows</strong> - Full support (Windows 10/11)</li>
+              <li><strong>macOS</strong> - Full support (both Intel and Apple Silicon/M1/M2/M3)</li>
+              <li><strong>Linux</strong> - Beta support available</li>
+              <li><strong>Docker</strong> - Server mode for running on NAS devices or headless servers</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-install-on-windows">
+            <summary>How do I install on Windows?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li>Download the latest installer from the <a href="public.html">Download page</a> (or try <a href="beta.html">Beta</a> for pre-release builds)</li>
+              <li>Run the installer</li>
+              <li>The app will install to your system</li>
+              <li>Updates can be installed over existing versions without losing data</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-install-on-macos">
+            <summary>How do I install on macOS?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li>Download the .DMG file from the <a href="public.html">Download page</a> (or <a href="beta.html">Beta</a>)</li>
+              <li>Open the DMG and drag Printventory to Applications</li>
+              <li><strong>Important</strong>: Since the app is unsigned, you'll need to:
+              <ul>
+              <li>Go to <strong>System Settings > Privacy & Security</strong></li>
+              <li>Scroll to the bottom and click <strong>"Open Anyway"</strong></li>
+              <li>Enter your password</li>
+              </ul>
+              </li>
+              <li>For M1/M2/M3 Macs: Use the Universal or arm64 build</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-is-there-a-docker-version">
+            <summary>Is there a Docker version?</summary>
+            <div class="faq-answer">
+              <p>Yes! Docker/Server mode is available for running Printventory on NAS devices (Synology, Unraid, ZimaOS, etc.) or headless servers. See the <a href="https://github.com/TechJeeper/Printventory/blob/main/README.md" target="_blank" rel="noopener noreferrer">GitHub README</a> for setup instructions.</p>
+              <p><strong>Important Docker setup notes:</strong></p>
+              <ul>
+              <li>The volume path must be lowercase: <code>/root/.config/printventory</code> (not <code>Printventory</code>)</li>
+              <li>You can map port 5000 to a different port using <code>-p</code> in docker run</li>
+              <li>STL Home requires a timer-based scan since there's no open/close action in server mode</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-will-upgrading-lose-my-data">
+            <summary>Will upgrading lose my data?</summary>
+            <div class="faq-answer">
+              <p>No. Your database and thumbnails are preserved during updates. However, it's always recommended to:</p>
+              <ol>
+              <li>Create a backup before major updates (Tools > Backup Database)</li>
+              <li>Keep the existing installation path when updating</li>
+              </ol>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="getting-started" aria-labelledby="getting-started-title">
+          <h2 id="getting-started-title">Getting Started</h2>
+          <details class="faq-item" id="q-how-do-i-set-up-my-first-scan">
+            <summary>How do I set up my first scan?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li>Open Printventory</li>
+              <li>Go to <strong>Settings > Application Settings</strong></li>
+              <li>Set your <strong>STL Home</strong> directory (the main folder containing your models)</li>
+              <li>The app will automatically scan and generate thumbnails</li>
+              <li>Initial scan can take time depending on collection size</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-scan-multiple-drives-or-folders">
+            <summary>Can I scan multiple drives or folders?</summary>
+            <div class="faq-answer">
+              <p>Yes! You can set multiple scan paths. The app supports:</p>
+              <ul>
+              <li>Local drives (C:\, D:\, etc.)</li>
+              <li>External drives</li>
+              <li>Network shares (UNC paths like \\server\share) in Docker or Server Mode</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-rescan-for-new-models">
+            <summary>How do I rescan for new models?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Right-click</strong> in the main window and select <strong>"Scan for new files"</strong></li>
+              <li>Or go to <strong>Tools > Scan for new files</strong></li>
+              <li>You can also configure your <strong>STL Home</strong> under settings, which will automatically scan when you open the app</li>
+              <li>The app will only scan for new/changed files, not rebuild everything</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="ai-tagging" aria-labelledby="ai-tagging-title">
+          <h2 id="ai-tagging-title">AI Tagging</h2>
+          <details class="faq-item" id="q-what-is-ai-tagging">
+            <summary>What is AI Tagging?</summary>
+            <div class="faq-answer">
+              <p>AI Tagging uses artificial intelligence to automatically analyze your 3D models and suggest relevant tags (e.g., "miniature", "functional", "dragon", "terrain") to help organize your collection.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-ai-services-are-supported">
+            <summary>What AI services are supported?</summary>
+            <div class="faq-answer">
+              <h4>1. Puter (Recommended - FREE)</h4>
+              <ul>
+              <li><strong>Setup</strong>: Go to Settings > AI Config > Select "Puter"</li>
+              <li><strong>Cost</strong>: Free, unlimited</li>
+              <li><strong>Models</strong>: GPT-4o, Claude 3.5 Sonnet, and others</li>
+              <li><strong>Signup</strong>: Visit <a href="https://developer.puter.com/" target="_blank" rel="noopener noreferrer">developer.puter.com</a></li>
+              <li><strong>Best for</strong>: Most users who want free AI tagging</li>
+              </ul>
+              <h4>2. Google Gemini</h4>
+              <ul>
+              <li><strong>Setup</strong>:
+              <ol>
+              <li>Get API key from <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">Google AI Studio</a></li>
+              <li>Settings > AI Config > Select "Gemini"</li>
+              <li>Model: Use <code>gemini-2.5-flash</code> (NOT gemini-1.5-flash)</li>
+              </ol>
+              </li>
+              <li><strong>Cost</strong>: Free tier available with rate limits</li>
+              <li><strong>Note</strong>: Rate limits are strict (may limit bulk tagging)</li>
+              </ul>
+              <h4>3. OpenAI</h4>
+              <ul>
+              <li><strong>Setup</strong>: Provide your OpenAI API key</li>
+              <li><strong>Cost</strong>: Paid (based on usage)</li>
+              <li><strong>Models</strong>: GPT-4o, GPT-3.5-turbo</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-use-ai-tagging">
+            <summary>How do I use AI Tagging?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Single model</strong>: Right-click model > "AI Tag"</li>
+              <li><strong>Multiple models</strong>: Select models in multi-edit mode > AI Tag</li>
+              <li>Review suggested tags (select/deselect as needed)</li>
+              <li>Click Apply</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-ai-tagging-tips">
+            <summary>AI Tagging Tips</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Review tags before applying</strong>: AI sometimes generates overly generic tags</li>
+              <li><strong>Rate limits</strong>: Gemini has strict rate limits. Use Puter for bulk tagging</li>
+              <li><strong>Batch tagging</strong>: When rate limited, tags are queued and applied when limit resets</li>
+              <li><strong>Tag cleanup</strong>: Use Metadata Manager (Tools menu) to merge/rename/delete tags</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-use-gemini-code-assist">
+            <summary>Can I use Gemini Code Assist?</summary>
+            <div class="faq-answer">
+              <p>Yes! If you use VS Code, Google offers generous free Gemini usage through the "Gemini Code Assist" extension.</p>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="file-management-organization" aria-labelledby="file-management-organization-title">
+          <h2 id="file-management-organization-title">File Management & Organization</h2>
+          <details class="faq-item" id="q-how-do-i-add-tags-to-models">
+            <summary>How do I add tags to models?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Manual</strong>: Click a model > Edit Tags field > Type and press Enter</li>
+              <li><strong>AI</strong>: Right-click > AI Tag</li>
+              <li><strong>Multi-edit</strong>: Select multiple models > Edit tags for all at once</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-manage-designers">
+            <summary>How do I manage Designers?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Add from URL</strong>: Paste a Thangs, Printables, or MakerWorld URL to auto-populate designer and parent model</li>
+              <li><strong>Manual entry</strong>: Type designer name in the Designer field</li>
+              <li><strong>Merge duplicates</strong>: Tools > Metadata Manager > Select "Designers" > Rename duplicate entries to merge</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-is-the-metadata-manager">
+            <summary>What is the Metadata Manager?</summary>
+            <div class="faq-answer">
+              <p><strong>Tools > Metadata Manager</strong> lets you:</p>
+              <ul>
+              <li><strong>Rename</strong> tags, designers, parent models, etc.</li>
+              <li><strong>Delete</strong> unused metadata</li>
+              <li><strong>Merge</strong> duplicates (e.g., rename "TechJeeper" to "Tech Jeeper" to combine them)</li>
+              <li><strong>Bulk operations</strong>: Clean up your metadata across thousands of models</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-add-custom-images-thumbnails">
+            <summary>Can I add custom images/thumbnails?</summary>
+            <div class="faq-answer">
+              <p>Yes! Right-click a model and:</p>
+              <ul>
+              <li><strong>Change picture</strong>: Upload your own image</li>
+              <li><strong>Cycle images</strong>: For 3MF files with multiple embedded images</li>
+              <li>Future versions will support pulling images from model sites (Thangs, Printables, MakerWorld)</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-remove-models-from-the-database">
+            <summary>How do I remove models from the database?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Option 1</strong>: Right-click model > "Remove from database"</li>
+              <li><strong>Option 2</strong>: Delete the physical file, then Tools > Purge Database to remove orphaned entries</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-is-purge-database">
+            <summary>What is "Purge Database"?</summary>
+            <div class="faq-answer">
+              <p><strong>Tools > Purge Database</strong> removes all thumbnails and model entries, then rescans your directories from scratch. Use this when:</p>
+              <ul>
+              <li>You've moved/reorganized many files</li>
+              <li>Thumbnails appear corrupted</li>
+              <li>You want to start fresh</li>
+              </ul>
+              <p><strong>Warning</strong>: This will reset all manually added tags, designers, and notes unless you've backed up the database first!</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-i-have-my-models-sorted-in-separate-folders-already-how-can-">
+            <summary>I have my models sorted in separate folders already, how can I sort by models within a folder?</summary>
+            <div class="faq-answer">
+              <p>You can click the parent directory on the model detail panel. Then, you can use select all to select the models and set properties like designer or parent models easily.</p>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="docker-server-mode" aria-labelledby="docker-server-mode-title">
+          <h2 id="docker-server-mode-title">Docker & Server Mode</h2>
+          <details class="faq-item" id="q-what-s-the-difference-between-desktop-and-server-mode">
+            <summary>What's the difference between Desktop and Server Mode?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Desktop Mode</strong>: Windows/Mac/Linux app with GUI</li>
+              <li><strong>Server Mode</strong>: Web-based UI accessible via browser (runs on port 5000)</li>
+              <li><strong>Docker Mode</strong>: Containerized server mode for NAS/headless systems</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-set-up-docker-mode">
+            <summary>How do I set up Docker mode?</summary>
+            <div class="faq-answer">
+              <p>See the <a href="https://github.com/TechJeeper/Printventory/blob/main/README.md" target="_blank" rel="noopener noreferrer">official README</a> for docker-compose examples.</p>
+              <p><strong>Common docker-compose.yml snippet:</strong></p>
+              <pre><code>volumes:
+              # IMPORTANT: Use lowercase 'printventory'
+              - printventory-data:/root/.config/printventory
+              # Mount your model directories
+              - /path/to/models:/mnt/models</code></pre>
+            </div>
+          </details>
+          <details class="faq-item" id="q-server-mode-known-issues">
+            <summary>Server Mode known issues</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Backup/Restore menu</strong>: Available in File menu (different from desktop)</li>
+              <li><strong>STL Home scanning</strong>: Uses timer-based periodic scans instead of manual triggers</li>
+              <li><strong>UNC paths</strong>: Experimental support for network shares</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-access-printventory-from-my-phone-tablet">
+            <summary>Can I access Printventory from my phone/tablet?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Docker/Server Mode</strong>: Yes! Open it in a browser at <code>http://your-server-ip:5000</code>. With HTTPS set up, you can install it as an app (PWA) with a compact phone layout.</li>
+              <li><strong>Desktop Mode</strong>: Use remote desktop apps (RDP, VNC, TeamViewer, etc.)</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="backup-database" aria-labelledby="backup-database-title">
+          <h2 id="backup-database-title">Backup & Database</h2>
+          <details class="faq-item" id="q-where-is-my-data-stored">
+            <summary>Where is my data stored?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Windows</strong>: <code>%LOCALAPPDATA%\Printventory</code> (usually <code>C:\Users\YourName\AppData\Local\Printventory</code>)</li>
+              <li><strong>macOS</strong>: <code>~/.config/Printventory</code></li>
+              <li><strong>Linux</strong>: <code>~/.config/Printventory</code></li>
+              <li><strong>Docker</strong>: Defined in your volume mount (e.g., <code>/root/.config/printventory</code>)</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-s-in-the-database">
+            <summary>What's in the database?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li>Model metadata (designer, tags, notes, parent model, etc.)</li>
+              <li>Rendered thumbnails (cached images)</li>
+              <li><strong>NOT</strong> the actual STL/3MF files (those stay in your original folders)</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-backup-my-database">
+            <summary>How do I backup my database?</summary>
+            <div class="faq-answer">
+              <p><strong>Recommended method:</strong></p>
+              <ol>
+              <li><strong>Tools > Backup Database</strong></li>
+              <li>Choose save location</li>
+              <li>Creates a <code>.backup</code> file you can restore later</li>
+              </ol>
+              <p><strong>Manual method:</strong></p>
+              <ul>
+              <li>Copy the entire <code>Printventory</code> folder from AppData/Local or .config</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-restore-from-backup">
+            <summary>How do I restore from backup?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Tools > Restore Database</strong></li>
+              <li>Select your <code>.backup</code> file</li>
+              <li>Restart the app</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-should-i-backup-before-uninstalling">
+            <summary>What should I backup before uninstalling?</summary>
+            <div class="faq-answer">
+              <p><strong>Critical</strong>: Create a backup before uninstalling! Uninstalling may delete:</p>
+              <ul>
+              <li>Your database</li>
+              <li>All thumbnails</li>
+              <li>Tags, designers, notes</li>
+              </ul>
+              <p>Your actual model files are safe (they're never moved/deleted by Printventory).</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-sync-my-database-across-multiple-computers">
+            <summary>Can I sync my database across multiple computers?</summary>
+            <div class="faq-answer">
+              <p><strong>Experimental</strong>: You can store the database on a network share or cloud storage (Google Drive, OneDrive), but:</p>
+              <ul>
+              <li><strong>Warning</strong>: Syncing databases is risky and can cause corruption</li>
+              <li><strong>Better option</strong>: Use Docker/Server mode on a NAS and access from multiple devices</li>
+              <li><strong>Alternative</strong>: Export/import backups between computers</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="performance-large-collections" aria-labelledby="performance-large-collections-title">
+          <h2 id="performance-large-collections-title">Performance & Large Collections</h2>
+          <details class="faq-item" id="q-how-many-models-can-printventory-handle">
+            <summary>How many models can Printventory handle?</summary>
+            <div class="faq-answer">
+              <p>Community members have successfully tested with:</p>
+              <ul>
+              <li>2,000+ models: Common</li>
+              <li>10,000+ models: No issues</li>
+              <li>29,000+ models: Tested and working</li>
+              <li>44,000+ models: Successfully scanned!</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-the-app-is-slow-when-loading-help">
+            <summary>The app is slow when loading. Help!</summary>
+            <div class="faq-answer">
+              <p><strong>For very large collections (10k+ models):</strong></p>
+              <ul>
+              <li>The app needs to load the database on startup</li>
+              <li>First load can take 1-5 minutes for huge collections</li>
+              <li><strong>Workaround</strong>: Let it finish loading once, then subsequent sessions are faster</li>
+              <li><strong>Stay current</strong>: recent versions lazy-load the grid and load thumbnails in batches, so updating helps a lot</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-scanning-is-taking-forever">
+            <summary>Scanning is taking forever</summary>
+            <div class="faq-answer">
+              <p><strong>Speed tips:</strong></p>
+              <ul>
+              <li><strong>Drive speed matters</strong>: HDD is slower than SSD/NVMe</li>
+              <li><strong>Network drives</strong>: Slower than local drives</li>
+              <li><strong>Initial scan only</strong>: Subsequent scans only process new/changed files</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-speed-up-thumbnail-generation">
+            <summary>Can I speed up thumbnail generation?</summary>
+            <div class="faq-answer">
+              <p>Thumbnails are generated once and cached. After initial scan:</p>
+              <ul>
+              <li><strong>Fast searches</strong>: Database lookups are instant</li>
+              <li><strong>Purge carefully</strong>: Tools > Purge will delete all thumbnails and require regeneration</li>
+              <li><strong>GPU doesn't matter much</strong>: Rendering is mostly CPU-bound</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="troubleshooting" aria-labelledby="troubleshooting-title">
+          <h2 id="troubleshooting-title">Troubleshooting</h2>
+          <details class="faq-item" id="q-max-file-size-setting">
+            <summary>Max file size setting</summary>
+            <div class="faq-answer">
+              <p>If large models aren't being scanned:</p>
+              <ul>
+              <li><strong>Settings > Application Settings > Max File Size</strong></li>
+              <li>Increase the limit to include larger STL/3MF files</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-failed-to-commit-changes-to-dconf-error-docker">
+            <summary>"Failed to commit changes to dconf" error (Docker)</summary>
+            <div class="faq-answer">
+              <p>This is a harmless warning related to Electron trying to use dconf on headless systems. It can be ignored.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-invalid-elf-header-database-error-linux">
+            <summary>"Invalid ELF header" database error (Linux)</summary>
+            <div class="faq-answer">
+              <p><strong>Fix</strong>: Reinstall the latest Linux build. This was fixed in version 1.24.1+</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-multi-edit-mode-issues">
+            <summary>Multi-edit mode issues</summary>
+            <div class="faq-answer">
+              <p>If metadata isn't saving in multi-edit:</p>
+              <ol>
+              <li>Try single-edit mode first</li>
+              <li>Update to latest beta</li>
+              <li>Backup database and report bug in Discord #beta-issues</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-duplicate-models-appearing">
+            <summary>Duplicate models appearing</summary>
+            <div class="faq-answer">
+              <p>This can happen after:</p>
+              <ul>
+              <li>Moving files between scans</li>
+              <li>Renaming directories</li>
+              <li><strong>Fix</strong>: Right-click > "Remove from database" on duplicates, or purge and rescan</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-t-set-stl-home-docker-mode">
+            <summary>Can't set STL Home (Docker mode)</summary>
+            <div class="faq-answer">
+              <p>Ensure:</p>
+              <ul>
+              <li>Your mount path exists (e.g., <code>/mnt/models</code>)</li>
+              <li>Volume is correctly mapped in docker-compose.yml</li>
+              <li>Path uses UNC format for network shares</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-gemini-api-404-status-code-error">
+            <summary>Gemini API "404 status code" error</summary>
+            <div class="faq-answer">
+              <p><strong>Fix</strong>: Change model from <code>gemini-1.5-flash</code> to <code>gemini-2.5-flash</code></p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-printventory-won-t-start-after-update">
+            <summary>Printventory won't start after update</summary>
+            <div class="faq-answer">
+              <ol>
+              <li>Check if Windows SmartScreen blocked it (click "More info" > "Run anyway")</li>
+              <li>Try running as Administrator</li>
+              <li>Reinstall (your database should be preserved)</li>
+              <li>If issues persist, restore from backup and report to Discord</li>
+              </ol>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="feature-requests-support" aria-labelledby="feature-requests-support-title">
+          <h2 id="feature-requests-support-title">Feature Requests & Support</h2>
+          <details class="faq-item" id="q-where-can-i-get-help">
+            <summary>Where can I get help?</summary>
+            <div class="faq-answer">
+              <ul>
+              <li><strong>Discord</strong>: Join the Printventory Discord for real-time support</li>
+              <li><strong>GitHub</strong>: <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">TechJeeper/Printventory</a></li>
+              <li><strong>Bug reports</strong>: Use #tech-support channel in Discord</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-how-do-i-report-a-bug">
+            <summary>How do I report a bug?</summary>
+            <div class="faq-answer">
+              <ol>
+              <li>Join the Discord server</li>
+              <li>Post in <strong>#tech-support</strong> with:
+              <ul>
+              <li>Version number (shown in About menu)</li>
+              <li>Platform (Windows/Mac/Linux/Docker)</li>
+              <li>Steps to reproduce</li>
+              <li>Screenshots if applicable</li>
+              </ul>
+              </li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-contribute">
+            <summary>Can I contribute?</summary>
+            <div class="faq-answer">
+              <p>Yes! The project welcomes:</p>
+              <ul>
+              <li>Beta testers</li>
+              <li>Bug reports</li>
+              <li>Feature suggestions</li>
+              <li>Documentation improvements</li>
+              <li>Code contributions (check GitHub)</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-is-there-a-roadmap">
+            <summary>Is there a roadmap?</summary>
+            <div class="faq-answer">
+              <p>The developer (@TechJeeper) actively works on:</p>
+              <ol>
+              <li><strong>Stability first</strong>: Fixing bugs before adding features</li>
+              <li><strong>User requests</strong>: Community-driven feature prioritization</li>
+              <li><strong>Cross-platform parity</strong>: Ensuring all platforms work equally well</li>
+              </ol>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="tips-best-practices" aria-labelledby="tips-best-practices-title">
+          <h2 id="tips-best-practices-title">Tips & Best Practices</h2>
+          <details class="faq-item" id="q-organization-tips">
+            <summary>Organization Tips</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Use consistent designer names</strong>: "TechJeeper" not "Tech Jeeper" or "techjeeper"</li>
+              <li><strong>Tag early and often</strong>: Easier to tag 10 models than 1,000 later</li>
+              <li><strong>Use Parent Model field</strong>: Link multi-part models to their source</li>
+              <li><strong>Notes field</strong>: Great for HueForge filament lists, print settings, etc.</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-backup-strategy">
+            <summary>Backup Strategy</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Before major updates</strong>: Always backup</li>
+              <li><strong>After big tagging sessions</strong>: Backup when you've added lots of metadata</li>
+              <li><strong>Weekly backups</strong>: If you use Printventory daily</li>
+              <li><strong>Test restores</strong>: Verify your backups work!</li>
+              </ol>
+            </div>
+          </details>
+          <details class="faq-item" id="q-workflow-suggestions">
+            <summary>Workflow Suggestions</summary>
+            <div class="faq-answer">
+              <ol>
+              <li><strong>Download models</strong> to a staging folder</li>
+              <li><strong>Scan staging folder</strong> in Printventory</li>
+              <li><strong>Tag and organize</strong> within Printventory</li>
+              <li><strong>Move to permanent storage</strong> (optional)</li>
+              <li><strong>Rescan</strong> to update paths</li>
+              </ol>
+            </div>
+          </details>
+        </section>
+        <section class="faq-group" id="frequently-asked-questions" aria-labelledby="frequently-asked-questions-title">
+          <h2 id="frequently-asked-questions-title">Quick Answers</h2>
+          <details class="faq-item" id="q-does-this-work-with-thingiverse-printables-makerworld">
+            <summary>Does this work with Thingiverse/Printables/MakerWorld?</summary>
+            <div class="faq-answer">
+              <p>Printventory doesn't download files it inventories the models you've downloaded.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-print-directly-from-printventory">
+            <summary>Can I print directly from Printventory?</summary>
+            <div class="faq-answer">
+              <p>You can right-click > "Open" or "Open with Slicer" to send models to your slicer app.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-will-this-organize-my-files-automatically">
+            <summary>Will this organize my files automatically?</summary>
+            <div class="faq-answer">
+              <p>No, Printventory creates a virtual organization layer without moving files. You can still manually organize files if desired.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-can-i-share-my-database-with-others">
+            <summary>Can I share my database with others?</summary>
+            <div class="faq-answer">
+              <p>Technically yes (share the .backup file), but it won't include the actual model files, only metadata and thumbnails. You can also export your collection as JSON format from the Backup menu.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-does-this-replace-makerworld-printables-libraries">
+            <summary>Does this replace Makerworld/Printables libraries?</summary>
+            <div class="faq-answer">
+              <p>No, it complements them. Use those for downloading; use Printventory for local organization.</p>
+            </div>
+          </details>
+          <details class="faq-item" id="q-is-my-data-private">
+            <summary>Is my data private?</summary>
+            <div class="faq-answer">
+              <p>Yes! Everything is local except: </p>
+              <ul>
+              <li>AI tagging (sends model metadata to AI service, not the actual files)</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item" id="q-what-happens-if-i-delete-a-model-file">
+            <summary>What happens if I delete a model file?</summary>
+            <div class="faq-answer">
+              <p>The database entry remains until you purge. When you re-scan it will ask if you want to remove the models from your library.</p>
+            </div>
+          </details>
+        </section>
+          <p class="faq-credits"><strong>Developer:</strong> @TechJeeper · <strong>Community:</strong> Printventory Discord beta testers · <strong>Built with:</strong> Electron, JavaScript, SQLite<br>
+          This FAQ is community-maintained. Join the Discord for the latest information.</p>
         </div>
-
-        <div id="general-information" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">General Information</h2>
-
-            <h3>What is Printventory?</h3>
-            <p>Printventory is a cross-platform desktop application designed to help 3D printing enthusiasts manage, organize, and search their STL and 3MF model files. It creates a searchable database of your 3D models with thumbnail previews, metadata, tags, and designer information - all without moving or uploading your files.</p>
-
-            <h3>What file formats does Printventory support?</h3>
-            <ul>
-                <li><strong>STL files</strong> - Full support with thumbnail generation</li>
-                <li><strong>3MF files</strong> - fully supported with ability to pull metadata from within 3mf file along with model images</li>
-                <li><strong>ZIP files</strong> - Beta support for searching inside zip archives</li>
-                <li><strong>STEP files</strong> - Planned for future releases</li>
-                <li><strong>G-code files</strong> - Planned for future releases</li>
-            </ul>
-
-            <h3>Does Printventory upload or move my files?</h3>
-            <p>No! Printventory only scans and indexes your existing files. Your models stay exactly where they are on your computer or network storage. The app creates thumbnails and stores metadata in a local database.</p>
-
-            <h3>How much does Printventory cost?</h3>
-            <p>Printventory is free and always will be, it's Open Source. If you want to support the project, visit <a href="http://printventory.com/support.html" style="color: #00bfff;">http://printventory.com/support.html</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+          <p>A free, open-source manager for the 3D model library already on your drives. Made with care by TechJeeper Designs.</p>
+          <div class="socials">
+            <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer" aria-label="Join the Printventory Discord"><img src="discord.svg" alt=""></a>
+            <a href="https://bsky.app/profile/printventory.com" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on Bluesky"><img src="BlueSky.png" alt=""></a>
+            <a href="https://x.com/printventory" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on X"><img src="X.png" alt=""></a>
+            <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer" aria-label="Printventory on GitHub"><img src="github.svg" alt=""></a>
+          </div>
         </div>
-
-        <div id="installation-platform-support" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Installation & Platform Support</h2>
-
-            <h3>What platforms are supported?</h3>
-            <ul>
-                <li><strong>Windows</strong> - Full support (Windows 10/11)</li>
-                <li><strong>macOS</strong> - Full support (both Intel and Apple Silicon/M1/M2/M3)</li>
-                <li><strong>Linux</strong> - Beta support available</li>
-                <li><strong>Docker</strong> - Server mode for running on NAS devices or headless servers</li>
-            </ul>
-
-            <h3>How do I install on Windows?</h3>
-            <ol>
-                <li>Download the latest installer from the <a href="public.html" style="color: #00bfff;">Download page</a> (or try <a href="beta.html" style="color: #00bfff;">Beta</a> for pre-release builds)</li>
-                <li>Run the installer</li>
-                <li>The app will install to your system</li>
-                <li>Updates can be installed over existing versions without losing data</li>
-            </ol>
-
-            <h3>How do I install on macOS?</h3>
-            <ol>
-                <li>Download the .DMG file from the <a href="public.html" style="color: #00bfff;">Download page</a> (or <a href="beta.html" style="color: #00bfff;">Beta</a>)</li>
-                <li>Open the DMG and drag Printventory to Applications</li>
-                <li><strong>Important</strong>: Since the app is unsigned, you'll need to:
-                    <ul>
-                        <li>Go to <strong>System Settings > Privacy & Security</strong></li>
-                        <li>Scroll to the bottom and click <strong>"Open Anyway"</strong></li>
-                        <li>Enter your password</li>
-                    </ul>
-                </li>
-                <li>For M1/M2/M3 Macs: Use the Universal or arm64 build</li>
-            </ol>
-
-            <h3>Is there a Docker version?</h3>
-            <p>Yes! Docker/Server mode is available for running Printventory on NAS devices (Synology, Unraid, ZimaOS, etc.) or headless servers. See the <a href="https://github.com/TechJeeper/Printventory/blob/main/README.md" target="_blank" style="color: #00bfff;">GitHub README</a> for setup instructions.</p>
-
-            <p><strong>Important Docker setup notes:</strong></p>
-            <ul>
-                <li>The volume path must be lowercase: <code>/root/.config/printventory</code> (not <code>Printventory</code>)</li>
-                <li>You can map port 5000 to a different port using <code>-p</code> in docker run</li>
-                <li>STL Home requires a timer-based scan since there's no open/close action in server mode</li>
-            </ul>
-
-            <h3>Will upgrading lose my data?</h3>
-            <p>No. Your database and thumbnails are preserved during updates. However, it's always recommended to:</p>
-            <ol>
-                <li>Create a backup before major updates (Tools > Backup Database)</li>
-                <li>Keep the existing installation path when updating</li>
-            </ol>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="public.html">Download<span class="ver" data-version-of="public" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="beta.html">Beta builds<span class="ver" data-version-of="beta" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="public.html#changelog">Changelog</a></li>
+            <li><a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer">Docker Hub</a></li>
+          </ul>
         </div>
-
-        <div id="getting-started" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Getting Started</h2>
-
-            <h3>How do I set up my first scan?</h3>
-            <ol>
-                <li>Open Printventory</li>
-                <li>Go to <strong>Settings > Application Settings</strong></li>
-                <li>Set your <strong>STL Home</strong> directory (the main folder containing your models)</li>
-                <li>The app will automatically scan and generate thumbnails</li>
-                <li>Initial scan can take time depending on collection size</li>
-            </ol>
-
-            <h3>Can I scan multiple drives or folders?</h3>
-            <p>Yes! You can set multiple scan paths. The app supports:</p>
-            <ul>
-                <li>Local drives (C:\, D:\, etc.)</li>
-                <li>External drives</li>
-                <li>Network shares (UNC paths like \\server\share) in Docker or Server Mode</li>
-            </ul>
-
-            <h3>How do I rescan for new models?</h3>
-            <ul>
-                <li><strong>Right-click</strong> in the main window and select <strong>"Scan for new files"</strong></li>
-                <li>Or go to <strong>Tools > Scan for new files</strong></li>
-                <li>You can also configure your <strong>STL Home</strong> under settings, which will automatically scan when you open the app</li>
-                <li>The app will only scan for new/changed files, not rebuild everything</li>
-            </ul>
+        <div class="footer-col">
+          <h2>Help</h2>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#docker-server-mode">Docker setup</a></li>
+            <li><a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">Discord support</a></li>
+            <li><a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+          </ul>
         </div>
-
-        <div id="ai-tagging" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">AI Tagging</h2>
-
-            <h3>What is AI Tagging?</h3>
-            <p>AI Tagging uses artificial intelligence to automatically analyze your 3D models and suggest relevant tags (e.g., "miniature", "functional", "dragon", "terrain") to help organize your collection.</p>
-
-            <h3>What AI services are supported?</h3>
-
-            <h4>1. Puter (Recommended - FREE)</h4>
-            <ul>
-                <li><strong>Setup</strong>: Go to Settings > AI Config > Select "Puter"</li>
-                <li><strong>Cost</strong>: Free, unlimited</li>
-                <li><strong>Models</strong>: GPT-4o, Claude 3.5 Sonnet, and others</li>
-                <li><strong>Signup</strong>: Visit <a href="https://developer.puter.com/" target="_blank" style="color: #00bfff;">developer.puter.com</a></li>
-                <li><strong>Best for</strong>: Most users who want free AI tagging</li>
-            </ul>
-
-            <h4>2. Google Gemini</h4>
-            <ul>
-                <li><strong>Setup</strong>:
-                    <ol>
-                        <li>Get API key from <a href="https://aistudio.google.com/" target="_blank" style="color: #00bfff;">Google AI Studio</a></li>
-                        <li>Settings > AI Config > Select "Gemini"</li>
-                        <li>Model: Use <code>gemini-2.5-flash</code> (NOT gemini-1.5-flash)</li>
-                    </ol>
-                </li>
-                <li><strong>Cost</strong>: Free tier available with rate limits</li>
-                <li><strong>Note</strong>: Rate limits are strict (may limit bulk tagging)</li>
-            </ul>
-
-            <h4>3. OpenAI</h4>
-            <ul>
-                <li><strong>Setup</strong>: Provide your OpenAI API key</li>
-                <li><strong>Cost</strong>: Paid (based on usage)</li>
-                <li><strong>Models</strong>: GPT-4o, GPT-3.5-turbo</li>
-            </ul>
-
-            <h3>How do I use AI Tagging?</h3>
-            <ol>
-                <li><strong>Single model</strong>: Right-click model > "AI Tag"</li>
-                <li><strong>Multiple models</strong>: Select models in multi-edit mode > AI Tag</li>
-                <li>Review suggested tags (select/deselect as needed)</li>
-                <li>Click Apply</li>
-            </ol>
-
-            <h3>AI Tagging Tips</h3>
-            <ul>
-                <li><strong>Review tags before applying</strong>: AI sometimes generates overly generic tags</li>
-                <li><strong>Rate limits</strong>: Gemini has strict rate limits. Use Puter for bulk tagging</li>
-                <li><strong>Batch tagging</strong>: When rate limited, tags are queued and applied when limit resets</li>
-                <li><strong>Tag cleanup</strong>: Use Metadata Manager (Tools menu) to merge/rename/delete tags</li>
-            </ul>
-
-            <h3>Can I use Gemini Code Assist?</h3>
-            <p>Yes! If you use VS Code, Google offers generous free Gemini usage through the "Gemini Code Assist" extension.</p>
+        <div class="footer-col">
+          <h2>Project</h2>
+          <ul>
+            <li><a href="support.html">Support Printventory</a></li>
+            <li><a href="https://printventory-shop.fourthwall.com/" target="_blank" rel="noopener noreferrer">Merch</a></li>
+            <li><a href="extension-privacy.html">Extension privacy</a></li>
+          </ul>
         </div>
-
-        <div id="file-management-organization" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">File Management & Organization</h2>
-
-            <h3>How do I add tags to models?</h3>
-            <ol>
-                <li><strong>Manual</strong>: Click a model > Edit Tags field > Type and press Enter</li>
-                <li><strong>AI</strong>: Right-click > AI Tag</li>
-                <li><strong>Multi-edit</strong>: Select multiple models > Edit tags for all at once</li>
-            </ol>
-
-            <h3>How do I manage Designers?</h3>
-            <ul>
-                <li><strong>Add from URL</strong>: Paste a Thangs, Printables, or MakerWorld URL to auto-populate designer and parent model</li>
-                <li><strong>Manual entry</strong>: Type designer name in the Designer field</li>
-                <li><strong>Merge duplicates</strong>: Tools > Metadata Manager > Select "Designers" > Rename duplicate entries to merge</li>
-            </ul>
-
-            <h3>What is the Metadata Manager?</h3>
-            <p><strong>Tools > Metadata Manager</strong> lets you:</p>
-            <ul>
-                <li><strong>Rename</strong> tags, designers, parent models, etc.</li>
-                <li><strong>Delete</strong> unused metadata</li>
-                <li><strong>Merge</strong> duplicates (e.g., rename "TechJeeper" to "Tech Jeeper" to combine them)</li>
-                <li><strong>Bulk operations</strong>: Clean up your metadata across thousands of models</li>
-            </ul>
-
-            <h3>Can I add custom images/thumbnails?</h3>
-            <p>Yes! Right-click a model and:</p>
-            <ul>
-                <li><strong>Change picture</strong>: Upload your own image</li>
-                <li><strong>Cycle images</strong>: For 3MF files with multiple embedded images</li>
-                <li>Future versions will support pulling images from model sites (Thangs, Printables, MakerWorld)</li>
-            </ul>
-
-            <h3>How do I remove models from the database?</h3>
-            <ul>
-                <li><strong>Option 1</strong>: Right-click model > "Remove from database"</li>
-                <li><strong>Option 2</strong>: Delete the physical file, then Tools > Purge Database to remove orphaned entries</li>
-            </ul>
-
-            <h3>What is "Purge Database"?</h3>
-            <p><strong>Tools > Purge Database</strong> removes all thumbnails and model entries, then rescans your directories from scratch. Use this when:</p>
-            <ul>
-                <li>You've moved/reorganized many files</li>
-                <li>Thumbnails appear corrupted</li>
-                <li>You want to start fresh</li>
-            </ul>
-            <p><strong>Warning</strong>: This will reset all manually added tags, designers, and notes unless you've backed up the database first!</p>
-
-            <h3>I have my models sorted in separate folders already, how can I sort by models within a folder?</h3>
-            <p>You can click the parent directory on the model detail panel. Then, you can use select all to select the models and set properties like designer or parent models easily.</p>
-        </div>
-
-        <div id="docker-server-mode" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Docker & Server Mode</h2>
-
-            <h3>What's the difference between Desktop and Server Mode?</h3>
-            <ul>
-                <li><strong>Desktop Mode</strong>: Windows/Mac/Linux app with GUI</li>
-                <li><strong>Server Mode</strong>: Web-based UI accessible via browser (runs on port 5000)</li>
-                <li><strong>Docker Mode</strong>: Containerized server mode for NAS/headless systems</li>
-            </ul>
-
-            <h3>How do I set up Docker mode?</h3>
-            <p>See the <a href="https://github.com/TechJeeper/Printventory/blob/main/README.md" target="_blank" style="color: #00bfff;">official README</a> for docker-compose examples.</p>
-
-            <p><strong>Common docker-compose.yml snippet:</strong></p>
-            <pre style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 5px; overflow-x: auto;"><code>volumes:
-  # IMPORTANT: Use lowercase 'printventory'
-  - printventory-data:/root/.config/printventory
-  # Mount your model directories
-  - /path/to/models:/mnt/models</code></pre>
-
-            <h3>Server Mode known issues</h3>
-            <ul>
-                <li><strong>Backup/Restore menu</strong>: Available in File menu (different from desktop)</li>
-                <li><strong>STL Home scanning</strong>: Uses timer-based periodic scans instead of manual triggers</li>
-                <li><strong>UNC paths</strong>: Experimental support for network shares</li>
-            </ul>
-
-            <h3>Can I access Printventory from my phone/tablet?</h3>
-            <ul>
-                <li><strong>Docker/Server Mode</strong>: Yes! Access via browser at <code>http://your-server-ip:5000</code></li>
-                <li><strong>Desktop Mode</strong>: Use remote desktop apps (RDP, VNC, TeamViewer, etc.)</li>
-            </ul>
-        </div>
-
-        <div id="backup-database" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Backup & Database</h2>
-
-            <h3>Where is my data stored?</h3>
-            <ul>
-                <li><strong>Windows</strong>: <code>%LOCALAPPDATA%\Printventory</code> (usually <code>C:\Users\YourName\AppData\Local\Printventory</code>)</li>
-                <li><strong>macOS</strong>: <code>~/.config/Printventory</code></li>
-                <li><strong>Linux</strong>: <code>~/.config/Printventory</code></li>
-                <li><strong>Docker</strong>: Defined in your volume mount (e.g., <code>/root/.config/printventory</code>)</li>
-            </ul>
-
-            <h3>What's in the database?</h3>
-            <ul>
-                <li>Model metadata (designer, tags, notes, parent model, etc.)</li>
-                <li>Rendered thumbnails (cached images)</li>
-                <li><strong>NOT</strong> the actual STL/3MF files (those stay in your original folders)</li>
-            </ul>
-
-            <h3>How do I backup my database?</h3>
-            <p><strong>Recommended method:</strong></p>
-            <ol>
-                <li><strong>Tools > Backup Database</strong></li>
-                <li>Choose save location</li>
-                <li>Creates a <code>.backup</code> file you can restore later</li>
-            </ol>
-
-            <p><strong>Manual method:</strong></p>
-            <ul>
-                <li>Copy the entire <code>Printventory</code> folder from AppData/Local or .config</li>
-            </ul>
-
-            <h3>How do I restore from backup?</h3>
-            <ol>
-                <li><strong>Tools > Restore Database</strong></li>
-                <li>Select your <code>.backup</code> file</li>
-                <li>Restart the app</li>
-            </ol>
-
-            <h3>What should I backup before uninstalling?</h3>
-            <p><strong>Critical</strong>: Create a backup before uninstalling! Uninstalling may delete:</p>
-            <ul>
-                <li>Your database</li>
-                <li>All thumbnails</li>
-                <li>Tags, designers, notes</li>
-            </ul>
-            <p>Your actual model files are safe (they're never moved/deleted by Printventory).</p>
-
-            <h3>Can I sync my database across multiple computers?</h3>
-            <p><strong>Experimental</strong>: You can store the database on a network share or cloud storage (Google Drive, OneDrive), but:</p>
-            <ul>
-                <li><strong>Warning</strong>: Syncing databases is risky and can cause corruption</li>
-                <li><strong>Better option</strong>: Use Docker/Server mode on a NAS and access from multiple devices</li>
-                <li><strong>Alternative</strong>: Export/import backups between computers</li>
-            </ul>
-        </div>
-
-        <div id="performance-large-collections" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Performance & Large Collections</h2>
-
-            <h3>How many models can Printventory handle?</h3>
-            <p>Community members have successfully tested with:</p>
-            <ul>
-                <li>2,000+ models: Common</li>
-                <li>10,000+ models: No issues</li>
-                <li>29,000+ models: Tested and working</li>
-                <li>44,000+ models: Successfully scanned!</li>
-            </ul>
-
-            <h3>The app is slow when loading. Help!</h3>
-            <p><strong>For very large collections (10k+ models):</strong></p>
-            <ul>
-                <li>The app needs to load the database on startup</li>
-                <li>First load can take 1-5 minutes for huge collections</li>
-                <li><strong>Workaround</strong>: Let it finish loading once, then subsequent sessions are faster</li>
-                <li><strong>Future fix</strong>: Developer is working on lazy-loading and pagination</li>
-            </ul>
-
-            <h3>Scanning is taking forever</h3>
-            <p><strong>Speed tips:</strong></p>
-            <ul>
-                <li><strong>Drive speed matters</strong>: HDD is slower than SSD/NVMe</li>
-                <li><strong>Network drives</strong>: Slower than local drives</li>
-                <li><strong>Initial scan only</strong>: Subsequent scans only process new/changed files</li>
-            </ul>
-
-            <h3>Can I speed up thumbnail generation?</h3>
-            <p>Thumbnails are generated once and cached. After initial scan:</p>
-            <ul>
-                <li><strong>Fast searches</strong>: Database lookups are instant</li>
-                <li><strong>Purge carefully</strong>: Tools > Purge will delete all thumbnails and require regeneration</li>
-                <li><strong>GPU doesn't matter much</strong>: Rendering is mostly CPU-bound</li>
-            </ul>
-        </div>
-
-        <div id="troubleshooting" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Troubleshooting</h2>
-
-            <h3>Filters/Sort not working (V1.0)</h3>
-            <p><strong>Known bug in V1.0</strong>: Changing sort order disables active filters.</p>
-            <ul>
-                <li><strong>Fix</strong>: Upgrade to latest beta (1.26+)</li>
-                <li><strong>Workaround</strong>: Re-apply filters after sorting</li>
-            </ul>
-
-            <h3>Max file size setting</h3>
-            <p>If large models aren't being scanned:</p>
-            <ul>
-                <li><strong>Settings > Application Settings > Max File Size</strong></li>
-                <li>Increase the limit to include larger STL/3MF files</li>
-            </ul>
-
-            <h3>"Failed to commit changes to dconf" error (Docker)</h3>
-            <p>This is a harmless warning related to Electron trying to use dconf on headless systems. It can be ignored.</p>
-
-            <h3>"Invalid ELF header" database error (Linux)</h3>
-            <p><strong>Fix</strong>: Reinstall the latest Linux build. This was fixed in version 1.24.1+</p>
-
-            <h3>Multi-edit mode issues</h3>
-            <p>If metadata isn't saving in multi-edit:</p>
-            <ol>
-                <li>Try single-edit mode first</li>
-                <li>Update to latest beta</li>
-                <li>Backup database and report bug in Discord #beta-issues</li>
-            </ol>
-
-            <h3>Duplicate models appearing</h3>
-            <p>This can happen after:</p>
-            <ul>
-                <li>Moving files between scans</li>
-                <li>Renaming directories</li>
-                <li><strong>Fix</strong>: Right-click > "Remove from database" on duplicates, or purge and rescan</li>
-            </ul>
-
-            <h3>Can't set STL Home (Docker mode)</h3>
-            <p>Ensure:</p>
-            <ul>
-                <li>Your mount path exists (e.g., <code>/mnt/models</code>)</li>
-                <li>Volume is correctly mapped in docker-compose.yml</li>
-                <li>Path uses UNC format for network shares</li>
-            </ul>
-
-            <h3>Gemini API "404 status code" error</h3>
-            <p><strong>Fix</strong>: Change model from <code>gemini-1.5-flash</code> to <code>gemini-2.5-flash</code></p>
-
-            <h3>Printventory won't start after update</h3>
-            <ol>
-                <li>Check if Windows SmartScreen blocked it (click "More info" > "Run anyway")</li>
-                <li>Try running as Administrator</li>
-                <li>Reinstall (your database should be preserved)</li>
-                <li>If issues persist, restore from backup and report to Discord</li>
-            </ol>
-        </div>
-
-        <div id="feature-requests-support" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Feature Requests & Support</h2>
-
-            <h3>Where can I get help?</h3>
-            <ul>
-                <li><strong>Discord</strong>: Join the Printventory Discord for real-time support</li>
-                <li><strong>GitHub</strong>: <a href="https://github.com/TechJeeper/Printventory" target="_blank" style="color: #00bfff;">TechJeeper/Printventory</a></li>
-                <li><strong>Bug reports</strong>: Use #tech-support channel in Discord</li>
-            </ul>
-
-            <h3>How do I report a bug?</h3>
-            <ol>
-                <li>Join the Discord server</li>
-                <li>Post in <strong>#tech-support</strong> with:
-                    <ul>
-                        <li>Version number (shown in About menu)</li>
-                        <li>Platform (Windows/Mac/Linux/Docker)</li>
-                        <li>Steps to reproduce</li>
-                        <li>Screenshots if applicable</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <h3>Can I contribute?</h3>
-            <p>Yes! The project welcomes:</p>
-            <ul>
-                <li>Beta testers</li>
-                <li>Bug reports</li>
-                <li>Feature suggestions</li>
-                <li>Documentation improvements</li>
-                <li>Code contributions (check GitHub)</li>
-            </ul>
-
-            <h3>Is there a roadmap?</h3>
-            <p>The developer (@TechJeeper) actively works on:</p>
-            <ol>
-                <li><strong>Stability first</strong>: Fixing bugs before adding features</li>
-                <li><strong>User requests</strong>: Community-driven feature prioritization</li>
-                <li><strong>Cross-platform parity</strong>: Ensuring all platforms work equally well</li>
-            </ol>
-        </div>
-
-        <div id="tips-best-practices" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Tips & Best Practices</h2>
-
-            <h3>Organization Tips</h3>
-            <ol>
-                <li><strong>Use consistent designer names</strong>: "TechJeeper" not "Tech Jeeper" or "techjeeper"</li>
-                <li><strong>Tag early and often</strong>: Easier to tag 10 models than 1,000 later</li>
-                <li><strong>Use Parent Model field</strong>: Link multi-part models to their source</li>
-                <li><strong>Notes field</strong>: Great for HueForge filament lists, print settings, etc.</li>
-            </ol>
-
-            <h3>Backup Strategy</h3>
-            <ol>
-                <li><strong>Before major updates</strong>: Always backup</li>
-                <li><strong>After big tagging sessions</strong>: Backup when you've added lots of metadata</li>
-                <li><strong>Weekly backups</strong>: If you use Printventory daily</li>
-                <li><strong>Test restores</strong>: Verify your backups work!</li>
-            </ol>
-
-            <h3>Workflow Suggestions</h3>
-            <ol>
-                <li><strong>Download models</strong> to a staging folder</li>
-                <li><strong>Scan staging folder</strong> in Printventory</li>
-                <li><strong>Tag and organize</strong> within Printventory</li>
-                <li><strong>Move to permanent storage</strong> (optional)</li>
-                <li><strong>Rescan</strong> to update paths</li>
-            </ol>
-        </div>
-
-        <div id="frequently-asked-questions" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Frequently Asked Questions</h2>
-
-            <p><strong>Q: Does this work with Thingiverse/Printables/MakerWorld?</strong><br>
-            A: Printventory doesn't download files it inventories the models you've downloaded.</p>
-
-            <p><strong>Q: Can I print directly from Printventory?</strong><br>
-            A: You can right-click > "Open" or "Open with Slicer" to send models to your slicer app.</p>
-
-            <p><strong>Q: Will this organize my files automatically?</strong><br>
-            A: No, Printventory creates a virtual organization layer without moving files. You can still manually organize files if desired.</p>
-
-            <p><strong>Q: Can I share my database with others?</strong><br>
-            A: Technically yes (share the .backup file), but it won't include the actual model files, only metadata and thumbnails. You can also export your collection as JSON format from the Backup menu.</p>
-
-            <p><strong>Q: Does this replace Makerworld/Printables libraries?</strong><br>
-            A: No, it complements them. Use those for downloading; use Printventory for local organization.</p>
-
-            <p><strong>Q: Is my data private?</strong><br>
-            A: Yes! Everything is local except:
-            <ul>
-                <li>AI tagging (sends model metadata to AI service, not the actual files)</li>
-            </ul></p>
-
-            <p><strong>Q: What happens if I delete a model file?</strong><br>
-            A: The database entry remains until you purge. When you re-scan it will ask if you want to remove the modeles from your library.</p>
-        </div>
-
-        <div id="credits" style="margin-bottom: 40px;">
-            <h2 style="color: #007bff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Credits</h2>
-
-            <p><strong>Developer</strong>: @TechJeeper<br>
-            <strong>Community</strong>: Printventory Discord Beta Testers<br>
-            <strong>Built with</strong>: Electron, JavaScript, SQLite</p>
-
-            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-
-            <p><em>Last Updated: January 2026</em><br>
-            <em>This FAQ is community-maintained. Join the Discord for the latest information!</em></p>
-        </div>
-
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> TechJeeper Designs. Free &amp; open source.</span>
+        <span class="supporters" id="supporters" hidden></span>
+      </div>
     </div>
-
-    <footer>
-      <p>Thank you for supporting Printventory! ❤️</p>
-      <div class="social-media">
-        <a href="https://bsky.app/profile/printventory.com" target="_blank">
-          <img src="BlueSky.png" alt="Follow us on Bluesky" style="height: 30px;">
-        </a>
-        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank">
-          <img src="discord.svg" alt="Join our Discord" style="height: 30px;">
-        </a>
-        <a href="https://x.com/printventory" target="_blank">
-          <img src="X.png" alt="Follow us on X" style="height: 30px;">
-        </a>
-      </div>
-      <div class="footer-meta">
-        &copy; TechJeeper Designs · <a href="extension-privacy.html">Extension Privacy</a>
-      </div>
-    </footer>
-  </div>
-    <script src="site-nav.js"></script>
-    <script src="supporters.js"></script>
+  </footer>
+  <script src="site.js"></script>
+  <script src="faq.js"></script>
 </body>
 </html>

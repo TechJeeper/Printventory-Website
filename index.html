@@ -1,378 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Printventory — Free Local 3D Model Manager</title>
   <meta name="description" content="Free and open-source 3D model manager for local STL/3MF libraries. Print history, filament catalog, printer &amp; parts tracking, AI tagging, and Docker/NAS support.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0c11">
   <link rel="canonical" href="https://printventory.com/">
-
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Printventory">
   <meta property="og:url" content="https://printventory.com/">
   <meta property="og:title" content="Printventory — Free Local 3D Model Manager">
-  <meta property="og:description" content="Organize your local 3D library with print history, filament, printers, parts stock, AI tagging, and Docker/NAS support.">
+  <meta property="og:description" content="Free and open-source 3D model manager for local STL/3MF libraries. Print history, filament catalog, printer &amp; parts tracking, AI tagging, and Docker/NAS support.">
   <meta property="og:image" content="https://printventory.com/1.webp">
-  <meta property="og:site_name" content="Printventory">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Printventory — Free Local 3D Model Manager">
-  <meta name="twitter:description" content="Organize your local 3D library with print history, filament, printers, parts stock, AI tagging, and Docker/NAS support.">
+  <meta name="twitter:description" content="Free and open-source 3D model manager for local STL/3MF libraries. Print history, filament catalog, printer &amp; parts tracking, AI tagging, and Docker/NAS support.">
   <meta name="twitter:image" content="https://printventory.com/1.webp">
-
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Printventory",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Free and open-source local 3D model manager with print history, filament catalog, printer and parts tracking, AI tagging, and Docker support.",
-    "url": "https://printventory.com/",
-    "image": "https://printventory.com/1.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "TechJeeper Designs"
-    }
-  }
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Printventory",
+   "applicationCategory": "UtilitiesApplication", "operatingSystem": "Windows, macOS, Linux",
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+   "description": "Free and open-source local 3D model manager with print history, filament catalog, printer and parts tracking, AI tagging, and Docker support.",
+   "url": "https://printventory.com/", "image": "https://printventory.com/1.webp",
+   "author": {"@type": "Organization", "name": "TechJeeper Designs"}}
   </script>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <script data-goatcounter="https://printventoryweb.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a href="index.html">
-        <img src="logo.png" alt="Printventory">
-      </a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="public.html">Download</a>
+        <a href="beta.html">Beta</a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html">Support</a>
+        <a class="nav-github" href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        <a class="btn btn--sm header-cta" href="public.html">Download <span class="btn-sub" data-version-of="public" data-prefix="v">v3.0.0</span></a>
+      </nav>
     </div>
-    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar-menu" id="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="public.html">Download</a>
-      <a href="beta.html">Beta</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">Support</a>
-      <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </nav>
-
-  <div class="container" id="main">
-    <div class="hero-background" aria-hidden="true">
-      <div class="carousel" id="screenshot-carousel">
-        <div class="carousel-slide active">
-          <picture>
-            <source srcset="1.webp" type="image/webp">
-            <img src="1.png" alt="" width="1600" height="925" fetchpriority="high">
-          </picture>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="release-pill" href="#whats-new">
+            <span class="version-tag" data-version-of="public" data-prefix="v">v3.0.0</span>
+            <span>Print history, filament &amp; printers are here</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <h1>Your 3D model library, <span class="gradient-text">finally organized.</span></h1>
+          <p class="lede">Printventory indexes the STL, 3MF and STEP files already on your drives, then tracks what you've printed, the filament you used and the printers that made it. Nothing gets uploaded.</p>
+          <div class="hero-ctas">
+            <a class="btn btn--primary btn--lg" href="public.html" data-download="auto" data-goatcounter-click="download-hero">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+              <span data-auto-label>Download free</span>
+            </a>
+            <a class="btn btn--lg" href="#tour">See it in action</a>
+          </div>
+          <ul class="hero-meta">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Free &amp; open source</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Windows · macOS · Linux · Docker</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Your files never leave your machine</li>
+          </ul>
         </div>
-        <div class="carousel-slide">
-          <picture>
-            <source srcset="2.webp" type="image/webp">
-            <img src="2.png" alt="" width="1600" height="925" loading="lazy">
-          </picture>
-        </div>
-        <div class="carousel-slide">
-          <picture>
-            <source srcset="3.webp" type="image/webp">
-            <img src="3.png" alt="" width="1600" height="925" loading="lazy">
-          </picture>
-        </div>
-        <div class="carousel-slide">
-          <picture>
-            <source srcset="4.webp" type="image/webp">
-            <img src="4.png" alt="" width="1600" height="925" loading="lazy">
-          </picture>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-section fade-in">
-      <div style="margin-bottom: 2rem;">
-        <img src="logo.png" alt="Printventory" class="logo" style="max-width: 400px; width: 100%;">
-      </div>
-      <h1>Your local 3D model library, finally organized</h1>
-      <p>Free and open source. Index models where they already live — then track prints, filament, printers, and parts without uploading a thing.</p>
-      <p class="hero-subline">Files never leave your machine · Windows, macOS, Linux &amp; Docker</p>
-      <div class="hero-cta">
-        <a href="public.html" class="download-button">Download Free</a>
-        <a href="faq.html" class="download-button download-button--secondary">Read the FAQ</a>
-      </div>
-    </div>
-
-    <div class="features">
-      <div class="feature-section">
-        <h3>Local<br>Library</h3>
-        <ul>
-          <li>Scan directories for STL, 3MF, STEP, OBJ, and more</li>
-          <li>Thumbnails, folders, tags, designers, and notes</li>
-          <li>Instant search and filters across large libraries</li>
-          <li>Find duplicates by content hash</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Print<br>Lifecycle</h3>
-        <ul>
-          <li>Statuses from Want and Queued through Printed or Failed</li>
-          <li>Log prints with date, quantity, notes, and filament</li>
-          <li>Filter and sort by last printed or print count</li>
-          <li>Track reprints with Printed ×N badges</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Filament<br>&amp; Spoolman</h3>
-        <ul>
-          <li>Build a filament catalog and assign spools to models</li>
-          <li>Filter the library by material and color</li>
-          <li>Optional pull-only sync from Spoolman</li>
-          <li>Prefill filaments when you log a print</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Printers<br>&amp; Parts</h3>
-        <ul>
-          <li>Save printers with maintenance logs and reminders</li>
-          <li>Network scan for Klipper, PrusaLink, and Bambu</li>
-          <li>Track screws, bearings, and hardware stock</li>
-          <li>Deduct parts when you log a print</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>AI<br>Tagging</h3>
-        <ul>
-          <li>Suggest tags from model metadata</li>
-          <li>Works with popular AI providers</li>
-          <li>Your model files stay local</li>
-          <li>Speed up organizing large libraries</li>
-        </ul>
-      </div>
-
-      <div class="feature-section">
-        <h3>Docker, NAS<br>&amp; Extension</h3>
-        <ul>
-          <li>Run server mode on Synology, Unraid, and more</li>
-          <li>HTTPS/SSL and installable PWA for phones</li>
-          <li>Browser extension inbox for model pages</li>
-          <li>Official Docker Hub image available</li>
-        </ul>
-      </div>
-
-      <div class="feature-section full-width">
-        <h3>See It In Action</h3>
-        <div class="gallery-grid">
-          <button type="button" class="gallery-item" onclick="openLightbox(0)" aria-label="Open library grid screenshot">
+        <div class="hero-shot">
+          <div class="pixels pixels--hero" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="app-frame">
+            <div class="app-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Printventory</span></div>
             <picture>
               <source srcset="1.webp" type="image/webp">
-              <img src="1.png" alt="Library grid view of 3D models" loading="lazy" width="1600" height="925">
+              <img src="1.png" alt="Printventory library grid showing model thumbnails, print status and file details" width="1600" height="925" fetchpriority="high">
             </picture>
-          </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(1)" aria-label="Open filament manager screenshot">
-            <picture>
-              <source srcset="2.webp" type="image/webp">
-              <img src="2.png" alt="Filament Manager with Spoolman sync" loading="lazy" width="1600" height="925">
-            </picture>
-          </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(2)" aria-label="Open printer manager screenshot">
-            <picture>
-              <source srcset="3.webp" type="image/webp">
-              <img src="3.png" alt="Printer Manager with network detect" loading="lazy" width="1600" height="925">
-            </picture>
-          </button>
-          <button type="button" class="gallery-item" onclick="openLightbox(3)" aria-label="Open parts manager screenshot">
-            <picture>
-              <source srcset="4.webp" type="image/webp">
-              <img src="4.png" alt="Parts Manager tracking hardware stock" loading="lazy" width="1600" height="925">
-            </picture>
-          </button>
-        </div>
-        <div class="youtube-video">
-          <iframe
-            src="https://www.youtube.com/embed/pV3kNr3YDMI?si=g6U3OnF6cgbFRyd4"
-            title="Printventory demo video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
-      <button type="button" class="close-lightbox" aria-label="Close screenshot preview" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
-      <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="Enlarged screenshot">
-      </div>
-    </div>
-
-    <div class="download-section">
-      <h2>Get Started Today</h2>
-      <div class="warning-box">
-        <p>Please report any problems to our <a href="https://discord.com/invite/JXcZHT77ua" class="discord-link">Discord community</a>!</p>
-      </div>
-      <div class="download-buttons">
-        <a href="https://printventory.techjeeper.com/Printventory-Setup-2.1.0.exe" id="download-win" class="download-button">
-          <img src="win.png" alt="">
-          Download for Windows
-        </a>
-        <a href="https://printventory.techjeeper.com/printventory-2.1.0-universal.dmg" id="download-mac" class="download-button">
-          <img src="mac.png" alt="">
-          Download for MacOS
-        </a>
-        <a href="https://printventory.techjeeper.com/printventory-2.1.0.AppImage" id="download-linux" class="download-button">
-          <img src="linux.png" alt="" width="30" height="30">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <span>Download for Linux</span>
-            <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
           </div>
-        </a>
-        <a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer" class="download-button">
-          <img src="docker.png" alt="" width="30" height="30" style="filter: brightness(0) invert(1);">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <span>Docker</span>
-            <span style="color: #FFD700; font-size: 0.8em; font-weight: bold;">Experimental</span>
-          </div>
-        </a>
-      </div>
-      <div class="warning">
-        <strong>Note:</strong> The MacOS version is unsigned. You'll need to allow it to run in the Security &amp; Privacy
-        panel of System Preferences.
-        <br><br>
-        <strong>Windows Users:</strong> The installer may be flagged as an "Untrusted Package". Click "More Info" then "Run Anyway" to proceed.
-      </div>
-    </div>
-
-    <div class="social-links">
-      <h2>Support the Project!</h2>
-      <p>Support Printventory by using our affiliate links or donating directly!</p>
-      <div class="affiliate-links">
-        <a href="https://www.prusa3d.com/#a_aid=Printventory" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-          <img src="prusa.png" alt="Support via Prusa">
-        </a>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <a href="https://us.snapmaker.com/?irclickid=wXExgZQBixycRumXP0wMgW6eUkpV%3A30x12o1TM0&irgwc=1&afsrc=1" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-            <img src="snapmaker.svg" alt="Support via Snapmaker">
-          </a>
-          <small style="margin-top: 5px; text-align: center; color: #b0b0b0;">Use code <strong>PRINTVENTORY5</strong> for 5% off!</small>
         </div>
-        <a href="https://shop.polymaker.com/TECHJEEPER" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-          <img src="polymaker.png" alt="Support via Polymaker">
-        </a>
-        <a href="https://creality.com/" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-          <img src="creality.svg" alt="Support via Creality">
-        </a>
-        <a href="https://sovol3d.com?sca_ref=8022212.uB3pwbgo9B" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-          <img src="sovol.png" alt="Support via Sovol">
-        </a>
-        <a href="https://visionminer.com/printventory" target="_blank" rel="noopener noreferrer" class="affiliate-link">
-          <img src="vm.png" alt="Support via Vision Miner">
-        </a>
       </div>
-      <p class="support-text">Or support us directly:</p>
-      <div class="donate-buttons">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" rel="noopener noreferrer" class="donate-button">PayPal</a>
-        <a href="https://patreon.com/Printventory" target="_blank" rel="noopener noreferrer" class="donate-button">Patreon</a>
-        <a href="https://www.buymeacoffee.com/printventory" target="_blank" rel="noopener noreferrer" class="donate-button">Buy Me a Coffee</a>
-        <a href="https://printventory-shop.fourthwall.com/" target="_blank" rel="noopener noreferrer" class="donate-button">Merch</a>
+    </section>
+
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="proof reveal">
+          <div><strong>44,000+</strong><span>models in a single community library</span></div>
+          <div><strong>10+</strong><span>3D and slicer file formats indexed</span></div>
+          <div><strong>0</strong><span>files uploaded. Everything stays local.</span></div>
+          <div><strong>$0</strong><span>free and open source, for good</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Features</p>
+          <h2>Everything between “downloaded” and “printed”.</h2>
+          <p>One place for the models, the spools, the printers and the spare parts.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card card--cyan card--hero reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
+            <h3>A library that indexes itself</h3>
+            <p>Point Printventory at your folders and it builds a searchable library with thumbnails, tags, designers, notes and source URLs, without moving a single file.</p>
+            <ul>
+              <li>Folder-tree explorer, grid, list and preview views</li>
+              <li>Instant search and filters across tens of thousands of models</li>
+              <li>Duplicate detection by content hash</li>
+              <li>3D Preview Studio with lighting, materials and 3MF part picking</li>
+            </ul>
+          </article>
+
+          <article class="card card--magenta reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Print lifecycle</h3>
+            <p>Want → Queued → Printing → Printed (or Failed), with a full log.</p>
+            <ul>
+              <li>Date, quantity, notes and filament for every print</li>
+              <li>Sort by last printed or print count</li>
+              <li>“Printed ×N” badges for reprints</li>
+            </ul>
+          </article>
+
+          <article class="card card--yellow card--wide reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6"/></svg></div>
+            <h3>Filament catalog &amp; Spoolman</h3>
+            <p>Build a catalog, assign spools to models and filter the library by material or color. If you already run Spoolman, Printventory can pull your catalog from it.</p>
+            <div class="card-shot">
+              <picture><source srcset="2.webp" type="image/webp"><img src="2.png" alt="Filament Manager with Spoolman sync" width="1600" height="925" loading="lazy"></picture>
+            </div>
+          </article>
+
+          <article class="card card--orange card--wide reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 15h10M9 15V9h6v6"/></svg></div>
+            <h3>Printers &amp; parts stock</h3>
+            <p>Save your printers with maintenance logs and reminders, and find them on the network (Klipper, PrusaLink, Bambu). Track screws, bearings and other hardware, then deduct them automatically when you log a print.</p>
+            <div class="card-shot">
+              <picture><source srcset="3.webp" type="image/webp"><img src="3.png" alt="Printer Manager with network detection" width="1600" height="925" loading="lazy"></picture>
+            </div>
+          </article>
+
+          <article class="card card--lime reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8Z"/></svg></div>
+            <h3>AI tagging &amp; MCP</h3>
+            <p>Get tag suggestions from model metadata with the AI provider you choose. Agents like Claude Desktop and Cursor can query your library over MCP.</p>
+            <ul>
+              <li>Model files never leave your machine</li>
+            </ul>
+          </article>
+
+          <article class="card card--cyan reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
+            <h3>Docker, NAS &amp; phone</h3>
+            <p>Run it in server mode on Synology, Unraid and other NAS boxes, with HTTPS. Install it on your phone as a PWA.</p>
+            <ul>
+              <li>Official Docker Hub image</li>
+            </ul>
+          </article>
+
+          <article class="card card--magenta reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4"/><path d="m9 10 2 2 4-4"/></svg></div>
+            <h3>Browser extension &amp; organizer</h3>
+            <p>Printventory Watcher queues model pages while the app is closed. Organize Library copies files into a structure you choose, with verified moves.</p>
+          </article>
+        </div>
+
+        <ul class="formats reveal" aria-label="Supported formats">
+          <li>STL</li><li>3MF</li><li>STEP / STP</li><li>OBJ</li><li>PLY</li><li>IGES</li><li>F3D</li><li>ChiTuBox</li><li>VOXL</li><li>LYS / LTY</li><li>ZIP archives</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="tour">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Take the tour</p>
+          <h2>See it in action</h2>
+          <p>A look at the managers that ship with Printventory.</p>
+        </div>
+        <div class="tour reveal">
+          <div class="tour-tabs" role="tablist" aria-label="Screenshots">
+            <button type="button" role="tab" id="tab-library" aria-controls="panel-library" aria-selected="true">Library</button>
+            <button type="button" role="tab" id="tab-filament" aria-controls="panel-filament" aria-selected="false" tabindex="-1">Filament</button>
+            <button type="button" role="tab" id="tab-printers" aria-controls="panel-printers" aria-selected="false" tabindex="-1">Printers</button>
+            <button type="button" role="tab" id="tab-parts" aria-controls="panel-parts" aria-selected="false" tabindex="-1">Parts</button>
+          </div>
+          <figure class="tour-panel" role="tabpanel" id="panel-library" aria-labelledby="tab-library">
+            <button type="button" class="tour-zoom app-frame" data-full="1.webp" aria-label="Enlarge library screenshot">
+              <picture><source srcset="1.webp" type="image/webp"><img src="1.png" alt="Library grid view of 3D models" width="1600" height="925" loading="lazy"></picture>
+            </button>
+            <figcaption>Thumbnails, print status, designers and file details at a glance.</figcaption>
+          </figure>
+          <figure class="tour-panel" role="tabpanel" id="panel-filament" aria-labelledby="tab-filament" hidden>
+            <button type="button" class="tour-zoom app-frame" data-full="2.webp" aria-label="Enlarge filament screenshot">
+              <picture><source srcset="2.webp" type="image/webp"><img src="2.png" alt="Filament Manager with Spoolman sync" width="1600" height="925" loading="lazy"></picture>
+            </button>
+            <figcaption>Filament Manager: your spool catalog, with optional Spoolman sync.</figcaption>
+          </figure>
+          <figure class="tour-panel" role="tabpanel" id="panel-printers" aria-labelledby="tab-printers" hidden>
+            <button type="button" class="tour-zoom app-frame" data-full="3.webp" aria-label="Enlarge printer screenshot">
+              <picture><source srcset="3.webp" type="image/webp"><img src="3.png" alt="Printer Manager with network detect" width="1600" height="925" loading="lazy"></picture>
+            </button>
+            <figcaption>Printer Manager: network detection, maintenance logs and reminders.</figcaption>
+          </figure>
+          <figure class="tour-panel" role="tabpanel" id="panel-parts" aria-labelledby="tab-parts" hidden>
+            <button type="button" class="tour-zoom app-frame" data-full="4.webp" aria-label="Enlarge parts screenshot">
+              <picture><source srcset="4.webp" type="image/webp"><img src="4.png" alt="Parts Manager tracking hardware stock" width="1600" height="925" loading="lazy"></picture>
+            </button>
+            <figcaption>Parts Manager: hardware stock that's deducted when you log a print.</figcaption>
+          </figure>
+        </div>
+        <div class="video-frame reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/pV3kNr3YDMI" title="Printventory demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="whats-new">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">What's new</p>
+          <h2>New in <span class="gradient-text" id="whatsnew-version" data-version-of="public" data-prefix="v">v3.0.0</span></h2>
+          <p>Pulled straight from the release changelog.</p>
+        </div>
+        <div class="whatsnew-grid" id="whatsnew" aria-live="polite">
+          <p class="changelog-status">Loading the latest changes…</p>
+        </div>
+        <div class="whatsnew-foot">
+          <span id="whatsnew-more"></span>
+          <a class="btn" href="public.html#changelog">Full changelog →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="download">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Download</p>
+          <h2>Get Printventory <span class="version-tag" data-version-of="public" data-prefix="v">v3.0.0</span></h2>
+          <p>Free for every platform. Want the newest features first? Try the <a href="beta.html">beta channel</a>.</p>
+        </div>
+        <div class="platforms">
+          <article class="platform" data-platform="win">
+            <div class="platform-head"><img src="win.png" alt=""><h3>Windows</h3></div>
+            <p class="platform-meta">Windows 10 &amp; 11 · .exe</p>
+            <a class="btn btn--primary" href="https://printventory.techjeeper.com/Printventory-Setup-3.0.0.exe" data-download="win" data-goatcounter-click="download-public-windows">Download installer</a>
+            <a class="btn btn--ghost" href="https://apps.microsoft.com/detail/9N0KTXW14622?hl=en-us&amp;gl=US&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer" data-goatcounter-click="download-public-microsoft-store"><img src="ms-store.svg" alt="">Microsoft Store</a>
+            <p class="platform-file" data-file-for="win">Printventory-Setup-3.0.0.exe</p>
+          </article>
+          <article class="platform" data-platform="mac">
+            <div class="platform-head"><img src="mac.png" alt=""><h3>macOS</h3></div>
+            <p class="platform-meta">Apple Silicon &amp; Intel · .dmg</p>
+            <a class="btn btn--primary" href="https://printventory.techjeeper.com/printventory-3.0.0-universal.dmg" data-download="mac" data-goatcounter-click="download-public-macos">Download universal DMG</a>
+            <p class="platform-file" data-file-for="mac">printventory-3.0.0-universal.dmg</p>
+          </article>
+          <article class="platform" data-platform="linux">
+            <div class="platform-head"><img src="linux.svg" alt=""><h3>Linux <span class="chip chip--warn">Experimental</span></h3></div>
+            <p class="platform-meta">x64 · AppImage</p>
+            <a class="btn btn--primary" href="https://printventory.techjeeper.com/printventory-3.0.0.AppImage" data-download="linux" data-goatcounter-click="download-public-linux">Download AppImage</a>
+            <p class="platform-file" data-file-for="linux">printventory-3.0.0.AppImage</p>
+          </article>
+          <article class="platform" data-platform="docker">
+            <div class="platform-head"><img src="docker.png" alt="" class="invert"><h3>Docker <span class="chip chip--warn">Experimental</span></h3></div>
+            <p class="platform-meta">NAS &amp; servers · web UI</p>
+            <a class="btn btn--primary" href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer" data-goatcounter-click="download-public-docker">View on Docker Hub</a>
+            <a class="btn btn--ghost" href="faq.html#docker-server-mode">Setup notes</a>
+          </article>
+        </div>
+        <div class="notes">
+          <div class="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+            <p><strong>Windows:</strong> SmartScreen may flag the direct installer as an unrecognized app. Choose <em>More info → Run anyway</em>, or install the signed build from the Microsoft Store.</p>
+          </div>
+          <div class="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+            <p><strong>macOS:</strong> the app is unsigned. After the first launch, open <em>System Settings → Privacy &amp; Security</em> and click <em>Open Anyway</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="wrap">
+        <div class="split">
+          <div class="reveal">
+            <p class="eyebrow">Support the project</p>
+            <h2 style="font-size: clamp(2rem, 4vw, 2.8rem)">Free forever, funded by makers like you.</h2>
+            <p style="color: var(--muted)">Printventory has no ads and no subscriptions. Shopping through a partner link or chipping in directly keeps development going.</p>
+            <div class="donate-row">
+              <a class="btn btn--primary" href="https://patreon.com/Printventory" target="_blank" rel="noopener noreferrer">Patreon</a>
+              <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=DTG4XVHF47K2E" target="_blank" rel="noopener noreferrer">PayPal</a>
+              <a class="btn" href="https://www.buymeacoffee.com/printventory" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
+              <a class="btn btn--ghost" href="support.html">More ways →</a>
+            </div>
+          </div>
+          <div class="partners reveal">
+            <a class="partner" href="https://www.prusa3d.com/#a_aid=Printventory" target="_blank" rel="noopener noreferrer"><img src="prusa.png" alt="Prusa Research"></a>
+            <a class="partner" href="https://us.snapmaker.com/?irclickid=wXExgZQBixycRumXP0wMgW6eUkpV%3A30x12o1TM0&amp;irgwc=1&amp;afsrc=1" target="_blank" rel="noopener noreferrer"><img src="snapmaker.svg" alt="Snapmaker"><small>Code <strong>PRINTVENTORY5</strong> for 5% off</small></a>
+            <a class="partner" href="https://shop.polymaker.com/TECHJEEPER" target="_blank" rel="noopener noreferrer"><img src="polymaker.png" alt="Polymaker"></a>
+            <a class="partner" href="https://creality.com/" target="_blank" rel="noopener noreferrer"><img src="creality.svg" alt="Creality"></a>
+            <a class="partner" href="https://sovol3d.com?sca_ref=8022212.uB3pwbgo9B" target="_blank" rel="noopener noreferrer"><img src="sovol.png" alt="Sovol"></a>
+            <a class="partner" href="https://visionminer.com/printventory" target="_blank" rel="noopener noreferrer"><img src="vm.png" alt="Vision Miner"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2>Got questions? There's a whole community.</h2>
+          <p>Get help, report bugs and help shape upcoming releases on the Printventory Discord.</p>
+          <div class="hero-ctas">
+            <a class="btn btn--primary" href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer"><img src="discord.svg" alt="">Join the Discord</a>
+            <a class="btn" href="faq.html">Read the FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot preview">
+    <form method="dialog"><button class="lightbox-close" aria-label="Close preview">×</button></form>
+    <img id="lightbox-img" src="" alt="">
+  </dialog>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Printventory home"><img src="mark.png" alt="" width="27" height="34">Printventory</a>
+          <p>A free, open-source manager for the 3D model library already on your drives. Made with care by TechJeeper Designs.</p>
+          <div class="socials">
+            <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer" aria-label="Join the Printventory Discord"><img src="discord.svg" alt=""></a>
+            <a href="https://bsky.app/profile/printventory.com" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on Bluesky"><img src="BlueSky.png" alt=""></a>
+            <a href="https://x.com/printventory" target="_blank" rel="noopener noreferrer" aria-label="Follow Printventory on X"><img src="X.png" alt=""></a>
+            <a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer" aria-label="Printventory on GitHub"><img src="github.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="public.html">Download<span class="ver" data-version-of="public" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="beta.html">Beta builds<span class="ver" data-version-of="beta" data-prefix="v">v3.0.0</span></a></li>
+            <li><a href="public.html#changelog">Changelog</a></li>
+            <li><a href="https://hub.docker.com/r/printventory/printventory" target="_blank" rel="noopener noreferrer">Docker Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Help</h2>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#docker-server-mode">Docker setup</a></li>
+            <li><a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">Discord support</a></li>
+            <li><a href="https://github.com/TechJeeper/Printventory" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Project</h2>
+          <ul>
+            <li><a href="support.html">Support Printventory</a></li>
+            <li><a href="https://printventory-shop.fourthwall.com/" target="_blank" rel="noopener noreferrer">Merch</a></li>
+            <li><a href="extension-privacy.html">Extension privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> TechJeeper Designs. Free &amp; open source.</span>
+        <span class="supporters" id="supporters" hidden></span>
       </div>
     </div>
-
-    <footer>
-      <p>Join the discussion</p>
-      <div class="social-media">
-        <a href="https://bsky.app/profile/printventory.com" target="_blank" rel="noopener noreferrer">
-          <img src="BlueSky.png" alt="Follow us on Bluesky" style="height: 30px;">
-        </a>
-        <a href="https://discord.com/invite/JXcZHT77ua" target="_blank" rel="noopener noreferrer">
-          <img src="discord.svg" alt="Join our Discord" style="height: 30px;">
-        </a>
-        <a href="https://x.com/printventory" target="_blank" rel="noopener noreferrer">
-          <img src="X.png" alt="Follow us on X" style="height: 30px;">
-        </a>
-      </div>
-      <div class="footer-meta">
-        &copy; TechJeeper Designs · <a href="extension-privacy.html">Extension Privacy</a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="site-nav.js"></script>
+  </footer>
+  <script src="site.js"></script>
   <script src="download-links.js"></script>
-  <script>
-    function carousel() {
-      const slides = document.querySelectorAll('.carousel-slide');
-      if (!slides.length) return;
-      let currentSlide = 0;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion) return;
-
-      function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[index].classList.add('active');
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      setInterval(nextSlide, 5000);
-    }
-
-    carousel();
-
-    const lightboxImages = ['1.webp', '2.webp', '3.webp', '4.webp'];
-    let lastLightboxTrigger = null;
-
-    function openLightbox(index) {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      lastLightboxTrigger = document.activeElement;
-      lightboxImg.src = lightboxImages[index];
-      lightbox.style.display = 'flex';
-      lightbox.removeAttribute('hidden');
-      document.body.style.overflow = 'hidden';
-      lightbox.querySelector('.close-lightbox').focus();
-    }
-
-    function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
-      lightbox.style.display = 'none';
-      lightbox.setAttribute('hidden', '');
-      document.body.style.overflow = '';
-      if (lastLightboxTrigger && typeof lastLightboxTrigger.focus === 'function') {
-        lastLightboxTrigger.focus();
-      }
-    }
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') closeLightbox();
-    });
-
-    hydrateDownloadLinks({
-      versionFile: 'public.version',
-      urlExt: 'pub',
-      placeholder: 'public.version'
-    });
-  </script>
-  <script src="supporters.js"></script>
+  <script src="changelog.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
