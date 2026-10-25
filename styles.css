@@ -657,6 +657,37 @@ p { margin: 0 0 1em; }
 .notfound .code { font: 700 clamp(5rem, 18vw, 10rem)/1 var(--font-display); letter-spacing: -0.05em; }
 .notfound p { color: var(--muted); max-width: 46ch; margin: 0 auto 28px; }
 .notfound { position: relative; overflow: hidden; }
+.notfound .code { user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; transform-origin: 50% 100%; }
+.notfound .code.is-poked { animation: nf-poke 0.3s ease-out; }
+@keyframes nf-poke { 35% { transform: scale(1.04, 0.92); } }
+.notfound .notfound-hint { font: 500 0.78rem var(--font-mono); color: var(--faint); opacity: 0.55; margin: 40px auto 0; }
+
+/* ---------- 404 easter egg: Layer Stack ---------- */
+.game {
+  padding: 0; width: min(420px, calc(100vw - 24px)); max-height: calc(100dvh - 24px);
+  background: var(--ink-2); color: var(--text);
+  border: 1px solid var(--line-strong); border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden;
+}
+.game::backdrop { background: rgba(5, 6, 10, 0.78); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.game-head { display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 18px; border-bottom: 1px solid var(--line); }
+.game-head h2 { flex: 1; margin: 0; font-size: 1.05rem; }
+.game-stats { display: flex; gap: 14px; font: 500 0.8rem var(--font-mono); color: var(--muted); }
+.game-stats strong { color: var(--text); }
+.game-close {
+  width: 36px; height: 36px; flex: none; border-radius: var(--radius-sm); cursor: pointer;
+  background: transparent; border: 1px solid var(--line-strong); color: var(--text); font-size: 1.35rem; line-height: 1;
+}
+.game-close:hover { background: var(--surface-2); }
+.game-canvas {
+  display: block; margin: 0 auto; width: min(100%, calc((100dvh - 140px) * 320 / 440)); aspect-ratio: 320 / 440;
+  cursor: pointer; touch-action: manipulation; outline: none; -webkit-tap-highlight-color: transparent;
+}
+.game-foot { margin: 0; padding: 10px 16px 12px; text-align: center; font: 500 0.75rem var(--font-mono); color: var(--faint); border-top: 1px solid var(--line); }
+.game-foot-touch { display: none; }
+@media (hover: none) and (pointer: coarse) {
+  .game-foot-mouse { display: none; }
+  .game-foot-touch { display: inline; }
+}
 
 /* Legacy wrapper used by the analytics page */
 .container { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
