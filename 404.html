@@ -48,8 +48,18 @@
           <a class="btn" href="/public.html">Download Printventory</a>
           <a class="btn btn--ghost" href="/faq.html">Read the FAQ</a>
         </div>
+        <p class="notfound-hint" aria-hidden="true">; printer not homed — G28</p>
       </div>
     </section>
+    <dialog class="game" id="layer-game" aria-labelledby="game-title">
+      <div class="game-head">
+        <h2 id="game-title">Layer Stack</h2>
+        <div class="game-stats"><span>Layer <strong data-stat="layer">0</strong></span><span>Best <strong data-stat="best">0</strong></span></div>
+        <button type="button" class="game-close" aria-label="Close game">&times;</button>
+      </div>
+      <canvas class="game-canvas" tabindex="0" role="img" aria-label="Layer Stack game. Press Space, click or tap to drop each layer onto the stack."></canvas>
+      <p class="game-foot"><span class="game-foot-mouse">Space / click to extrude · Esc to quit</span><span class="game-foot-touch">Tap to extrude</span></p>
+    </dialog>
   </main>
   <footer class="site-footer">
     <div class="wrap">
@@ -99,5 +109,6 @@
     </div>
   </footer>
   <script src="site.js"></script>
+  <script src="notfound-game.js"></script>
 </body>
 </html>
