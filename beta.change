@@ -1,2 +1,9 @@
+3.0.3
+Multi-edit + zip/parent/bundle groups: click selects all children and keeps multi-edit open (no more stuck after opening a zip)
+Multi-edit seeding and filter/sidebar traps fixed for Docker/browser
+Docker bridge: sliced files, collections APIs; tag edits refresh cards; missing modules packaged
+Clearer error when STL Home / scan directory is missing
+Thumbnail color presets + custom picker; MCP scan crash fix
+
 - Upgrading from 2.x keeps models that were marked Printed. Opening 3.0.1 also repairs databases that already hit the 3.0.0 Unprinted reset (#117).
 - Printventory Watcher inbox sidecars use .pvimport (legacy .pvimport.json still imports). Pickable folder is Downloads/Printventory; the app also watches Downloads/Printventory/PrintventoryInbox and Documents/Printventory/PrintventoryInbox.
