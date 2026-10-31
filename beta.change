@@ -1,9 +1,31 @@
 3.0.3
-Multi-edit + zip/parent/bundle groups: click selects all children and keeps multi-edit open (no more stuck after opening a zip)
-Multi-edit seeding and filter/sidebar traps fixed for Docker/browser
-Docker bridge: sliced files, collections APIs; tag edits refresh cards; missing modules packaged
-Clearer error when STL Home / scan directory is missing
-Thumbnail color presets + custom picker; MCP scan crash fix
+Collections & saved searches
+Manual collections/projects: name groups, add models from the grid or multi-edit, filter by collection, and manage covers.
+Saved searches (smart collections): store the current filter/query-builder state, reopen from the sidebar, and use richer numeric/date operators.
+Discovery & library hygiene
+Optional semantic / find-similar search via AI descriptions and locally stored embeddings.
+Geometry near-duplicate fingerprints for De-Dup similarity review (beyond exact hash matches).
+Mark intentional duplicates as "not a duplicate," and treat same-hash path changes as moves so metadata follows the file.
+Safer parent-model assignment (cycle/child warnings, flatten group).
+Soft-delete / Recently removed with restore and timed purge; undo stack for destructive library edits.
+Path display modes and per-root path aliases (helpful for Docker/NAS mapped drives).
+Print workflow
+Print statistics dashboard: prints over time, outcomes, printers, filament usage, and related rollups.
+Print queue board: Want → Queued → Printing → Printed/Failed with drag between columns.
+G-code / sliced-file index next to models (.gcode, .bgcode, plate .3mf) with header metadata and send-to-printer for G-code.
+Filament cost / remaining-weight tracking and cost-aware print logging.
+Maintenance reminders that surface in the UI (and can notify in Docker/server mode).
+UI / UX
+Non-blocking toasts and a unified Jobs panel for scans, thumbnails, hashes, backups, and related background work.
+Light theme, system theme follow, and custom accent color.
+Ctrl/Cmd+K command palette, grid keyboard navigation, and rebindable shortcuts.
+First-run empty state with a clear Scan action (and related empty-library guidance).
+Server/Docker web upload / drop-in inbox that lands under STL Home and triggers an incremental scan.
+Fixes
+Multi-edit + zip/parent/bundle groups: clicking a group selects or deselects all children and keeps multi-edit open (no more stuck after opening a zip).
+Enter Multi-Edit Mode keeps the current model selected; removed duplicate Multi-Edit toggle handlers.
+Multi-edit no longer leaves the sidebar stuck on filters (Docker/browser and mobile sheets).
+Docker image includes required server modules; bridge exposes sliced-file/collections APIs; tag edits refresh cards.
+Clearer error when STL Home / scan directory is missing.
+Thumbnail color presets + custom picker; MCP/server scan crash fix.
 
-- Upgrading from 2.x keeps models that were marked Printed. Opening 3.0.1 also repairs databases that already hit the 3.0.0 Unprinted reset (#117).
-- Printventory Watcher inbox sidecars use .pvimport (legacy .pvimport.json still imports). Pickable folder is Downloads/Printventory; the app also watches Downloads/Printventory/PrintventoryInbox and Documents/Printventory/PrintventoryInbox.
